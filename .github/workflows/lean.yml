@@ -1,0 +1,56 @@
+name: Lean
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "lean-toolchain"
+      - "lakefile.toml"
+      - "lake-manifest.json"
+      - "WeilDefect.lean"
+      - "WeilDefect/**"
+      - ".github/workflows/lean.yml"
+  pull_request:
+    paths:
+      - "lean-toolchain"
+      - "lakefile.toml"
+      - "lake-manifest.json"
+      - "WeilDefect.lean"
+      - "WeilDefect/**"
+      - ".github/workflows/lean.yml"
+
+concurrency:
+  group: lean-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Elan
+        shell: bash
+        run: |
+          curl -sSf https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh | sh -s -- -y
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+
+      - name: Resolve pinned dependencies
+        shell: bash
+        run: lake update
+
+      - name: Fetch mathlib cache
+        shell: bash
+        run: lake exe cache get
+
+      - name: Check current theorem target
+        shell: bash
+        run: lake build WeilDefect.Examples.WeakCriticalFallthrough
+
+      - name: Reject unfinished trusted declarations
+        shell: bash
+        run: |
+          if grep -R -nE '^[[:space:]]*(axiom|sorry|admit)\b' WeilDefect WeilDefect.lean; then
+            echo "Unfinished or project-axiom declaration found."
+            exit 1
+          fi

@@ -1,0 +1,39 @@
+import WeilDefect.Arithmetic.PrimeSupport
+import WeilDefect.Arithmetic.LogarithmicForm
+import WeilDefect.Arithmetic.NoSobolevBootstrap
+import WeilDefect.Screening.RankOne
+import WeilDefect.Arithmetic.Coadaptation
+import WeilDefect.Arithmetic.Scalarization
+import WeilDefect.Arithmetic.FarTail
+import WeilDefect.Arithmetic.NextJet
+import WeilDefect.Examples.SpectralScreening
+import WeilDefect.Screening.Quadratic
+import WeilDefect.PairGeometry
+import WeilDefect.RationalResponse
+import WeilDefect.NativeHilbertSchmidt
+import WeilDefect.DirichletResolvent
+import WeilDefect.DirichletEnergy
+import WeilDefect.FiniteHeadApproximation
+import WeilDefect.FiniteExponentialIndependence
+import WeilDefect.ProblemOneIndependence
+import WeilDefect.Residues
+import WeilDefect.Examples.Algebraic
+import WeilDefect.Screening.SequentialElimination
+import WeilDefect.Screening.ShortedCovariance
+import WeilDefect.Screening.FinitePositiveShadows
+import WeilDefect.Filtration.RightLimit
+import WeilDefect.Filtration.FiniteNegativeSector
+import WeilDefect.Filtration.CriticalDichotomy
+import WeilDefect.Filtration.EndpointJump
+import WeilDefect.Filtration.RepresentativeBlowup
+import WeilDefect.Morphology.Negative
+
+import WeilDefect.Morphology.Neutral
+
+import WeilDefect.Morphology.Noncompact
+
+import WeilDefect.Examples.CriticalNonattainment
+
+import WeilDefect.Examples.MovingSectors
+
+import WeilDefect.Examples.WeakCriticalFallthrough
