@@ -897,3 +897,25 @@ It is a terminal status for the current LEAN-H1 exhaustion test, but not a claim
 - SCOPE-ONLY.
 
 No stable theorem/example may remain merely unattempted when LEAN-H1 closes.
+
+
+## Screw-family rank — provisional research term
+
+**Screw-family rank** is the dimension of the linear span of observables obtained by varying the Matsumoto–Suzuki parameter ell in the family
+
+~~~math
+g_{H_\ell}(t)=H_\ell(e^t)-H_\ell(1).
+~~~
+
+The phrase is always qualified by the carrier on which rank is measured.
+
+- **Ambient spectral screw-family rank** refers to the rank of the weight functions
+  ~~~math
+  \gamma\mapsto\frac{1}{\gamma^2+(\ell-1/2)^2}.
+  ~~~
+- **Finite-window screw-family rank** refers to the rank remaining after a lawful finite-window carrier map has been derived.
+- **Collar screw-family rank** refers to the rank of the resulting observables on the specific post-threshold defect variables.
+
+These ranks must not be identified without an explicit intertwining/projection theorem.
+
+This term is provisional on the branch research/sz-screw-family-0 and has no canonical Horizon-1 or SZ theorem standing unless separately ratified.
