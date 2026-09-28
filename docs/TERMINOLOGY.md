@@ -1638,3 +1638,30 @@ At a unit-gain neutral crossing this energy is zero on an endpoint singular dire
 After pair-to-raw conversion, the same quadratic form may be regarded as a finite-dimensional metric on zero-moment selected raw sources.
 
 **Status:** branch-local RPB terminology.
+
+
+## Birman--Schwinger carrier caution
+
+The branch-local background Birman--Schwinger matrix
+
+```math
+\mathsf K_a
+=
+\Phi_a
+A_{B,a}^{-1}
+\Phi_a^{*}
+```
+
+is a **canonical-physical/form-carrier** object, where (A_{B,a}) is the strictly positive compact-window background operator on the (L^2)/form realization and
+
+```math
+\Phi_a:L^2(-a,a)\to M
+```
+
+is the finite selected analysis map.
+
+It must not be identified without an explicit intertwining theorem with a coefficient-space Douglas Gram (C_a^{*}C_a) formed in the Green-preconditioned native Problem-1 carrier.
+
+The native zero synthesis is Hilbert--Schmidt in the (H^{-1}_L) metric, while the canonical compact-window operator is an unbounded compact-resolvent operator on (L^2). These are equivalent representations of the quadratic-form problem only after the relevant Green/metric transport is explicitly supplied.
+
+**Status:** branch-local RPB custody rule.
