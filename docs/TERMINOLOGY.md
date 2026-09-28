@@ -1210,3 +1210,40 @@ Equivalently, for every fixed finite negative-coordinate block, the selected fin
 Sign-custody escape is weaker than full selected-sector escape: fixed low negative coordinates may remain strongly anchored, but an increasingly remote negative tail is required to tip the total signature below zero as the full negative margin tends to zero.
 
 **Status:** branch-local RPB terminology.
+
+
+## Sign-capture scale
+
+For a strict full-form negative witness (h) at support (a), the **sign-capture scale** (G_{m cap}(a,h)) is the least cutoff in a fixed canonical finite negative-coordinate exhaustion for which the truncated selected form is already negative:
+
+```math
+Q_{G,a}(h)<0.
+```
+
+When a post-neutral branch (h_delta) approaches a plateau edge (c_*), the behavior of (G_{m cap}(c_*+delta,h_delta)) distinguishes bounded finite-head custody from sign-custody escape.
+
+**Status:** branch-local RPB terminology.
+
+## Relative negative-tail control
+
+For a post-plateau negative branch with margin
+
+```math
+m(delta)
+=
+-Q_W^{c_*+delta}(h_delta)>0,
+```
+
+a fixed negative-coordinate cutoff (G) has **relative negative-tail control** when
+
+```math
+|(I-P_G^-)S_-^*h_delta|^2
+=
+o(m(delta))
+qquad
+(deltadownarrow0).
+```
+
+Relative negative-tail control, unlike an absolute uniform tail bound, is sufficient to preserve the strict negative sign in one fixed finite packet arbitrarily close to the plateau edge.
+
+**Status:** branch-local RPB terminology.
