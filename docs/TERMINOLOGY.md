@@ -1924,3 +1924,70 @@ does not, by itself, give a certified scalar identity involving
 (\mathcal C_v[\psi_{a,u_a}^{\rm res}]).
 
 **Status:** branch-local RPB terminology.
+
+
+## Logarithmic support modulus
+
+After scaling compact-window support to a fixed interval, a prime translation
+with delay \(\ell=\log n\) contributes a Fourier multiplier of the form
+
+```math
+m_{\ell,a}(\xi)
+=
+\cos\!\left(
+\frac{\ell\xi}{a}
+\right).
+```
+
+For nearby supports \(a,b\) in a compact positive interval,
+
+```math
+|m_{\ell,a}(\xi)-m_{\ell,b}(\xi)|
+\lesssim
+\min\!\left(
+1,
+|a-b|\,|\xi|
+\right).
+```
+
+Relative to the logarithmic form weight
+\(\log(e+|\xi|)\), the resulting operator/form modulus is of order
+
+```math
+\omega_{\log}(r)
+=
+\frac{1}{
+\log(e+r^{-1})
+}.
+```
+
+This is the **logarithmic support modulus**. It tends to zero but is weaker
+than every positive power \(r^\alpha\).
+
+**Status:** branch-local RPB terminology.
+
+## Crossing-normalized first-variation gap
+
+Let \(\kappa_a>1\) denote the post-edge Birman--Schwinger top eigenvalue
+with \(\kappa_a\to1\) as \(a\downarrow c_*\), and let
+\(\psi_a^{\rm sp}\) be a selected-preserving support-dependent multiplier.
+
+The **crossing-normalized first-variation gap** is the missing control needed
+to make sense of, or extract a nonzero limit from,
+
+```math
+\frac{
+\psi_a^{\rm sp}
+-
+\psi_{c_*}^{\rm sp}
+}{
+\kappa_a-1
+}.
+```
+
+Continuity of numerator and denominator separately is insufficient. A closure
+requires a quantitative comparison of their vanishing orders, supplied for
+example by differentiability plus a nonzero transversality derivative, or by
+another two-sided modulus theorem.
+
+**Status:** branch-local RPB terminology.
