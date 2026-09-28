@@ -387,9 +387,10 @@ assert rc==Counter({
     (-1,"A"):67,(-1,"B"):67,(-1,"D"):68,(-1,"T"):144,
 })
 
-# lambda = h-kappa: interior h-chain successor plus one layer down.
-for c in SSET-bottoms:
-    # reverse statement is not universal; only record arithmetic identity.
+# lambda = h-kappa: away from a chain top, one lambda step is
+# one h-chain successor plus one kappa-layer down.
+for c in SSET-tops:
+    assert add3(c,H3) in SSET
     assert add3(c,LAM3)==add3(add3(c,H3),mul3(-1,KAP3))
 
 # At the five chain tops, the h-successor is exactly one cap site.
