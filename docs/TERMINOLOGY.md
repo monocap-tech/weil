@@ -2355,3 +2355,110 @@ At a neutral edge, Suzuki's generalized eigenvalue formulation guarantees this
 subspace is nonzero.
 
 **Status:** branch-local RPB terminology.
+
+
+## Screw compression stationarity
+
+For (0<c<a), let
+
+```math
+J_{c,a}:
+L_0^2(-c,c)
+\to
+L_0^2(-a,a)
+```
+
+be zero extension.  For the projected screw operators
+
+```math
+G_r=P_rGP_r,
+```
+
+the **screw compression stationarity** identity is
+
+```math
+\boxed{
+J_{c,a}^*G_aJ_{c,a}
+=
+G_c.
+}
+```
+
+Thus enlarging support changes the admissible carrier but does not change the
+quadratic form on vectors already supported in the old zero-mean carrier.
+
+In particular, if (N_c=\ker G_c), then the diagonal compression of every
+larger (G_a) to (J_{c,a}N_c) is identically zero.
+
+**Status:** branch-local RPB terminology.
+
+## Screw-kernel collar leakage
+
+Let
+
+```math
+\mathcal C_{c,a}
+=
+J_{c,a}L_0^2(-c,c)^\perp
+\cap
+L_0^2(-a,a).
+```
+
+For (u\in\ker G_c), screw compression stationarity implies
+
+```math
+G_aJ_{c,a}u
+\in
+\mathcal C_{c,a}.
+```
+
+The vector
+
+```math
+\mathcal L_{c,a}u
+:=
+G_aJ_{c,a}u
+```
+
+is the **screw-kernel collar leakage** of (u).
+
+If (\mathcal L_{c,a}u\ne0), then (G_a) is indefinite: the mixed vector
+
+```math
+J_{c,a}u-t\mathcal L_{c,a}u
+```
+
+has negative quadratic value for all sufficiently small (t>0).
+
+If (\mathcal L_{c,a}u=0), the zero-extended vector remains an actual kernel
+vector of (G_a).
+
+**Status:** branch-local RPB terminology.
+
+## Screw-potential collar rigidity
+
+For (u\in L_0^2(-c,c)), define the screw potential
+
+```math
+F_u(x)
+=
+\int_{-c}^{c}
+g(x-y)u(y)\,dy.
+```
+
+Because (G_c=P_cGP_c),
+
+```math
+u\in\ker G_c
+```
+
+means that (F_u) is constant on ((-c,c)).
+
+The **screw-potential collar rigidity** question asks whether a nonzero
+(u\in\ker G_c) can have the same potential remain constant on any strictly
+larger interval.
+
+Equivalently, it asks whether the collar leakage
+(\mathcal L_{c,a}u) can vanish for some (a>c).
+
+**Status:** branch-local RPB terminology.
