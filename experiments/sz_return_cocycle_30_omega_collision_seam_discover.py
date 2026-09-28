@@ -1,17 +1,30 @@
 #!/usr/bin/env python3
-"""Discovery/verifier for SZ-RETURN-COCYCLE-30.
+"""Exact verifier for SZ-RETURN-COCYCLE-30.
 
-Types the omega seam at
+Types the omega collision seam at
     e = 5*kappa + 2*chi + rho + sigma + 4*tau
-and probes the first omega chamber
+and the first omega chamber
     e = seam + delta, 0 < delta < omega.
 
-The script reconstructs the new orbit directly, measures the equal-orientation
-constant set and row census, identifies its shifted return body against the
-known T0/T1/T2/T3/S0 sets, verifies inherited relabelings, and checks the next
-residual nu=tau-omega with 0<nu<omega.
+Conclusions:
+  * at the seam the generic species are T3/86774 and S0/18984;
+  * immediately above, the atlas has
+        1643 x O0/105768
+        1348 x T3/86774
+         295 x S0/18984
+    = 3286 generic bands;
+  * all new-anchor families normalize to one exact O0 source graph;
+  * per orientation
+        O0 = T3 union (4*tau + W),
+    where |W|=9497, so |O0|=52884, full size=105768;
+  * the same stabilized W module therefore appears at shifts
+        tau, 2tau, 3tau, 4tau;
+  * inherited T3 is an exact reflected-orientation +tau relabeling;
+  * inherited S0 is an exact positive-orientation +tau relabeling;
+  * nu=tau-omega satisfies 0<nu<omega;
+  * at delta=omega, S0 centers collapse and T3 width becomes nu.
 
-No invertibility claim for the new omega-chamber species is made here.
+No invertibility claim for O0/105768 is made here.
 """
 
 from collections import Counter, deque
@@ -68,6 +81,10 @@ assert add3(mul3(4,TAU3),OMEGA3)==SIG3
 assert 2**33628 * 5**5693 > 3**29557
 assert 3**36026 > 2**40988 * 5**6939
 assert logcomb_sign(OMEGA3)>0
+# nu = log(3^36026/(2^40988 5^6939)) > 0.
+assert 3**36026 > 2**40988 * 5**6939
+# omega-nu = log(2^74616 5^12632 / 3^65583) > 0.
+assert 2**74616 * 5**12632 > 3**65583
 assert logcomb_sign(NU3)>0
 assert logcomb_sign(sub3(OMEGA3,NU3))>0
 
@@ -139,6 +156,7 @@ WBODY=S0 | {add3(c,SIG3) for c in TOPRHO}
 T1=T0 | {add3(c,TAU3) for c in WBODY}
 T2=T1 | {add3(c,mul3(2,TAU3)) for c in WBODY}
 T3=T2 | {add3(c,mul3(3,TAU3)) for c in WBODY}
+O0=T3 | {add3(c,mul3(4,TAU3)) for c in WBODY}
 
 assert len(K2)==5399
 assert len(S0)==9492
@@ -148,6 +166,8 @@ assert len(WBODY)==9497
 assert len(T1)==24393
 assert len(T2)==33890
 assert len(T3)==43387
+assert len(O0)==52884
+assert not (T3 & {add3(c,mul3(4,TAU3)) for c in WBODY})
 assert not (T2 & {add3(c,mul3(3,TAU3)) for c in WBODY})
 
 # ---------------------------------------------------------------------------
@@ -310,7 +330,7 @@ DELTA=omegaf/3
 E=base30f+DELTA
 
 LOW=orbit(E,DELTA/2)
-print("MEASURE: new full orbit size =",len(LOW))
+assert len(LOW)==105768
 certify_new_band(LOW,E,DELTA/2,(0,0,0))
 GNEW=graph(LOW,E,DELTA/2,BASE30,(0,0,0))
 
@@ -328,23 +348,27 @@ for t in LOW:
     constsets[o].add(cc)
     rc[(o,region_rep(t,E,DELTA/2))]+=1
 
-assert constsets[+1]==constsets[-1]
+assert constsets[+1]==constsets[-1]==O0
 NEWSET=constsets[+1]
-print("MEASURE: new per-orientation size =",len(NEWSET))
-print("MEASURE: row census =",tuple(rc[(+1,x)] for x in ("A","B","D","T")))
+assert len(NEWSET)==52884
+for ori in (+1,-1):
+    assert tuple(rc[(ori,x)] for x in ("A","B","D","T"))==(10246,10246,10247,22145)
 
-# Identify the omega-shifted return body.
+# Exact fourth stabilized tau-module increment.
 assert T3 <= NEWSET
 DIFF=NEWSET-T3
-BACK_OMEGA={sub3(x,OMEGA3) for x in DIFF}
-BACK_4TAU={sub3(x,mul3(4,TAU3)) for x in DIFF}
-print("MEASURE: added body size =",len(DIFF))
-for label,BACK in (("minus_omega",BACK_OMEGA),("minus_4tau",BACK_4TAU)):
-    for name,S in (("S0",S0),("T0",T0),("T1",T1),("T2",T2),("T3",T3),("WBODY",WBODY)):
-        print("COMPARE:",label,name,
-              "missing_from_body",len(S-BACK),
-              "extra_over",len(BACK-S),
-              "intersection",len(BACK&S))
+assert len(DIFF)==9497
+assert {sub3(x,mul3(4,TAU3)) for x in DIFF}==WBODY
+assert tuple(
+    y-x for x,y in zip(
+        (8406,8406,8407,18168),
+        (10246,10246,10247,22145),
+    )
+)==(1840,1840,1840,3977)
+
+# Generic band count.
+assert len(omega_offsets)==1643
+assert 1643+1348+295==3286
 
 # Inherited T3: reflected orientation +tau.
 D0=tauf/3
@@ -368,11 +392,16 @@ assert GcurS==shift_graph(GS0,TAU3,(0,0,0))
 assert abs((tauf-omegaf)-nuf)<1e-15
 assert 0<nuf<omegaf
 
-print("PASS: omega seam has T3/86774 and S0/18984 generic species")
-print("PASS: first omega chamber has 1643 new anchors, 1348 inherited T3, 295 inherited S0")
-print("PASS: checked new-anchor families normalize to one source graph")
+print("PASS: omega seam has 1348 T3/86774 and 295 S0/18984 generic bands")
+print("PASS: first omega chamber counts = O0/105768 x1643, T3/86774 x1348, S0/18984 x295")
+print("PASS: total generic bands = 3286")
+print("PASS: all checked new-anchor families normalize to one O0 source graph")
+print("PASS: O0 per orientation = T3 union (4tau+W), |W|=9497")
+print("PASS: |O0| per orientation = 52884; full size = 105768")
+print("PASS: O0 census per orientation = A10246/B10246/D10247/T22145")
+print("PASS: fourth stabilized W increment = A1840/B1840/D1840/T3977")
 print("PASS: inherited T3 is reflected-orientation +tau relabeling")
 print("PASS: inherited S0 is positive-orientation +tau relabeling")
 print("PASS: nu=tau-omega with 0<nu<omega")
 print("PASS: next seam delta=omega collapses S0; T3 width becomes nu")
-print("NOTE: new omega species invertibility is not claimed in this seam pass")
+print("NOTE: O0/105768 invertibility is not claimed in this seam pass")
