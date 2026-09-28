@@ -1092,3 +1092,55 @@ At the matrix-coefficient level, potentialization replaces a translated Weil coe
 This lowers distributional order but does not remove the underlying spectral data.
 
 **Status:** branch-local RPB terminology.
+
+
+## Neutral spectral plateau
+
+Let (Q_W^a) be the localized Weil form on the support window ([-a,a]), with associated self-adjoint operator (A_a), and let
+
+```math
+\lambda_a
+=
+\inf_{0\ne f}
+\frac{Q_W^a(f)}{\|f\|_2^2}
+```
+
+be its lowest spectral value.
+
+Given an endpoint (c) with a nonzero neutral mode (k) satisfying (A_ck=0), a **neutral spectral plateau** is an interval of larger supports on which
+
+```math
+\lambda_a=0.
+```
+
+Because the zero extension of (k) has the same global Weil quadratic value on every larger support, every point of such a plateau carries the same fixed mode in the kernel of (A_a).
+
+**Status:** branch-local RPB terminology.
+
+## Neutral sign-persistence dichotomy
+
+The **neutral sign-persistence dichotomy** is the following branch-local reduction.
+
+For a zero-extended endpoint neutral mode (k) and any larger support (b>c),
+
+```math
+Q_W^b(k)=0.
+```
+
+Therefore exactly one of the following occurs:
+
+```math
+\lambda_b=0,
+```
+
+in which case the larger localized form is nonnegative and the same fixed (k) lies in (ker A_b); or
+
+```math
+\lambda_b<0,
+```
+
+in which case the enlarged compact-window Weil form has entered a negative spectral regime.
+
+This dichotomy refines the branch-local interpretation of `AZ-FIN-WEIL-NULL-EXTENSION`. It does not by itself identify selected negative-sector custody after a negative fall-through.
+
+**Status:** branch-local RPB terminology.
