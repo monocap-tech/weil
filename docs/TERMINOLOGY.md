@@ -1318,3 +1318,38 @@ In this representation, every negative direction of the full defect is owned by 
 Residual selected custody is not the same as negativity of the raw selected form obtained by simply deleting the background term.
 
 **Status:** branch-local RPB terminology.
+
+
+## Background right-edge stability
+
+Relative to a fixed finite selected packet (Pi), the unselected negative background has **background right-edge stability** at support (c) when there exists (delta>0) such that the background-only defect remains nonnegative on every strict right enlargement:
+
+```math
+D_{B,a}\succeq0
+\qquad
+(c\le a<c+\delta).
+```
+
+Equivalently, the background remains contractively screenable throughout some right neighborhood of (c).
+
+Endpoint screenability
+
+```math
+D_{B,c}\succeq0
+```
+
+does not by itself imply background right-edge stability.
+
+**Status:** branch-local RPB terminology.
+
+## Strict background screening margin
+
+The background has a **strict background screening margin** at support (c) when its background-only analysis space is uniformly (J)-positive, equivalently when the reduced background screening solution satisfies
+
+```math
+\|X_{B,c}\|<1.
+```
+
+A strict margin can be propagated to a right neighborhood only with an additional continuity theorem strong enough to control the background defect/reduced screening map in operator norm. Horizon 1 does not currently supply that support-parameter continuity statement.
+
+**Status:** branch-local RPB terminology.
