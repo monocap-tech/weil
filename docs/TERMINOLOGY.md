@@ -1450,3 +1450,31 @@ P_G^-S_-^*|_{N_c}
 After completing the retained coordinates to the project’s symmetric zero-packet convention, they form a nullspace-covering selected packet.
 
 **Status:** branch-local RPB terminology.
+
+
+## Finite-enlarged background ground level
+
+For a finite symmetric selected packet \(\Pi'\), define the complementary-background quadratic form at support \(a\) by
+
+```math
+Q_{B',a}(h)
+=
+Q_W^a(h)
++
+\|S_{M_{\Pi'},a}^{*}h\|^2.
+```
+
+Its **finite-enlarged background ground level** is
+
+```math
+\lambda_{B',a}
+=
+\inf_{0\ne h}
+\frac{Q_{B',a}(h)}{\|h\|_2^2}.
+```
+
+Equivalently, \(\lambda_{B',a}\) is the lowest spectral value of the background-only operator obtained by removing the finitely selected negative channels \(M_{\Pi'}\) from the full negative divisor.
+
+Under the fixed-interval scaling used by Suzuki, the added selected covariance is a finite-rank bounded quadratic perturbation depending continuously on the support parameter.
+
+**Status:** branch-local RPB terminology.
