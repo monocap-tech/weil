@@ -897,3 +897,141 @@ It is a terminal status for the current LEAN-H1 exhaustion test, but not a claim
 - SCOPE-ONLY.
 
 No stable theorem/example may remain merely unattempted when LEAN-H1 closes.
+
+
+## Physical probe
+
+A **physical probe** is a compactly supported smooth test function
+
+```math
+f\in C_c^\infty(\mathbb R)
+```
+
+used as an input to the physical Weil preform.
+
+In the reflected-packet bridge, a physical probe is distinct from a **selected packet** (Pi), which is a finite set of zero-side divisor channels.
+
+## Weil translation system
+
+The **Weil translation system** is the triple
+
+```math
+(\mathscr D,T,\mathfrak q),
+\qquad
+\mathscr D=C_c^\infty(\mathbb R),
+```
+
+where
+
+```math
+(T_tf)(x)=f(x-t)
+```
+
+is the real translation action and (mathfrak q) is the Hermitian Weil preform on the common compact-support core.
+
+The system is translation-covariant in the sense
+
+```math
+\mathfrak q(T_af,T_ag)=\mathfrak q(f,g).
+```
+
+This term refers to the form together with its translation action, not to a single compact-window compression and not to a single scalar observable.
+
+**Status:** branch-local RPB terminology; noncanonical outside the reflected-packet investigation.
+
+## Polarized translated Weil kernel
+
+Given the Weil translation system, the **polarized translated Weil kernel** is the matrix-coefficient family
+
+```math
+\mathcal K_{\mathfrak q}(f,g;t)
+:=
+\mathfrak q(T_tf,g).
+```
+
+Equivalently, by common-translation covariance,
+
+```math
+\mathcal K_{\mathfrak q}(f,g;t)
+=
+\mathfrak q(T_{t/2}f,T_{-t/2}g).
+```
+
+It satisfies the Hermitian symmetry
+
+```math
+\mathcal K_{\mathfrak q}(f,g;t)
+=
+\overline{
+\mathcal K_{\mathfrak q}(g,f;-t)
+}.
+```
+
+The frozen reflected scalar (Q_h(y)) is the diagonal centered slice
+
+```math
+Q_h(y)
+=
+\mathcal K_{\mathfrak q}(h,h;2y).
+```
+
+**Status:** branch-local RPB terminology; noncanonical outside the reflected-packet investigation.
+
+## Mellin probe weight
+
+For compact physical probes (f,g) with correlation
+
+```math
+C_{f,g}(r)
+=
+\int
+\overline{f(x-r)}g(x)\,dx,
+```
+
+the associated **Mellin probe weight** is
+
+```math
+W_{f,g}(u)
+=
+u^{-1/2}C_{f,g}(-\log u),
+\qquad
+u>0.
+```
+
+Its Mellin transform satisfies
+
+```math
+\widetilde W_{f,g}(s)
+=
+M_{f,g}\!\left(\frac12-s\right),
+```
+
+where (M_{f,g}) is the bilateral Laplace transform of (C_{f,g}).
+
+On a finite selected zero set, RPB source custody is expressed by
+
+```math
+m_\rho\widetilde W_{f,g}(\rho)=v_\rho.
+```
+
+**Status:** branch-local RPB terminology.
+
+## RPB-POL-TAIL
+
+`RPB-POL-TAIL` is the branch-local candidate interface asking for a subcritical large-separation growth estimate for a polarized translated Weil kernel whose selected Mellin residues encode a fixed WD-T37 source.
+
+A source-specific sufficient form is
+
+```math
+\mathcal K_{\mathfrak q}(f_v,g_v;2y)
+=
+O(e^{\kappa_v y}),
+\qquad
+\kappa_v<2\delta_v,
+```
+
+where (delta_v) is the largest positive real displacement of an active selected zero carried by (v).
+
+Equivalently, in multiplicative scale it is a source-adapted smoothed prime-number-theorem remainder bound.
+
+`RPB-POL-TAIL` is not a public Horizon-1 interface and is not currently known to follow from `AZ-NEXTJET-LOC` or imply it.
