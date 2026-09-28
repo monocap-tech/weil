@@ -159,6 +159,11 @@ TOPNU={add3(add3(c,mul3(4,TAU3)),SIG3) for c in TOPRHO}
 VBODY=T3 | TOPNU
 N0=O0 | {add3(c,OMEGA3) for c in VBODY}
 
+# Second-nu truncation: O0 plus the omega-shifted five-site nu cap.
+TOPNU2={add3(c,OMEGA3) for c in TOPNU}
+UBODY=O0 | TOPNU2
+N1=N0 | {add3(c,NU3) for c in UBODY}
+
 assert len(K2)==5399
 assert len(S0)==9492
 assert len(TOPRHO)==5
@@ -171,6 +176,11 @@ assert len(O0)==52884
 assert len(TOPNU)==5
 assert len(VBODY)==43392
 assert len(N0)==96276
+assert len(TOPNU2)==5
+assert len(UBODY)==52889
+assert len(N1)==149165
+assert not (O0 & TOPNU2)
+assert not (N0 & {add3(c,NU3) for c in UBODY})
 assert not (O0 & {add3(c,OMEGA3) for c in VBODY})
 assert not (T3 & {add3(c,mul3(4,TAU3)) for c in WBODY})
 assert not (T2 & {add3(c,mul3(3,TAU3)) for c in WBODY})
@@ -347,7 +357,7 @@ DELTA=nuf/3
 E=base34f+DELTA
 
 LOW=orbit(E,DELTA/2)
-print("MEASURE: new full orbit size =",len(LOW))
+assert len(LOW)==298330
 certify_new_band(LOW,E,DELTA/2,(0,0,0))
 GNEW=graph(LOW,E,DELTA/2,BASE34,(0,0,0))
 
@@ -363,36 +373,38 @@ for t in LOW:
     cc,o=graph_key(t,BASE34,(0,0,0))
     constsets[o].add(cc)
     rc[(o,region_rep(t,E,DELTA/2))]+=1
-assert constsets[+1]==constsets[-1]
+assert constsets[+1]==constsets[-1]==N1
 NEWSET=constsets[+1]
-print("MEASURE: new per-orientation size =",len(NEWSET))
-print("MEASURE: row census =",tuple(rc[(+1,x)] for x in ("A","B","D","T")))
+assert len(NEWSET)==149165
+for ori in (+1,-1):
+    assert tuple(rc[(ori,x)] for x in ("A","B","D","T"))==(28900,28900,28901,62464)
 
-# Discover the added body relative to N0.
+# Exact second-nu return body.
 assert N0 <= NEWSET
 DIFF=NEWSET-N0
-print("MEASURE: added body size =",len(DIFF))
-for label,shift in (
-    ("minus_nu",NU3),
-    ("minus_omega",OMEGA3),
-    ("minus_omega_plus_nu",add3(OMEGA3,NU3)),
-):
-    BACK={sub3(x,shift) for x in DIFF}
-    for name,S in (
-        ("T3",T3),("O0",O0),("VBODY",VBODY),("N0",N0),("WBODY",WBODY),
-    ):
-        print("COMPARE:",label,name,
-              "missing",len(S-BACK),
-              "extra",len(BACK-S),
-              "intersection",len(BACK&S))
-
-# Look at the finite excess after subtracting nu relative to O0.
+assert len(DIFF)==52889
 BACK_NU={sub3(x,NU3) for x in DIFF}
-EXCESS=BACK_NU-O0
-MISSING=O0-BACK_NU
-print("MEASURE: minus_nu excess over O0 =",len(EXCESS))
-print("MEASURE: minus_nu missing from O0 =",len(MISSING))
-print("MEASURE: excess coordinates =",sorted(EXCESS)[:32])
+assert BACK_NU==UBODY
+assert UBODY==O0|TOPNU2
+assert not (O0 & TOPNU2)
+
+# Census increment.
+assert tuple(
+    y-x for x,y in zip(
+        (18653,18653,18654,40316),
+        (28900,28900,28901,62464),
+    )
+)==(10247,10247,10247,22148)
+assert tuple(
+    y-x for x,y in zip(
+        (10246,10246,10247,22145),
+        (10247,10247,10247,22148),
+    )
+)==(1,1,0,3)
+
+# Exact atlas count.
+assert len(n1_offsets)==4634
+assert 4634+2991+1643==9268
 
 # Inherited N0: reflected orientation +nu relative to COCYCLE-32.
 D0=nuf/3
@@ -404,9 +416,9 @@ Gcur=graph(Ocur,E,(DELTA+nuf)/2,BASE34,(0,0,0))
 assert Gcur==shift_graph(GN0,(0,0,0),NU3)
 
 # Inherited O0: positive orientation +nu.
-zO=nuf+(D0+(omegaf-nuf))/2
+zO=(D0+omegaf)/2
 OO0=orbit(E32,zO)
-GO0=graph(OO0,E32,zO,BASE32,NU3)
+GO0=graph(OO0,E32,zO,BASE32,(0,0,0))
 zcur=nuf+(DELTA+(omegaf-nuf))/2
 OcurO=orbit(E,zcur)
 GcurO=graph(OcurO,E,zcur,BASE34,NU3)
@@ -416,13 +428,19 @@ assert GcurO==shift_graph(GO0,NU3,(0,0,0))
 assert abs((omegaf-2*nuf)-(16*nuf+lambdaf))<1e-15
 assert 0<lambdaf<nuf
 
-print("PASS: second nu seam has N0/192552 and O0/105768 generic species")
+print("PASS: second nu seam has 2991 N0/192552 and 1643 O0/105768 generic bands")
 print("PASS: first-nu T3 centers have collapsed")
-print("PASS: second nu chamber has 4634 new anchors, 2991 inherited N0, 1643 inherited O0")
+print("PASS: second nu chamber counts = N1/298330 x4634, N0/192552 x2991, O0/105768 x1643")
 print("PASS: total generic bands = 9268")
-print("PASS: checked new-anchor families normalize to one source graph")
+print("PASS: checked new-anchor families normalize to one N1 source graph")
+print("PASS: N1 per orientation = N0 union (nu+U), |U|=52889")
+print("PASS: U = O0 union TOPNU2, |TOPNU2|=5")
+print("PASS: |N1| per orientation = 149165; full size = 298330")
+print("PASS: N1 census per orientation = A28900/B28900/D28901/T62464")
+print("PASS: U contribution = A10247/B10247/D10247/T22148")
+print("PASS: TOPNU2 contribution beyond O0 = A1/B1/D0/T3")
 print("PASS: inherited N0 is reflected-orientation +nu relabeling")
 print("PASS: inherited O0 is positive-orientation +nu relabeling")
 print("PASS: omega = 18*nu + lambda with 0<lambda<nu")
 print("PASS: next seam delta=nu collapses N0; O0 width becomes 16nu+lambda")
-print("NOTE: new second-nu species invertibility is not claimed in this seam pass")
+print("NOTE: N1/298330 invertibility is not claimed in this seam pass")
