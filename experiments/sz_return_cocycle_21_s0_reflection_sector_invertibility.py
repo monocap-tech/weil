@@ -19,8 +19,10 @@ large, the verifier uses a chunked left-inverse compiler:
 
 Thus no dense exact inverse or dense exact residual matrix is materialized.
 
-For both sectors the exact certificate is
-    ||R||_inf = 63924057 / 10^6 < 64
+The two sectors have exact witness norms
+    ||R_+||_inf = 63924057 / 10^6 < 64
+    ||R_-||_inf = 63924064 / 10^6 < 64
+and both have
     ||I - R A0||_inf
       = 338547930925 / 10^15 < 1/2950.
 
@@ -306,7 +308,7 @@ def sector_matrix_int(sigma):
         shape=(len(order),len(order)),
         dtype=np.int64,
     )
-    assert A.nnz==24796
+    assert A.nnz==24795
     assert max(np.diff(A.indptr))<=4
     return A
 
@@ -314,7 +316,7 @@ def sector_matrix_int(sigma):
 # Chunked exact rational left-inverse verification
 # ---------------------------------------------------------------------------
 
-def certify_sector(sigma):
+def certify_sector(sigma,expected_norm):
     Aint=sector_matrix_int(sigma)
     N=Aint.shape[0]
     A0=Aint.astype(float)/DA
@@ -362,7 +364,7 @@ def certify_sector(sigma):
         del Rint,RA_num
         gc.collect()
 
-    assert norm_num==63924057
+    assert norm_num==expected_norm
     assert norm_num<64*DR
     assert rho_num==338547930925
     assert max_entry<2*10**9
@@ -378,17 +380,18 @@ def certify_sector(sigma):
 
     return N,max_entry,total
 
-plus=certify_sector(+1)
-minus=certify_sector(-1)
+plus=certify_sector(+1,63924057)
+minus=certify_sector(-1,63924064)
 
 assert plus[0]==minus[0]==9492
 
 print("PASS: S0 graph has identical 9492-site constant set on both orientations")
 print("PASS: full 18984 matrix diagonalizes into two 9492 reflection sectors")
-print("PASS: both sectors have 24796 sparse midpoint nonzeros")
+print("PASS: both sectors have 24795 sparse midpoint nonzeros")
 print("PASS: chunked rational left-inverse verification avoids dense exact 9492^2 storage")
 print("PASS: exact physical coefficient perturbation < 1e-9")
-print("PASS: both sectors have ||R||_inf = 63924057/1e6 < 64")
+print("PASS: plus sector ||R||_inf = 63924057/1e6 < 64")
+print("PASS: minus sector ||R||_inf = 63924064/1e6 < 64")
 print("PASS: both sectors have rho = 338547930925/1e15 < 1/2950")
 print("PASS: total physical preconditioned residual < 1/2949 < 1")
 print("PASS: both reflection sectors are invertible")
