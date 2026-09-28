@@ -2111,3 +2111,76 @@ such theorem is presently established for the finite-enlarged Weil background
 operator.
 
 **Status:** branch-local RPB terminology.
+
+
+## Neutral-resolvent isomorphism
+
+At a support where the complementary-background operator (A_B) is strictly
+positive, let
+
+```math
+\mathsf K
+=
+\Phi A_B^{-1}\Phi^*
+```
+
+on the finite selected sector (M), and let
+
+```math
+A_{\rm full}
+=
+A_B-\Phi^*\Phi.
+```
+
+The **neutral-resolvent isomorphism** is the bijection
+
+```math
+J:
+\ker(\mathsf K-I)
+\longrightarrow
+\ker A_{\rm full},
+\qquad
+J(u)=A_B^{-1}\Phi^*u,
+```
+
+with inverse
+
+```math
+J^{-1}(h)=\Phi h.
+```
+
+Thus selected unit-gain multiplicity equals full physical nullity whenever the
+background is strictly positive.
+
+**Status:** branch-local RPB terminology.
+
+## Half-Sobolev neutral nullspace
+
+For a compact-window full operator (A_{\rm full}), define the
+**half-Sobolev neutral nullspace**
+
+```math
+N^{1/2}
+=
+\left\{
+h\in\ker A_{\rm full}:
+\widetilde h\in H^{1/2}(\mathbb R)
+\right\}.
+```
+
+Under the neutral-resolvent isomorphism,
+
+```math
+J\left(
+\ker(\mathsf K-I)
+\cap
+\mathcal R_{1/2}
+\right)
+=
+N^{1/2}.
+```
+
+Hence the selected regularity-intersection problem is exactly the physical
+regularity problem for neutral null modes.
+
+**Status:** branch-local RPB terminology.
