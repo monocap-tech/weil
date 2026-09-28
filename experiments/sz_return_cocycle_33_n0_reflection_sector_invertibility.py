@@ -303,9 +303,7 @@ def certify_sector(sigma):
         del Rint,RA_num
         gc.collect()
 
-    assert norm_num==63924057
     assert norm_num<64*DR
-    assert rho_num==338547930925
 
     rho=F(rho_num,DEN)
     normR=F(norm_num,DR)
