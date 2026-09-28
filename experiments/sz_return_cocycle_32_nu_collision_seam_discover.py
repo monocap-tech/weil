@@ -154,6 +154,11 @@ T2=T1 | {add3(c,mul3(2,TAU3)) for c in WBODY}
 T3=T2 | {add3(c,mul3(3,TAU3)) for c in WBODY}
 O0=T3 | {add3(c,mul3(4,TAU3)) for c in WBODY}
 
+# Nu-collision truncation: T3 plus the five terminal sites of the fourth W copy.
+TOPNU={add3(add3(c,mul3(4,TAU3)),SIG3) for c in TOPRHO}
+VBODY=T3 | TOPNU
+N0=O0 | {add3(c,OMEGA3) for c in VBODY}
+
 assert len(K2)==5399
 assert len(S0)==9492
 assert len(TOPRHO)==5
@@ -163,6 +168,10 @@ assert len(T1)==24393
 assert len(T2)==33890
 assert len(T3)==43387
 assert len(O0)==52884
+assert len(TOPNU)==5
+assert len(VBODY)==43392
+assert len(N0)==96276
+assert not (O0 & {add3(c,OMEGA3) for c in VBODY})
 assert not (T3 & {add3(c,mul3(4,TAU3)) for c in WBODY})
 assert not (T2 & {add3(c,mul3(3,TAU3)) for c in WBODY})
 
@@ -332,7 +341,7 @@ DELTA=nuf/3
 E=base32f+DELTA
 
 LOW=orbit(E,DELTA/2)
-print("MEASURE: new full orbit size =",len(LOW))
+assert len(LOW)==192552
 certify_new_band(LOW,E,DELTA/2,(0,0,0))
 GNEW=graph(LOW,E,DELTA/2,BASE32,(0,0,0))
 
@@ -348,31 +357,36 @@ for t in LOW:
     cc,o=graph_key(t,BASE32,(0,0,0))
     constsets[o].add(cc)
     rc[(o,region_rep(t,E,DELTA/2))]+=1
-assert constsets[+1]==constsets[-1]
+assert constsets[+1]==constsets[-1]==N0
 NEWSET=constsets[+1]
-print("MEASURE: new per-orientation size =",len(NEWSET))
-print("MEASURE: row census =",tuple(rc[(+1,x)] for x in ("A","B","D","T")))
+assert len(NEWSET)==96276
+for ori in (+1,-1):
+    assert tuple(rc[(ori,x)] for x in ("A","B","D","T"))==(18653,18653,18654,40316)
 
-# Discover the added return body relative to O0 under natural shifts.
+# Exact nu-collision return body.
 assert O0 <= NEWSET
 DIFF=NEWSET-O0
-print("MEASURE: added body size =",len(DIFF))
-for label,shift in (
-    ("minus_nu",NU3),
-    ("minus_omega",OMEGA3),
-    ("minus_tau",TAU3),
-    ("minus_5tau",mul3(5,TAU3)),
-    ("minus_4tau_plus_omega",add3(mul3(4,TAU3),OMEGA3)),
-):
-    BACK={sub3(x,shift) for x in DIFF}
-    for name,S in (
-        ("S0",S0),("T0",T0),("T1",T1),("T2",T2),
-        ("T3",T3),("O0",O0),("WBODY",WBODY),
-    ):
-        print("COMPARE:",label,name,
-              "missing",len(S-BACK),
-              "extra",len(BACK-S),
-              "intersection",len(BACK&S))
+assert len(DIFF)==43392
+BACK_OMEGA={sub3(x,OMEGA3) for x in DIFF}
+assert BACK_OMEGA==VBODY
+assert VBODY==T3|TOPNU
+assert not (T3 & TOPNU)
+assert tuple(
+    y-x for x,y in zip(
+        (10246,10246,10247,22145),
+        (18653,18653,18654,40316),
+    )
+)==(8407,8407,8407,18171)
+assert tuple(
+    y-x for x,y in zip(
+        (8406,8406,8407,18168),
+        (8407,8407,8407,18171),
+    )
+)==(1,1,0,3)
+
+# Exact atlas counts.
+assert len(nu_offsets)==2991
+assert 2991+1643+1348==5982
 
 # Inherited O0: reflected orientation +omega.
 D0=omegaf/3
@@ -393,14 +407,23 @@ GcurT=graph(OcurT,E,zcur,BASE32,OMEGA3)
 assert GcurT==shift_graph(GT3,OMEGA3,(0,0,0))
 
 # Euclidean arithmetic: omega = 18 nu + lambda, 0<lambda<nu.
+# lambda = log(2^771412 5^130595 / 3^678025).
+# nu-lambda = log(3^714051 / (2^812400 5^137534)).
 assert abs((omegaf-18*nuf)-lambdaf)<1e-15
 assert 0<lambdaf<nuf
 
 print("PASS: nu seam has 1643 O0/105768 and 1348 T3/86774 generic bands")
-print("PASS: first nu chamber has 2991 new anchors, 1643 inherited O0, 1348 inherited T3")
-print("PASS: checked new-anchor families normalize to one source graph")
+print("PASS: first nu chamber counts = N0/192552 x2991, O0/105768 x1643, T3/86774 x1348")
+print("PASS: total generic bands = 5982")
+print("PASS: checked new-anchor families normalize to one N0 source graph")
+print("PASS: N0 per orientation = O0 union (omega+V), |V|=43392")
+print("PASS: V = T3 union TOPNU, |TOPNU|=5")
+print("PASS: |N0| per orientation = 96276; full size = 192552")
+print("PASS: N0 census per orientation = A18653/B18653/D18654/T40316")
+print("PASS: V contribution = A8407/B8407/D8407/T18171")
+print("PASS: TOPNU contribution beyond T3 = A1/B1/D0/T3")
 print("PASS: inherited O0 is reflected-orientation +omega relabeling")
 print("PASS: inherited T3 is positive-orientation +omega relabeling")
 print("PASS: omega = 18*nu + lambda with 0<lambda<nu")
-print("PASS: next seam delta=nu collapses T3; O0 width becomes omega-nu = 17nu+lambda")
-print("NOTE: new nu species invertibility is not claimed in this seam pass")
+print("PASS: next seam delta=nu collapses T3; O0 width becomes 17nu+lambda")
+print("NOTE: N0/192552 invertibility is not claimed in this seam pass")
