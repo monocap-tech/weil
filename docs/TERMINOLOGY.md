@@ -2305,3 +2305,53 @@ A full zero-mode core-domain lift at support (c) is equivalent to
 ```
 
 **Status:** branch-local RPB terminology.
+
+
+## Screw-visible neutral direction
+
+At a compact-window support (c) with (0insigma(A_c)), a **screw-visible
+neutral direction** is a nonzero vector
+
+```math
+u\in\ker G_c
+\subset L_0^2(-c,c),
+```
+
+equivalently a zero mode of Suzuki's generalized eigenvalue problem at spectral
+parameter (0).
+
+Suzuki's generalized formulation
+
+```math
+G_cu=\lambda K_cu
+```
+
+has the same spectrum as the localized Weil operator (A_c), and the case
+(lambda=0) reduces exactly to the (0)-eigenspace of (G_c).
+
+By the screw-core kernel criterion, every screw-visible neutral direction lifts
+through (D^{-1}) to a nonzero core-domain neutral mode in
+(H_0^1(-c,c)).
+
+**Status:** branch-local RPB terminology.
+
+## Screw-visible core neutral subspace
+
+Define
+
+```math
+N_{\rm screw}(c)
+:=
+D^{-1}(\ker G_c)
+=
+\ker A_c\cap H_0^1(-c,c).
+```
+
+The **screw-visible core neutral subspace** is the part of the localized Weil
+nullspace already visible in the compact projected screw operator before
+Friedrichs completion.
+
+At a neutral edge, Suzuki's generalized eigenvalue formulation guarantees this
+subspace is nonzero.
+
+**Status:** branch-local RPB terminology.
