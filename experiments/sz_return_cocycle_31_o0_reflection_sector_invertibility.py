@@ -6,10 +6,14 @@ Certifies the O0/105768 species from COCYCLE-30.
 The full system diagonalizes into two 52884x52884 reflection sectors.
 A chunked rational left-inverse compiler avoids dense exact inverse storage.
 
-The exact sector sparsity, witness norms, and residual maxima are measured by
-the full repository-side run.  The post-rounding proof checks
-    ||R||_inf < 64
-    ||I - R A0||_inf < 1/2950.
+Measured exact certificate for both sectors:
+    nnz = 138157
+    ||R||_inf = 63924057 / 10^6 < 64
+    ||I - R A0||_inf = 338547930925 / 10^15 < 1/2950.
+
+Maximum exact residual entries:
+    plus  = 1905595184
+    minus = 1660409900.
 
 The exact physical coefficient perturbation is <10^-9 in row-sum norm,
 hence the physical preconditioned residual is <1/2949<1.
@@ -250,10 +254,11 @@ def sector_matrix_int(sigma):
         shape=(len(order),len(order)),
         dtype=np.int64,
     )
+    assert A.nnz==138157
     assert max(np.diff(A.indptr))<=4
     return A
 
-def certify_sector(sigma):
+def certify_sector(sigma,expected_max):
     Aint=sector_matrix_int(sigma)
     N=Aint.shape[0]
     luT=spla.splu((Aint.astype(float)/DA).T.tocsc())
@@ -296,6 +301,7 @@ def certify_sector(sigma):
     assert norm_num==63924057
     assert norm_num<64*DR
     assert rho_num==338547930925
+    assert max_entry==expected_max
 
     rho=F(rho_num,DEN)
     normR=F(norm_num,DR)
@@ -304,14 +310,17 @@ def certify_sector(sigma):
 
     return N,Aint.nnz,norm_num,rho_num,max_entry
 
-plus=certify_sector(+1)
-minus=certify_sector(-1)
+plus=certify_sector(+1,1905595184)
+minus=certify_sector(-1,1660409900)
 assert plus[0]==minus[0]==52884
 
 print("PASS: O0 graph has identical 52884-site constant set on both orientations")
 print("PASS: full 105768 matrix diagonalizes into two 52884 reflection sectors")
-print("MEASURE: plus sector (N,nnz,norm_num,rho_num,max_entry) =",plus)
-print("MEASURE: minus sector (N,nnz,norm_num,rho_num,max_entry) =",minus)
+print("PASS: both sectors have 138157 sparse midpoint nonzeros")
+print("PASS: both sectors have ||R||_inf = 63924057/1e6 < 64")
+print("PASS: both sectors have residual = 338547930925/1e15 < 1/2950")
+print("PASS: plus max exact residual entry = 1905595184")
+print("PASS: minus max exact residual entry = 1660409900")
 print("PASS: exact physical coefficient perturbation < 1e-9")
 print("PASS: both sectors have ||R||_inf < 64")
 print("PASS: both sectors have residual < 1/2950")
