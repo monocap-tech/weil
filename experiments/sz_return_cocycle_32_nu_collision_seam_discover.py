@@ -17,6 +17,7 @@ No invertibility claim for the new nu-chamber species is made here.
 """
 
 from collections import Counter, deque
+from functools import lru_cache
 from math import log
 
 Q5=(1,0,0,0,0); J5=(0,1,0,0,0); K5=(0,0,1,0,0)
@@ -54,6 +55,7 @@ BASE28=add3(BASE26,TAU3)
 BASE30=add3(BASE28,TAU3)
 BASE32=add3(BASE30,OMEGA3)
 
+@lru_cache(maxsize=None)
 def logcomb_sign(c):
     aq,aj,ak=c
     e2=2*aq-3*aj+4*ak
