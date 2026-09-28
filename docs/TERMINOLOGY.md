@@ -2184,3 +2184,63 @@ Hence the selected regularity-intersection problem is exactly the physical
 regularity problem for neutral null modes.
 
 **Status:** branch-local RPB terminology.
+
+
+## Arithmetic domain invariance
+
+On a fixed compact support interval, write the canonical logarithmic principal
+operator as (A_{\log,c}).  The compact-window Weil background differs from
+this principal operator by a bounded self-adjoint perturbation:
+
+```math
+A_{B,c}
+=
+A_{\log,c}
++
+B_c,
+\qquad
+B_c\in\mathcal B(L^2(-c,c)).
+```
+
+The bounded term contains the bounded archimedean remainder after subtracting
+the logarithmic principal symbol, finitely many prime cosine/translation
+multipliers, the finite-rank pole contribution, and any fixed finite selected
+covariance restored into the background.
+
+Therefore
+
+```math
+\mathfrak D(A_{B,c})
+=
+\mathfrak D(A_{\log,c})
+```
+
+with equivalent graph norms.
+
+This is **arithmetic domain invariance**: the known finite/support-local
+arithmetic corrections can move the spectrum and nullspace but do not raise the
+operator-domain regularity order.
+
+**Status:** branch-local RPB terminology.
+
+## Neutral core-domain lift
+
+Let (A_c) be the Friedrichs extension of a symmetric core operator (B_c)
+whose core domain is stronger, for example (H_0^1(-c,c)).
+
+A **neutral core-domain lift** is a theorem of the form
+
+```math
+h\in\ker A_c
+\quad\Longrightarrow\quad
+h\in\mathfrak D(B_c).
+```
+
+Such a lift would upgrade a neutral Friedrichs eigenvector into the stronger
+core regularity class and can therefore bypass the generic logarithmic-domain
+boundary obstruction.
+
+No such implication follows from the definition of a Friedrichs extension
+alone.
+
+**Status:** branch-local RPB terminology.
