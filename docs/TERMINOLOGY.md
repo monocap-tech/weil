@@ -1406,3 +1406,47 @@ Because the canonical compact-window Weil operator has discrete lower-bounded sp
 This is an (L^2)-spectral statement. It must not be identified with a coefficient-space contraction gap (|X_B|<1) without an explicit metric/comparison theorem.
 
 **Status:** branch-local RPB terminology.
+
+
+## Nullspace-covering selected packet
+
+At a nonnegative compact-window support (c), let
+
+```math
+N_c=\ker A_c
+```
+
+be the finite-dimensional full Weil nullspace.
+
+A finite selected negative packet (M_{\Pi'}\subset K_-) is a **nullspace-covering selected packet** when
+
+```math
+N_c\cap\ker S_{M_{\Pi'}}^*
+=
+\{0\}.
+```
+
+Equivalently, its selected negative analysis map is injective on the entire full nullspace.
+
+A nullspace-covering packet need not coincide with the originally chosen finite-exception packet; it may be a finite enlargement.
+
+**Status:** branch-local RPB terminology.
+
+## Finite nullspace capture
+
+**Finite nullspace capture** is the principle that, if the full negative analysis map
+
+```math
+S_-^*|_{N_c}:N_c\to K_-
+```
+
+is injective and (N_c) is finite dimensional, then some finite negative-coordinate projection (P_G^-) remains injective on (N_c):
+
+```math
+P_G^-S_-^*|_{N_c}
+\text{ is injective}.
+```
+
+After completing the retained coordinates to the project’s symmetric zero-packet convention, they form a nullspace-covering selected packet.
+
+**Status:** branch-local RPB terminology.
