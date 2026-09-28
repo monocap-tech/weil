@@ -2244,3 +2244,64 @@ No such implication follows from the definition of a Friedrichs extension
 alone.
 
 **Status:** branch-local RPB terminology.
+
+
+## Screw-core kernel criterion
+
+For Suzuki's compact-window screw realization
+
+```math
+B_c=D^*G_cD,
+\qquad
+\mathfrak D(B_c)=H_0^1(-c,c),
+```
+
+with
+
+```math
+D=i\frac{d}{dx}:
+H_0^1(-c,c)
+\overset{\sim}{\longrightarrow}
+L_0^2(-c,c),
+```
+
+the **screw-core kernel criterion** is
+
+```math
+\ker A_c
+\cap
+H_0^1(-c,c)
+=
+D^{-1}(\ker G_c),
+```
+
+where (A_c) is the Friedrichs extension of (B_c).
+
+Thus a neutral Friedrichs mode lies in the stronger screw core exactly when its
+derivative is a zero mode of the compact projected screw operator (G_c).
+
+**Status:** branch-local RPB terminology.
+
+## Core-lift nullity defect
+
+Define
+
+```math
+\delta_{\rm core}(c)
+=
+\dim\ker A_c
+-
+\dim\ker G_c.
+```
+
+Under the screw-core kernel criterion, (\delta_{\rm core}(c)) counts neutral
+Friedrichs directions that are not represented by (H_0^1) screw-core zero
+modes.
+
+A full zero-mode core-domain lift at support (c) is equivalent to
+
+```math
+\delta_{\rm core}(c)=0.
+```
+
+**Status:** branch-local RPB terminology.
