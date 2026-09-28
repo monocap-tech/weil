@@ -1,0 +1,730 @@
+# SZ-RETURN-COCYCLE-16 — Second Chi Collision Seam
+
+**Date:** 2026-09-28  
+**Branch:** research/sz-return-cocycle-0  
+**Standing:** PARALLEL RECONNAISSANCE / EXACT SOURCE-LEVEL SEAM TYPING  
+**Canonical effect:** NONE  
+**Canonical theorem cursor:** remains SZ-CROSS-COLLAR-3.
+
+Companion verifier:
+
+experiments/sz_return_cocycle_16_second_chi_seam_verify.py
+
+---
+
+## 0. Result
+
+The second chi collision occurs at
+
+~~~math
+e=5\kappa+\chi.
+~~~
+
+At that seam, every surviving M7 / 2932 center from the first chi chamber collapses.
+
+The generic seam atlas contains only:
+
+~~~math
+\boxed{
+86\text{ copies of }C_0/5554
+}
+~~~
+
+and
+
+~~~math
+\boxed{
+40\text{ copies of }M_6/2612.
+}
+~~~
+
+Immediately above the seam, write
+
+~~~math
+e
+=
+5\kappa
++
+\chi
++
+\delta,
+\qquad
+0<\delta<\chi.
+~~~
+
+A new graph species appears.
+
+Its size is
+
+~~~math
+\boxed{8176}.
+~~~
+
+The complete generic atlas in this chamber contains
+
+~~~math
+\boxed{
+127\times8176
++
+86\times5554
++
+40\times2612,
+}
+~~~
+
+i.e.
+
+~~~math
+\boxed{253}
+~~~
+
+open seed bands.
+
+All 127 new bands are one exact graph species.
+
+No invertibility claim for the new 8176 species is made in this seam pass.
+
+---
+
+## 1. The new Euclidean residual
+
+Recall
+
+~~~math
+\eta_*
+=
+h-5\kappa
+~~~
+
+and
+
+~~~math
+\chi
+=
+\kappa-8\eta_*.
+~~~
+
+Define
+
+~~~math
+\boxed{
+\rho
+:=
+\eta_*
+-
+3\chi.
+}
+~~~
+
+In the q,j,k basis,
+
+~~~math
+\eta_*=(-26,52,21),
+~~~
+
+~~~math
+\chi=(213,-426,-172),
+~~~
+
+so
+
+~~~math
+\boxed{
+\rho=(-665,1330,537).
+}
+~~~
+
+In prime logarithms,
+
+~~~math
+\boxed{
+\rho
+=
+\log
+\frac{3^{2788}}
+{2^{3172}5^{537}}.
+}
+~~~
+
+Exact integer comparison gives
+
+~~~math
+3^{2788}
+>
+2^{3172}5^{537},
+~~~
+
+hence
+
+~~~math
+\rho>0.
+~~~
+
+Also,
+
+~~~math
+\chi-\rho
+=
+(878,-1756,-709),
+~~~
+
+which is
+
+~~~math
+\boxed{
+\chi-\rho
+=
+\log
+\frac{2^{4188}5^{709}}
+{3^{3681}}.
+}
+~~~
+
+Exact comparison gives
+
+~~~math
+2^{4188}5^{709}
+>
+3^{3681},
+~~~
+
+so
+
+~~~math
+\boxed{
+0<\rho<\chi.
+}
+~~~
+
+Thus the next Euclidean relation is
+
+~~~math
+\boxed{
+\eta_*
+=
+3\chi+\rho.
+}
+~~~
+
+---
+
+## 2. Seam at e=5 kappa + chi
+
+In the first chi chamber
+
+~~~math
+5\kappa<e<5\kappa+\chi,
+~~~
+
+each old eta-star anchor supported the local pattern
+
+~~~math
+C_0/M_7/C_0/M_6.
+~~~
+
+At
+
+~~~math
+e=5\kappa+\chi,
+~~~
+
+the M7 center width becomes zero.
+
+Keeping equality seeds separate, the generic seam atlas therefore has exactly:
+
+~~~math
+\boxed{
+86\text{ C}_0\text{ bands}
+}
+~~~
+
+and
+
+~~~math
+\boxed{
+40\text{ M}_6\text{ bands}.
+}
+~~~
+
+The companion verifier reconstructs all 126 generic seam intervals and confirms the species dimensions
+
+~~~math
+5554
+~~~
+
+and
+
+~~~math
+2612
+~~~
+
+respectively.
+
+No M7 generic interval survives the seam.
+
+---
+
+## 3. First chamber above the second chi seam
+
+Write
+
+~~~math
+e
+=
+5\kappa+\chi+\delta,
+\qquad
+0<\delta<\chi.
+~~~
+
+For one eta-star cell, the exact local ordering is
+
+~~~math
+\boxed{
+\begin{array}{ccl}
+(0,\delta)
+&:&K_1,\\
+(\delta,\chi)
+&:&C_0,\\
+(\chi,\chi+\delta)
+&:&K_1,\\
+(\chi+\delta,2\chi)
+&:&C_0,\\
+(2\chi,2\chi+\delta)
+&:&K_1,\\
+(2\chi+\delta,\eta_*)
+&:&M_6.
+\end{array}
+}
+~~~
+
+Translated by every old anchor
+
+~~~math
+m\kappa+a\eta_*,
+~~~
+
+this generates the whole chamber.
+
+The exact unique-anchor counts are:
+
+~~~math
+\boxed{
+127\text{ K}_1\text{ bands},
+}
+~~~
+
+~~~math
+\boxed{
+86\text{ C}_0\text{ bands},
+}
+~~~
+
+and
+
+~~~math
+\boxed{
+40\text{ M}_6\text{ bands}.
+}
+~~~
+
+Hence
+
+~~~math
+127+86+40
+=
+\boxed{253}
+~~~
+
+generic open bands.
+
+---
+
+## 4. The new K1 collision species
+
+Retain from SZ-RETURN-COCYCLE-14
+
+~~~math
+\mathcal M_7
+~~~
+
+with
+
+~~~math
+|\mathcal M_7|=1466
+~~~
+
+per orientation, and the truncated collision body
+
+~~~math
+\mathcal X
+~~~
+
+with
+
+~~~math
+|\mathcal X|=1311.
+~~~
+
+The first collision species was
+
+~~~math
+\mathcal K_0
+=
+\mathcal M_7
+\sqcup
+(\chi+\mathcal X).
+~~~
+
+The new species is
+
+~~~math
+\boxed{
+\mathcal K_1
+=
+\mathcal M_7
+\sqcup
+(\chi+\mathcal X)
+\sqcup
+(2\chi+\mathcal X).
+}
+~~~
+
+The three pieces are disjoint in the present chamber.
+
+Therefore
+
+~~~math
+\begin{aligned}
+|\mathcal K_1|
+&=
+1466
++
+1311
++
+1311
+\\
+&=
+\boxed{4088}
+\end{aligned}
+~~~
+
+per orientation.
+
+Thus the full two-orientation matrix has
+
+~~~math
+\boxed{
+2\cdot4088
+=
+8176
+}
+~~~
+
+variables.
+
+This is the second chi collision species.
+
+---
+
+## 5. Exact row census
+
+For each orientation of K1, the source-row census is
+
+~~~math
+\boxed{
+A:792,
+\qquad
+B:792,
+\qquad
+D:793,
+\qquad
+T:1711.
+}
+~~~
+
+These sum to
+
+~~~math
+792+792+793+1711
+=
+4088.
+~~~
+
+Relative to the first collision species C0 census
+
+~~~math
+A:538,
+\quad
+B:538,
+\quad
+D:539,
+\quad
+T:1162,
+~~~
+
+the extra chi-shifted collision body contributes
+
+~~~math
+\boxed{
+A:254,
+\quad
+B:254,
+\quad
+D:254,
+\quad
+T:549.
+}
+~~~
+
+These sum to
+
+~~~math
+1311,
+~~~
+
+exactly the size of X.
+
+Thus the collision body repeats once without changing its internal row census.
+
+---
+
+## 6. New-band graph uniqueness
+
+Let a new-band anchor be
+
+~~~math
+z_0
+=
+m\kappa
++
+a\eta_*
++
+b\chi,
+~~~
+
+with the exact unique anchor set generated by
+
+~~~math
+0\le m\le4,
+\qquad
+0\le a\le8,
+\qquad
+b=0,1,2.
+~~~
+
+Canonicalize
+
+~~~math
+z=z_0+\zeta,
+\qquad
+0<\zeta<\delta.
+~~~
+
+With
+
+~~~math
+e
+=
+5\kappa+\chi+\delta,
+~~~
+
+all source arguments become
+
+~~~math
+C+\zeta
+~~~
+
+or
+
+~~~math
+C+\delta-\zeta.
+~~~
+
+After subtracting z0 from the orientation constants, every one of the 127 new bands has exactly the same row graph.
+
+The companion verifier certifies every region inequality uniformly over
+
+~~~math
+0\le\zeta\le\delta\le\chi
+~~~
+
+by checking the affine margins on the three closed parameter-triangle vertices.
+
+Every vertex sign reduces to an exact prime-power comparison.
+
+Thus K1 is one genuine source-level matrix species.
+
+---
+
+## 7. Inherited C0 species
+
+The surviving C0 bands are not new matrices.
+
+Relative to the C0 graph from the first chi chamber, the current C0 graph is obtained by the exact orientation-dependent relabeling
+
+~~~math
+(+):C\mapsto C,
+~~~
+
+~~~math
+(-):C\mapsto C+\chi.
+~~~
+
+The verifier checks row-by-row graph equality under this relabeling.
+
+Therefore every 5554 band in the present chamber inherits the invertibility certificate from SZ-RETURN-COCYCLE-15.
+
+---
+
+## 8. Inherited M6 species
+
+Likewise, the surviving M6 graph is the previously certified M6 / 2612 species.
+
+The exact current relabeling is
+
+~~~math
+(+):C\mapsto C+\chi,
+~~~
+
+~~~math
+(-):C\mapsto C.
+~~~
+
+The companion verifier checks exact row-graph equality under this orientation shift.
+
+Therefore every 2612 band in the present chamber is already certified invertible.
+
+---
+
+## 9. Next topology event
+
+In one eta-star cell, the surviving C0 center widths are
+
+~~~math
+\chi-\delta.
+~~~
+
+Thus they collapse simultaneously at
+
+~~~math
+\delta=\chi,
+~~~
+
+i.e.
+
+~~~math
+\boxed{
+e
+=
+5\kappa+2\chi.
+}
+~~~
+
+At that value, the surviving M6 interval has width
+
+~~~math
+\begin{aligned}
+\eta_*
+-
+(2\chi+\delta)
+&=
+\eta_*
+-
+3\chi
+\\
+&=
+\boxed{\rho}.
+\end{aligned}
+~~~
+
+Therefore rho is the next Euclidean residual that becomes exposed at the following seam.
+
+The present pass stops before that seam.
+
+---
+
+## 10. Standing
+
+The exact current standing is:
+
+### seam
+
+~~~math
+e=5\kappa+\chi
+~~~
+
+typed.
+
+### first chamber above
+
+~~~math
+5\kappa+\chi
+<
+e
+<
+5\kappa+2\chi
+~~~
+
+fully classified into three graph species:
+
+- K1 / 8176: new, invertibility open;
+- C0 / 5554: certified;
+- M6 / 2612: certified.
+
+Thus the chamber is **not yet declared closed** solely because K1 remains uncertified.
+
+---
+
+## 11. Determination
+
+~~~math
+\boxed{
+\texttt{SZ-RETURN-COCYCLE-16:
+SECOND CHI SEAM TYPED /
+8176 K1 SPECIES EXTRACTED /
+RHO RESIDUAL IDENTIFIED}
+}
+~~~
+
+No canonical SZ theorem cursor moves automatically.
+
+---
+
+## 12. Next cursor
+
+The next bounded task is
+
+~~~math
+\boxed{
+\texttt{SZ-RETURN-COCYCLE-17 /
+K1 REFLECTION-SECTOR INVERTIBILITY}.
+}
+~~~
+
+Priority:
+
+1. use the equal-orientation constant set
+   ~~~math
+   \mathcal K_1
+   ~~~
+   to diagonalize the 8176 matrix into two 4088 reflection sectors;
+2. test whether the same rational inverse envelope
+   ~~~math
+   \|R\|_\infty<64,
+   \qquad
+   \|I-RA_0\|_\infty<1/2950
+   ~~~
+   persists;
+3. certify K1 if possible;
+4. then promote
+   ~~~math
+   5\kappa+\chi
+   <
+   e
+   <
+   5\kappa+2\chi
+   ~~~
+   as closed;
+5. only after that type the rho seam at e=5 kappa+2 chi.
+
+**Stop rule:** do not extrapolate a general chi-tier ladder from K0 and K1 before the rho collision is typed.
