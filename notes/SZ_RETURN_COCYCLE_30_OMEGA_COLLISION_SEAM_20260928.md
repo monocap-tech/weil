@@ -10,6 +10,10 @@ Companion verifier:
 
 experiments/sz_return_cocycle_30_omega_collision_seam_discover.py
 
+Repository-side ratification run:
+
+GitHub Actions run 36463656961, job 109068213512, conclusion SUCCESS.
+
 ---
 
 ## 0. Result
