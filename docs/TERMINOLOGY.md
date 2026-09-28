@@ -1824,3 +1824,103 @@ is intrinsically support-dependent and may cross the unit threshold as (a) varie
 Therefore the bare source-level Cauchy response cannot by itself encode the support crossing. Any bridge must introduce additional support-dependent data, such as a resolvent extremizer, dual multiplier, or reproducing kernel.
 
 **Status:** branch-local RPB terminology.
+
+
+## Resolvent multiplier candidate
+
+For a compact-window resolvent extremizer
+
+```math
+h_{a,u}
+=
+A_{B,a}^{-1}\Phi_a^{*}u,
+```
+
+the **resolvent multiplier candidate** is its centered bilateral Laplace transform
+
+```math
+\psi_{a,u}^{\rm res}(s)
+=
+\int_{-a}^{a}
+h_{a,u}(x)
+e^{x(s-1/2)}
+\,dx.
+```
+
+On any bounded support neighborhood and the closed critical strip
+
+```math
+0\le\Re s\le1,
+```
+
+a uniform (L^2) bound on (h_{a,u}) gives a uniform strip bound on
+(psi_{a,u}^{\rm res}).
+
+The selected zero evaluations of this transform recover the selected analysis
+coordinates of (h_{a,u}), up to the fixed raw/pair normalization convention.
+
+**Status:** branch-local RPB terminology.
+
+## Selected-preserving projection of a multiplier family
+
+Let (\mathcal C_v) be the selected contracted-residue functional for a fixed
+source (v), and let (\chi) be a fixed admissible multiplier with
+
+```math
+\mathcal C_v[\chi]\ne0.
+```
+
+For any multiplier family (\phi_a), its **selected-preserving projection
+relative to (\chi)** is
+
+```math
+\Pi_v^{\chi}\phi_a
+=
+\phi_a
+-
+\frac{\mathcal C_v[\phi_a]}
+{\mathcal C_v[\chi]}
+\chi.
+```
+
+Then
+
+```math
+\mathcal C_v[
+\Pi_v^{\chi}\phi_a
+]
+=
+0.
+```
+
+Uniform boundedness of the projected family requires uniform boundedness of
+both (\phi_a) and the scalar ratios
+(\mathcal C_v[\phi_a]/\mathcal C_v[\chi]).
+
+**Status:** branch-local RPB terminology.
+
+## Scalar crossing-custody gap
+
+The **scalar crossing-custody gap** is the unresolved step of proving that a
+support-dependent multiplier derived from the resolvent extremizer carries the
+Birman--Schwinger over-budget datum
+
+```math
+\kappa_a-1
+```
+
+through the scalar selected-contraction / explicit-formula normalization.
+
+Horizon 1 treats (\mathcal C_v) abstractly and does not identify it with the
+Hermitian selected-coordinate pairing. Therefore the vector identity
+
+```math
+\Phi_a h_{a,u_a}
+=
+\kappa_a u_a
+```
+
+does not, by itself, give a certified scalar identity involving
+(\mathcal C_v[\psi_{a,u_a}^{\rm res}]).
+
+**Status:** branch-local RPB terminology.
