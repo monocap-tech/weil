@@ -1353,3 +1353,56 @@ The background has a **strict background screening margin** at support (c) when 
 A strict margin can be propagated to a right neighborhood only with an additional continuity theorem strong enough to control the background defect/reduced screening map in operator norm. Horizon 1 does not currently supply that support-parameter continuity statement.
 
 **Status:** branch-local RPB terminology.
+
+
+## Full-nullspace coverage
+
+At a nonnegative compact-window support (c), let (A_c) be the canonical self-adjoint Weil operator and let (M_Pi) be a fixed finite selected negative sector with selected physical covariance
+
+```math
+K_M
+=
+S_M S_M^{*}.
+```
+
+The selected sector has **full-nullspace coverage** when
+
+```math
+ker A_c
+cap
+ker S_M^{*}
+=
+{0}.
+```
+
+Equivalently, the selected analysis map is injective on the finite-dimensional full nullspace.
+
+For the background-only operator
+
+```math
+A_{B,c}
+=
+A_c+K_M,
+```
+
+full-nullspace coverage is exactly the condition that (A_{B,c}) have trivial kernel.
+
+**Status:** branch-local RPB terminology.
+
+## Background physical spectral gap
+
+The background-only compact-window operator has a **background physical spectral gap** at support (c) when
+
+```math
+A_{B,c}
+\succeq
+\eta I
+```
+
+on (L^2(-c,c)) for some (eta>0).
+
+Because the canonical compact-window Weil operator has discrete lower-bounded spectrum, adding a bounded finite-rank selected covariance preserves compact resolvent/discrete spectrum. At a nonnegative endpoint, full-nullspace coverage is therefore equivalent to a positive background physical spectral gap.
+
+This is an (L^2)-spectral statement. It must not be identified with a coefficient-space contraction gap (|X_B|<1) without an explicit metric/comparison theorem.
+
+**Status:** branch-local RPB terminology.
