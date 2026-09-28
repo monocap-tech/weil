@@ -1,0 +1,25 @@
+name: SZ Return Cocycle 32 Nu Discovery
+
+on:
+  push:
+    branches:
+      - research/sz-return-cocycle-0
+    paths:
+      - "experiments/sz_return_cocycle_32_nu_collision_seam_discover.py"
+      - ".github/workflows/sz-return-cocycle-32.yml"
+
+concurrency:
+  group: sz-return-cocycle-32-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run nu seam discovery
+        run: python experiments/sz_return_cocycle_32_nu_collision_seam_discover.py
