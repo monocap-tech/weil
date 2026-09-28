@@ -1514,3 +1514,54 @@ e0) with the canonical zero-moment law
 Critical source custody is weaker than persistent strict-negative-ray custody: it preserves the selected arithmetic source even when the normalized negative margin collapses.
 
 **Status:** branch-local RPB terminology.
+
+
+## Source-level next-jet object
+
+For a fixed finite nonzero selected raw source (v) with
+
+```math
+\mathbf 1^Tv=0,
+```
+
+the **source-level next-jet object** is the arithmetic package
+
+```math
+R_v(z)
+=
+\sum_{\rho_j\in\Pi}
+\frac{v_j}{z-\rho_j},
+```
+
+```math
+\mathcal F_{v,R}[\psi]
+=
+O\!\left(\frac{\log R}{R}\right),
+```
+
+and
+
+```math
+\mathcal N_{v,R}[\psi]
+=
+\sum_{\mu}^{\rm near}
+m_\mu\psi(\mu)
+\frac{H_v^{(m_\mu)}(\mu)}
+{\Xi^{(m_\mu)}(\mu)}.
+```
+
+This object depends on the fixed source and multiplier/cutoff regime, not on how the source was produced.
+
+It must be distinguished from the canonical branch-level interface `AZ-NEXTJET-LOC`, whose closure semantics are currently attached to WD-T37.
+
+**Status:** branch-local RPB terminology.
+
+## Branch contradiction datum
+
+A **branch contradiction datum** is additional information, beyond existence of a fixed nonzero zero-moment source and its source-level next-jet representation, that makes a proposed actual-zeta next-jet estimate incompatible with the morphology branch that produced the source.
+
+Examples include a fixed normalized negative margin, a nonzero forcing functional, a transversality lower bound, or another quantified relation whose failure excludes the branch.
+
+The source-level next-jet object by itself is an identity/localization package and is not a contradiction datum.
+
+**Status:** branch-local RPB terminology.
