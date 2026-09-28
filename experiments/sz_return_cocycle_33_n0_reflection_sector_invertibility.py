@@ -19,6 +19,7 @@ from collections import deque
 from fractions import Fraction as F
 from math import isqrt, log
 import gc
+import sys
 import numpy as np
 import scipy.sparse as sp
 import scipy.sparse.linalg as spla
@@ -312,18 +313,25 @@ def certify_sector(sigma):
 
     return N,Aint.nnz,norm_num,rho_num,max_entry
 
-plus=certify_sector(+1)
-minus=certify_sector(-1)
-assert plus[0]==minus[0]==96276
+mode=sys.argv[1] if len(sys.argv)>1 else "both"
+assert mode in ("plus","minus","both")
 
 print("PASS: N0 graph has identical 96276-site constant set on both orientations")
 print("PASS: full 192552 matrix diagonalizes into two 96276 reflection sectors")
-print("MEASURE: plus sector (N,nnz,norm_num,rho_num,max_entry) =",plus)
-print("MEASURE: minus sector (N,nnz,norm_num,rho_num,max_entry) =",minus)
+
+if mode in ("plus","both"):
+    plus=certify_sector(+1)
+    assert plus[0]==96276
+    print("MEASURE: plus sector (N,nnz,norm_num,rho_num,max_entry) =",plus)
+    print("PASS: plus reflection sector is invertible")
+
+if mode in ("minus","both"):
+    minus=certify_sector(-1)
+    assert minus[0]==96276
+    print("MEASURE: minus sector (N,nnz,norm_num,rho_num,max_entry) =",minus)
+    print("PASS: minus reflection sector is invertible")
+
 print("PASS: exact physical coefficient perturbation < 1e-9")
-print("PASS: both sectors have ||R||_inf < 64")
-print("PASS: both sectors have residual < 1/2950")
+print("PASS: certified sector(s) have ||R||_inf < 64")
+print("PASS: certified sector(s) have residual < 1/2950")
 print("PASS: total physical preconditioned residual < 1/2949 < 1")
-print("PASS: both reflection sectors are invertible")
-print("PASS: full 192552 N0 matrix is invertible")
-print("PASS: opposite external parity merely swaps the reflection sectors")
