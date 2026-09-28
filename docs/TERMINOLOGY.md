@@ -1247,3 +1247,27 @@ qquad
 Relative negative-tail control, unlike an absolute uniform tail bound, is sufficient to preserve the strict negative sign in one fixed finite packet arbitrarily close to the plateau edge.
 
 **Status:** branch-local RPB terminology.
+
+
+## Selected crossing support
+
+Fix a finite selected zero packet (Pi) carrying an endpoint neutral vector at support (c).
+
+The **selected crossing support** is
+
+```math
+c_\Pi
+=
+\inf
+\left\{
+a\ge c:
+\mathcal A_{\Pi,a}
+\text{ contains a strictly }J\text{-negative vector}
+\right\},
+```
+
+with (c_\Pi=+\infty) if no such support exists.
+
+Because the endpoint neutral vector remains in every larger selected analysis space by support monotonicity, the fixed selected packet can only remain critical/nonnegative or cross into a negative regime; it cannot become strictly positive.
+
+**Status:** branch-local RPB terminology.
