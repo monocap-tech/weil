@@ -1144,3 +1144,31 @@ in which case the enlarged compact-window Weil form has entered a negative spect
 This dichotomy refines the branch-local interpretation of `AZ-FIN-WEIL-NULL-EXTENSION`. It does not by itself identify selected negative-sector custody after a negative fall-through.
 
 **Status:** branch-local RPB terminology.
+
+
+## Global Weil radical
+
+A compactly supported physical vector (k) lies in the **global Weil radical** when
+
+```math
+\mathfrak q(k,h)=0
+\qquad
+\text{for every }h\in C_c^\infty(\mathbb R).
+```
+
+Equivalently, every translated matrix coefficient with (k) in one slot vanishes after using common-translation covariance.
+
+In the RPB neutral-plateau analysis, persistence of the same compact mode in the kernel of every sufficiently large localized Weil operator forces membership in the global Weil radical.
+
+**Status:** branch-local RPB terminology.
+
+## Entire-density obstruction
+
+The **entire-density obstruction** is the incompatibility between:
+
+1. a nonzero compactly supported (L^2) function (k), whose Fourier transform is an entire function of finite exponential type and hence has only (O(R)) zeros in (|z|\le R); and
+2. a requirement that (widehat k) vanish at a set of distinct real points with counting function (gg R\log R).
+
+In RPB-11, Conrey's unconditional positive proportion of simple critical-line zeta zeros supplies such a set of real ordinates.
+
+**Status:** branch-local RPB terminology.
