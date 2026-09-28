@@ -1665,3 +1665,102 @@ It must not be identified without an explicit intertwining theorem with a coeffi
 The native zero synthesis is Hilbert--Schmidt in the (H^{-1}_L) metric, while the canonical compact-window operator is an unbounded compact-resolvent operator on (L^2). These are equivalent representations of the quadratic-form problem only after the relevant Green/metric transport is explicitly supplied.
 
 **Status:** branch-local RPB custody rule.
+
+
+## Green-congruence transport
+
+Fix a compact support interval and the positive Dirichlet operator
+
+```math
+L=-\partial_u^2+\frac14,
+\qquad
+G=L^{-1}.
+```
+
+Let (H^{-1}_L) be the completion of (L^2) for
+
+```math
+\langle f,g\rangle_{-1,L}
+=
+\langle f,Gg\rangle_{L^2}.
+```
+
+The map
+
+```math
+U=G^{1/2}
+```
+
+extends to a unitary
+
+```math
+U:H^{-1}_L\to L^2.
+```
+
+For a canonical compact-window closed form (q_A) with operator (A), its Green-preconditioned/native realization is the form
+
+```math
+q_{\rm nat}[h]
+=
+q_A[Gh].
+```
+
+After transport by (U),
+
+```math
+\widetilde q_{\rm nat}[k]
+=
+q_A[G^{1/2}k],
+```
+
+so the transported bounded/preconditioned operator is the form congruence
+
+```math
+\widetilde D
+=
+G^{1/2}AG^{1/2}.
+```
+
+This is a form/metric intertwiner. It does not assert ordinary bounded similarity between (A) and (widetilde D).
+
+**Status:** branch-local RPB terminology.
+
+## Native inverse-form Gram
+
+Let a strictly positive canonical background operator (A_B) have Green-preconditioned transport
+
+```math
+\widetilde D_B
+=
+G^{1/2}A_BG^{1/2},
+```
+
+and let (Phi:L^2\to M) be a finite selected analysis map. Put
+
+```math
+\widetilde S_M
+=
+G^{1/2}\Phi^{*}.
+```
+
+The **native inverse-form Gram** is the finite matrix defined by
+
+```math
+\langle \mathsf K_{\rm nat}u,u\rangle
+=
+\|\widetilde D_B^{-1/2}\widetilde S_Mu\|^2,
+```
+
+where the inverse is understood on its natural quadratic-form domain.
+
+Under Green-congruence transport,
+
+```math
+\mathsf K_{\rm nat}
+=
+\Phi A_B^{-1}\Phi^{*}.
+```
+
+Although (widetilde D_B) is compact and not boundedly invertible on an infinite-dimensional carrier, this finite sandwich is bounded whenever (A_B\succ0).
+
+**Status:** branch-local RPB terminology.
