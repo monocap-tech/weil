@@ -1991,3 +1991,54 @@ example by differentiability plus a nonzero transversality derivative, or by
 another two-sided modulus theorem.
 
 **Status:** branch-local RPB terminology.
+
+
+## Half-Sobolev boundary obstruction
+
+For a compactly supported function (h) on an interval, the **half-Sobolev
+boundary obstruction** is the failure of its zero extension to belong to
+(H^{1/2}(\mathbb R)).
+
+A sufficient diagnostic near a boundary point is
+
+```math
+\int_0^\varepsilon
+\frac{|h(c-r)|^2}{r}\,dr
+=
+\infty.
+```
+
+Indeed this integral is contained, up to constants, in the cross-boundary part
+of the (H^{1/2}) Gagliardo seminorm of the zero extension.
+
+For logarithmic Dirichlet problems, the optimal model boundary scale
+
+```math
+|h(c-r)|
+\asymp
+\frac1{\sqrt{\log(1/r)}}
+```
+
+produces precisely such divergence.
+
+**Status:** branch-local RPB terminology.
+
+## Selected boundary-cancellation obligation
+
+The **selected boundary-cancellation obligation** is the additional statement
+needed to show that the special resolvent extremizers
+
+```math
+h_{a,u}
+=
+A_{B,a}^{-1}\Phi_a^*u
+```
+
+avoid the generic logarithmic Dirichlet boundary layer strongly enough to lie
+uniformly in (H^{1/2}), or in another regularity class sufficient for support
+differentiation.
+
+Smoothness of the finite selected forcing (\Phi_a^*u) alone does not satisfy
+this obligation.
+
+**Status:** branch-local RPB terminology.
