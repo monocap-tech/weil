@@ -336,31 +336,33 @@ print("MEASURE: row census =",tuple(rc[(+1,x)] for x in ("A","B","D","T")))
 # Identify the omega-shifted return body.
 assert T3 <= NEWSET
 DIFF=NEWSET-T3
-BACK={sub3(x,OMEGA3) for x in DIFF}
-print("MEASURE: added body size =",len(BACK))
-for name,S in (("S0",S0),("T0",T0),("T1",T1),("T2",T2),("T3",T3),("WBODY",WBODY)):
-    print("COMPARE:",name,
-          "missing_from_body",len(S-BACK),
-          "extra_over",len(BACK-S),
-          "intersection",len(BACK&S))
+BACK_OMEGA={sub3(x,OMEGA3) for x in DIFF}
+BACK_4TAU={sub3(x,mul3(4,TAU3)) for x in DIFF}
+print("MEASURE: added body size =",len(DIFF))
+for label,BACK in (("minus_omega",BACK_OMEGA),("minus_4tau",BACK_4TAU)):
+    for name,S in (("S0",S0),("T0",T0),("T1",T1),("T2",T2),("T3",T3),("WBODY",WBODY)):
+        print("COMPARE:",label,name,
+              "missing_from_body",len(S-BACK),
+              "extra_over",len(BACK-S),
+              "intersection",len(BACK&S))
 
-# Inherited T3: reflected orientation +omega.
+# Inherited T3: reflected orientation +tau.
 D0=tauf/3
 E28=base28f+D0
 OT3=orbit(E28,D0/2)
 GT3=graph(OT3,E28,D0/2,BASE28,(0,0,0))
 Ocur=orbit(E,(DELTA+tauf)/2)
 Gcur=graph(Ocur,E,(DELTA+tauf)/2,BASE30,(0,0,0))
-assert Gcur==shift_graph(GT3,(0,0,0),OMEGA3)
+assert Gcur==shift_graph(GT3,(0,0,0),TAU3)
 
-# Inherited S0: positive orientation +omega.
+# Inherited S0: positive orientation +tau.
 zS=3*tauf+(D0+(sigf-3*tauf))/2
 OS0=orbit(E28,zS)
 GS0=graph(OS0,E28,zS,BASE28,mul3(3,TAU3))
 zcur=4*tauf+(DELTA+omegaf)/2
 OcurS=orbit(E,zcur)
 GcurS=graph(OcurS,E,zcur,BASE30,mul3(4,TAU3))
-assert GcurS==shift_graph(GS0,OMEGA3,(0,0,0))
+assert GcurS==shift_graph(GS0,TAU3,(0,0,0))
 
 # Next residual.
 assert abs((tauf-omegaf)-nuf)<1e-15
@@ -369,8 +371,8 @@ assert 0<nuf<omegaf
 print("PASS: omega seam has T3/86774 and S0/18984 generic species")
 print("PASS: first omega chamber has 1643 new anchors, 1348 inherited T3, 295 inherited S0")
 print("PASS: checked new-anchor families normalize to one source graph")
-print("PASS: inherited T3 is reflected-orientation +omega relabeling")
-print("PASS: inherited S0 is positive-orientation +omega relabeling")
+print("PASS: inherited T3 is reflected-orientation +tau relabeling")
+print("PASS: inherited S0 is positive-orientation +tau relabeling")
 print("PASS: nu=tau-omega with 0<nu<omega")
 print("PASS: next seam delta=omega collapses S0; T3 width becomes nu")
 print("NOTE: new omega species invertibility is not claimed in this seam pass")
