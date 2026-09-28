@@ -2042,3 +2042,72 @@ Smoothness of the finite selected forcing (\Phi_a^*u) alone does not satisfy
 this obligation.
 
 **Status:** branch-local RPB terminology.
+
+
+## Selected half-Sobolev regularity kernel
+
+For a fixed support (a) with strictly positive complementary-background
+operator (A_{B,a}), let
+
+```math
+h_{a,u}
+=
+A_{B,a}^{-1}\Phi_a^{*}u,
+\qquad
+u\in M.
+```
+
+The **selected half-Sobolev regularity kernel** is
+
+```math
+\mathcal R_{1/2}(a)
+:=
+\left\{
+u\in M:
+\widetilde h_{a,u}
+\in
+H^{1/2}(\mathbb R)
+\right\},
+```
+
+where (\widetilde h_{a,u}) is the zero extension outside the support
+interval.
+
+Because (u\mapsto h_{a,u}) is linear and (H^{1/2}) is a vector space,
+(\mathcal R_{1/2}(a)) is a linear subspace of the finite selected sector.
+
+This definition avoids assuming that a pointwise logarithmic boundary
+coefficient exists.
+
+**Status:** branch-local RPB terminology.
+
+## Boundary-coefficient existence gap
+
+The **boundary-coefficient existence gap** is the missing theorem required to
+replace sharp logarithmic boundary bounds
+
+```math
+|h(x)|
+\lesssim
+\ell^{1/2}(\operatorname{dist}(x,\partial I))
+```
+
+and Hopf-type positive lower bounds by a genuine signed/complex asymptotic
+
+```math
+h(a-r)
+=
+\mathfrak b^{+}(h)\,
+\ell^{1/2}(r)
++
+o(\ell^{1/2}(r)),
+```
+
+and similarly at the left endpoint.
+
+Existing logarithmic-Laplacian boundary regularity does not by itself provide
+such a linear coefficient map for arbitrary signed/complex solutions, and no
+such theorem is presently established for the finite-enlarged Weil background
+operator.
+
+**Status:** branch-local RPB terminology.
