@@ -1035,3 +1035,60 @@ where (delta_v) is the largest positive real displacement of an active selected 
 Equivalently, in multiplicative scale it is a source-adapted smoothed prime-number-theorem remainder bound.
 
 `RPB-POL-TAIL` is not a public Horizon-1 interface and is not currently known to follow from `AZ-NEXTJET-LOC` or imply it.
+
+
+## Weil screw potential
+
+The **Weil screw potential** is the branch-local name for Suzuki's continuous real-even function (g_\zeta(t)) associated with the zeta Weil form.
+
+Its load-bearing relation to the Weil translation system is distributional:
+
+```math
+k_\zeta
+=
+-g_\zeta'',
+```
+
+where (k_\zeta) is the translation-invariant distribution kernel representing the Weil preform.
+
+The term **potential** emphasizes that (g_\zeta) is two distributional integrations smoother than the original Weil kernel. It does not assert that (g_\zeta) is positive definite unconditionally.
+
+Suzuki's stronger Krein--Langer screw-kernel positivity condition is RH-equivalent.
+
+**Status:** branch-local RPB terminology; source is Suzuki's screw-function formalism.
+
+## Screw-kernel regularization
+
+The **screw-kernel regularization** of the Weil form is the continuous Hermitian kernel
+
+```math
+\widetilde g_\zeta(x,y)
+=
+g_\zeta(x-y)
+-
+g_\zeta(x)
+-
+g_\zeta(-y)
++
+g_\zeta(0).
+```
+
+On zero-mean functions, the subtraction terms vanish after integration, so the corresponding quadratic form agrees with convolution by (g_\zeta(x-y)).
+
+This regularization is a continuous-kernel realization of the same Weil form after differentiation of test functions; it is not an independent arithmetic source.
+
+**Status:** branch-local RPB terminology.
+
+## Potentialization
+
+**Potentialization** is the passage from the distribution kernel (k_\zeta) of the Weil preform to its normalized continuous second primitive (g_\zeta):
+
+```math
+k_\zeta=-g_\zeta''.
+```
+
+At the matrix-coefficient level, potentialization replaces a translated Weil coefficient by the second derivative of a smoother translated screw-potential coefficient.
+
+This lowers distributional order but does not remove the underlying spectral data.
+
+**Status:** branch-local RPB terminology.
