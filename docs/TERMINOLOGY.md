@@ -1271,3 +1271,50 @@ with (c_\Pi=+\infty) if no such support exists.
 Because the endpoint neutral vector remains in every larger selected analysis space by support monotonicity, the fixed selected packet can only remain critical/nonnegative or cross into a negative regime; it cannot become strictly positive.
 
 **Status:** branch-local RPB terminology.
+
+
+## Background screenability boundary
+
+Fix a decomposition of the negative zero-side coefficient sector
+
+```math
+K_-
+=
+M_\Pi\oplus B_\Pi
+```
+
+relative to a finite selected packet (Pi).
+
+The **background screenability boundary** is the first support at which the background-only defect
+
+```math
+D_{B,a}
+=
+S_{+,a}S_{+,a}^{*}
+-
+S_{B_\Pi,a}S_{B_\Pi,a}^{*}
+```
+
+fails to be nonnegative.
+
+Equivalently, before this boundary the background admits a contractive Douglas screening map and may be legitimately absorbed into the residual positive budget by WD-B4.
+
+**Status:** branch-local RPB terminology.
+
+## Residual selected custody
+
+A fixed finite selected sector (M_\Pi) has **residual selected custody** at support (a) when the negative background (B_\Pi) is contractively screenable and has been eliminated by WD-B4, leaving
+
+```math
+D_{\rm full,a}
+=
+S_{{\rm eff},a}S_{{\rm eff},a}^{*}
+-
+S_{M_\Pi,a}S_{M_\Pi,a}^{*}.
+```
+
+In this representation, every negative direction of the full defect is owned by the same fixed selected sector (M_\Pi) relative to the residual positive budget.
+
+Residual selected custody is not the same as negativity of the raw selected form obtained by simply deleting the background term.
+
+**Status:** branch-local RPB terminology.
