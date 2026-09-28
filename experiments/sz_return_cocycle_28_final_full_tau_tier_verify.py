@@ -325,7 +325,7 @@ assert len(LOW)==86774
 certify_new_band(LOW,E,DELTA/2,(0,0,0))
 GNEW=graph(LOW,E,DELTA/2,BASE28,(0,0,0))
 
-# Representative from the newly added 2tau+S0 anchor family.
+# Representative from the newly added 3tau+S0 anchor family.
 second_family={add3(o,mul3(3,TAU3)) for o in s0_offsets}
 rep2=min(second_family,key=eval3)
 O2=orbit(E,eval3(rep2)+DELTA/2)
@@ -343,7 +343,7 @@ assert constsets[+1]==constsets[-1]==T3
 for ori in (+1,-1):
     assert tuple(rc[(ori,x)] for x in ("A","B","D","T"))==(8406,8406,8407,18168)
 
-# Fixed-module increment from T1.
+# Fixed-module increment from T2.
 assert tuple(
     b-a for a,b in zip(
         (6566,6566,6567,14191),
