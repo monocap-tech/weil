@@ -10,12 +10,12 @@ Companion verifier:
 
 experiments/sz_return_cocycle_35_n1_reflection_sector_invertibility.py
 
-Repository-side exact run:
+Authoritative non-assumptive repository-side run:
 
-GitHub Actions run 36475877484.
+GitHub Actions run 36478582803.
 
-- plus job 109109344358: SUCCESS;
-- minus job 109109344874: SUCCESS.
+- plus job 109118354661: SUCCESS;
+- minus job 109118354632: SUCCESS.
 
 ---
 
