@@ -1478,3 +1478,39 @@ Equivalently, \(\lambda_{B',a}\) is the lowest spectral value of the background-
 Under the fixed-interval scaling used by Suzuki, the added selected covariance is a finite-rank bounded quadratic perturbation depending continuously on the support parameter.
 
 **Status:** branch-local RPB terminology.
+
+
+## Critical source custody
+
+A fixed finite selected sector has **critical source custody** along a right-approaching negative branch when normalized selected analysis vectors
+
+```math
+z_n=(a_n,u_n),
+\qquad
+\|z_n\|=1,
+\qquad
+[z_n,z_n]_J<0,
+```
+
+admit, after passage to a subsequence, a limit selected coordinate
+
+```math
+u_n\to u_*\ne0
+```
+
+even though the limiting (J)-signature may be neutral:
+
+```math
+[z_n,z_n]_J\to0.
+```
+
+The nonzero (u_*) determines a fixed finite raw zero source (v_*
+e0) with the canonical zero-moment law
+
+```math
+\mathbf 1^Tv_*=0.
+```
+
+Critical source custody is weaker than persistent strict-negative-ray custody: it preserves the selected arithmetic source even when the normalized negative margin collapses.
+
+**Status:** branch-local RPB terminology.
