@@ -122,7 +122,7 @@ def orbit(e,z):
     return seen
 
 # ---------------------------------------------------------------------------
-# Exact K2 constant set from COCYCLE-16
+# Exact K2 constant set from COCYCLE-18
 # ---------------------------------------------------------------------------
 
 skeleton=[]
