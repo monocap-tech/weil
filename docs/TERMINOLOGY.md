@@ -1565,3 +1565,76 @@ Examples include a fixed normalized negative margin, a nonzero forcing functiona
 The source-level next-jet object by itself is an identity/localization package and is not a contradiction datum.
 
 **Status:** branch-local RPB terminology.
+
+
+## Background Birman--Schwinger matrix
+
+Fix a finite selected negative sector (M) and a strictly positive complementary-background operator
+
+```math
+A_{B,a}\succ0.
+```
+
+Let (S_{M,a}:M\to\mathcal H_a) be the selected physical synthesis.
+
+The **background Birman--Schwinger matrix** is the finite-dimensional positive operator
+
+```math
+\mathsf K_a
+:=
+S_{M,a}^{*}
+A_{B,a}^{-1}
+S_{M,a}
+\quad\text{on }M.
+```
+
+When the background has been eliminated by WD-B4, (mathsf K_a) equals (C_a^{*}C_a) for the Douglas reduced residual screening map (C_a).
+
+Thus
+
+```math
+D_{\rm full,a}\succeq0
+\iff
+\mathsf K_a\preceq I,
+```
+
+while strict selected over-budget negativity is equivalent to
+
+```math
+\lambda_{\max}(\mathsf K_a)>1.
+```
+
+**Status:** branch-local RPB terminology.
+
+## Inverse-background source energy
+
+For a selected coefficient (u\in M), its **inverse-background source energy** at support (a) is
+
+```math
+\mathfrak E_a(u)
+=
+\langle
+\mathsf K_a u,u
+\rangle
+-
+\|u\|^2.
+```
+
+Equivalently,
+
+```math
+\mathfrak E_a(u)
+=
+\langle
+A_{B,a}^{-1}S_{M,a}u,
+S_{M,a}u
+\rangle
+-
+\|u\|^2.
+```
+
+At a unit-gain neutral crossing this energy is zero on an endpoint singular direction; post-edge over-budget crossing means it is positive for some selected direction.
+
+After pair-to-raw conversion, the same quadratic form may be regarded as a finite-dimensional metric on zero-moment selected raw sources.
+
+**Status:** branch-local RPB terminology.
