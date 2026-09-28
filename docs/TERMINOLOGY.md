@@ -1172,3 +1172,41 @@ The **entire-density obstruction** is the incompatibility between:
 In RPB-11, Conrey's unconditional positive proportion of simple critical-line zeta zeros supplies such a set of real ordinates.
 
 **Status:** branch-local RPB terminology.
+
+
+## Finite-head sign capture
+
+Let
+
+```math
+Q_W(h)
+=
+\|S_+^*h\|^2
+-
+\|S_-^*h\|^2
+```
+
+be the full zero-side Weil form, and let (P_G^-) be a finite-coordinate exhaustion of the negative coefficient sector.
+
+A negative witness (h) has **finite-head sign capture at height (G)** when
+
+```math
+\|S_+^*h\|^2
+-
+\|P_G^-S_-^*h\|^2
+<0.
+```
+
+Every strict full-form negative witness has finite-head sign capture for some finite (G), because the negative coefficient tail is square summable.
+
+**Status:** branch-local RPB terminology.
+
+## Sign-custody escape
+
+A right-approaching sequence of strict full-form negative witnesses exhibits **sign-custody escape** when each witness has finite-head sign capture, but the least/canonical height needed to capture the strict sign tends to infinity.
+
+Equivalently, for every fixed finite negative-coordinate block, the selected finite-head form is eventually nonnegative even though the full form remains strictly negative.
+
+Sign-custody escape is weaker than full selected-sector escape: fixed low negative coordinates may remain strongly anchored, but an increasingly remote negative tail is required to tip the total signature below zero as the full negative margin tends to zero.
+
+**Status:** branch-local RPB terminology.
