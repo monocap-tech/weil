@@ -1764,3 +1764,63 @@ Under Green-congruence transport,
 Although (widetilde D_B) is compact and not boundedly invertible on an infinite-dimensional carrier, this finite sandwich is bounded whenever (A_B\succ0).
 
 **Status:** branch-local RPB terminology.
+
+
+## Resolvent extremizer
+
+For a strictly positive complementary-background operator (A_{B,a}), finite selected analysis map (Phi_a), and selected coefficient (u), the **resolvent extremizer** is
+
+```math
+h_{a,u}
+=
+A_{B,a}^{-1}Phi_a^{*}u.
+```
+
+It is the unique physical vector representing the Riesz extremizer for the inverse-background source energy:
+
+```math
+\langle
+\Phi_aA_{B,a}^{-1}\Phi_a^{*}u,u
+\rangle
+=
+\langle
+\Phi_a^{*}u,h_{a,u}
+\rangle
+=
+Q_{B,a}[h_{a,u}].
+```
+
+If (u) is an eigenvector of the Birman--Schwinger matrix with eigenvalue (kappa), then
+
+```math
+\Phi_a h_{a,u}
+=
+\kappa u.
+```
+
+**Status:** branch-local RPB terminology.
+
+## Support-decoupling obstruction
+
+The **support-decoupling obstruction** is the mismatch that a fixed raw selected source (v) determines the meromorphic reciprocal-Cauchy response
+
+```math
+R_v(\mu)
+=
+\sum_j
+\frac{v_j}{\mu-\rho_j},
+```
+
+independently of the compact-window support parameter (a), while the inverse-background Gram
+
+```math
+\mathsf K_a
+=
+\Phi_aA_{B,a}^{-1}\Phi_a^{*}
+```
+
+is intrinsically support-dependent and may cross the unit threshold as (a) varies.
+
+Therefore the bare source-level Cauchy response cannot by itself encode the support crossing. Any bridge must introduce additional support-dependent data, such as a resolvent extremizer, dual multiplier, or reproducing kernel.
+
+**Status:** branch-local RPB terminology.
