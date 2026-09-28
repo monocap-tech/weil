@@ -1,0 +1,25 @@
+name: SZ Return Cocycle 28 Final Tau Geometry
+
+on:
+  push:
+    branches:
+      - research/sz-return-cocycle-0
+    paths:
+      - "experiments/sz_return_cocycle_28_final_full_tau_tier_verify.py"
+      - ".github/workflows/sz-return-cocycle-28.yml"
+
+concurrency:
+  group: sz-return-cocycle-28-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run final tau geometry verifier
+        run: python experiments/sz_return_cocycle_28_final_full_tau_tier_verify.py
