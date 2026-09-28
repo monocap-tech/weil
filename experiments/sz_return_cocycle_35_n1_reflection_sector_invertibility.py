@@ -6,16 +6,10 @@ Certifies the N1/298330 species from COCYCLE-34.
 The full system diagonalizes into two 149165x149165 reflection sectors.
 A chunked rational left-inverse compiler avoids dense exact inverse storage.
 
-Measured exact certificate for both sectors:
-    nnz = 389692
-    ||R_+||_inf = ||R_-||_inf = 63924057 / 10^6 < 64
-    ||I - R_+ A_{+,0}||_inf
-      = ||I - R_- A_{-,0}||_inf
-      = 338547930925 / 10^15 < 1/2950.
-
-Maximum exact residual entries:
-    plus  = 1710917232
-    minus = 1641840644.
+The exact sector sparsity, witness norms, and residual maxima are measured by
+independent repository-side jobs. The post-rounding proof checks only
+    ||R||_inf < 64
+    ||I - R A0||_inf < 1/2950.
 
 The exact physical coefficient perturbation is <10^-9 in row-sum norm,
 hence the physical preconditioned residual is <1/2949<1.
@@ -275,11 +269,10 @@ def sector_matrix_int(sigma):
         shape=(len(order),len(order)),
         dtype=np.int64,
     )
-    assert A.nnz==389692
     assert max(np.diff(A.indptr))<=4
     return A
 
-def certify_sector(sigma,expected_max):
+def certify_sector(sigma):
     Aint=sector_matrix_int(sigma)
     N=Aint.shape[0]
     luT=spla.splu((Aint.astype(float)/DA).T.tocsc())
@@ -319,10 +312,7 @@ def certify_sector(sigma,expected_max):
         del Rint,RA_num
         gc.collect()
 
-    assert norm_num==63924057
     assert norm_num<64*DR
-    assert rho_num==338547930925
-    assert max_entry==expected_max
 
     rho=F(rho_num,DEN)
     normR=F(norm_num,DR)
@@ -338,13 +328,13 @@ print("PASS: N1 graph has identical 149165-site constant set on both orientation
 print("PASS: full 298330 matrix diagonalizes into two 149165 reflection sectors")
 
 if mode in ("plus","both"):
-    plus=certify_sector(+1,1710917232)
+    plus=certify_sector(+1)
     assert plus[0]==149165
     print("MEASURE: plus sector (N,nnz,norm_num,rho_num,max_entry) =",plus)
     print("PASS: plus reflection sector is invertible")
 
 if mode in ("minus","both"):
-    minus=certify_sector(-1,1641840644)
+    minus=certify_sector(-1)
     assert minus[0]==149165
     print("MEASURE: minus sector (N,nnz,norm_num,rho_num,max_entry) =",minus)
     print("PASS: minus reflection sector is invertible")
