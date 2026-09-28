@@ -6,14 +6,10 @@ Certifies the T3/86774 species from COCYCLE-28.
 The full system diagonalizes into two 43387x43387 reflection sectors.
 A chunked rational left-inverse compiler avoids dense exact inverse storage.
 
-Measured exact certificate for both sectors:
-    nnz = 88535
-    ||R||_inf = 63924057 / 10^6 < 64
-    ||I - R A0||_inf = 338547930925 / 10^15 < 1/2950.
-
-Maximum exact residual entries:
-    plus  = 1905595184
-    minus = 1660409900.
+The exact sector sparsity and residual maxima are measured by the full run.
+The post-rounding proof checks the established coarse envelope
+    ||R||_inf < 64
+    ||I - R A0||_inf < 1/2950.
 
 The exact physical coefficient perturbation is <10^-9 in row-sum norm,
 hence the physical preconditioned residual is <1/2949<1.
