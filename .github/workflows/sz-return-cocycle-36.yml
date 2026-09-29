@@ -1,4 +1,4 @@
-name: SZ Return Cocycle 36 Fast Overlap Probe
+name: SZ Return Cocycle 36 Fast Orbit Probe
 
 on:
   push:
@@ -10,11 +10,11 @@ on:
 jobs:
   probe:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Measure failed fixed-U overlap
-        run: python experiments/sz_return_cocycle_36_overlap_probe.py
+      - name: Measure third nu-tier orbit
+        run: python experiments/sz_return_cocycle_36_orbit_probe.py
