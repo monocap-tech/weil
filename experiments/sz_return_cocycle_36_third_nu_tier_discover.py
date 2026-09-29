@@ -166,7 +166,8 @@ N0=O0 | {add3(c,OMEGA3) for c in VBODY}
 TOPNU2={add3(c,OMEGA3) for c in TOPNU}
 UBODY=O0 | TOPNU2
 N1=N0 | {add3(c,NU3) for c in UBODY}
-N2=N1 | {add3(c,NU3) for c in UBODY}
+SHIFTU={add3(c,NU3) for c in UBODY}
+N2_CAND=N1 | SHIFTU
 
 assert len(K2)==5399
 assert len(S0)==9492
@@ -183,10 +184,11 @@ assert len(N0)==96276
 assert len(TOPNU2)==5
 assert len(UBODY)==52889
 assert len(N1)==149165
-assert len(N2)==202054
 assert not (O0 & TOPNU2)
 assert not (N0 & {add3(c,NU3) for c in UBODY})
-assert not (N1 & {add3(c,NU3) for c in UBODY})
+print("MEASURE: |shift(nu+U)| =",len(SHIFTU))
+print("MEASURE: |N1 intersect (nu+U)| =",len(N1 & SHIFTU))
+print("MEASURE: |N1 union (nu+U)| =",len(N2_CAND))
 assert not (O0 & {add3(c,OMEGA3) for c in VBODY})
 assert not (T3 & {add3(c,mul3(4,TAU3)) for c in WBODY})
 assert not (T2 & {add3(c,mul3(3,TAU3)) for c in WBODY})
@@ -357,95 +359,76 @@ assert not (nu_offsets & n1_second_offsets)
 assert not (n1_offsets & n2_third_offsets)
 
 # ---------------------------------------------------------------------------
-# Third nu-tier seam and chamber
+# Third nu-tier seam and chamber — diagnostic recovery after stabilization miss
 # ---------------------------------------------------------------------------
 
-# At the seam the generic species are N1 and O0.
-assert len(orbit(base36f,nuf/2))==298330
-assert len(orbit(base36f,2*nuf+(omegaf-2*nuf)/2))==105768
+print("MEASURE: seam canonical N1 orbit size =",len(orbit(base36f,nuf/2)))
+print("MEASURE: seam O0 orbit size =",len(orbit(base36f,2*nuf+(omegaf-2*nuf)/2)))
 
 DELTA=nuf/3
 E=base36f+DELTA
 
 LOW=orbit(E,DELTA/2)
-assert len(LOW)==404108
+print("MEASURE: third-tier canonical full orbit size =",len(LOW))
 certify_new_band(LOW,E,DELTA/2,(0,0,0))
 GNEW=graph(LOW,E,DELTA/2,BASE36,(0,0,0))
 
-# Representative from the newly shifted O0-anchor family 2*nu + O0.
+# Probe the newly shifted O0-anchor family without presupposing graph equality.
 rep2=min(n2_third_offsets,key=eval3)
 O2=orbit(E,eval3(rep2)+DELTA/2)
 G2=graph(O2,E,eval3(rep2)+DELTA/2,BASE36,rep2)
-assert G2==GNEW
+print("MEASURE: shifted-O0 anchor full orbit size =",len(O2))
+print("MEASURE: shifted-O0 anchor graph equals canonical =",G2==GNEW)
 
-# Constant sets and row census.
 constsets={+1:set(),-1:set()}; rc=Counter()
 for t in LOW:
     cc,o=graph_key(t,BASE36,(0,0,0))
     constsets[o].add(cc)
     rc[(o,region_rep(t,E,DELTA/2))]+=1
-assert constsets[+1]==constsets[-1]==N2
+
+print("MEASURE: orientation sizes =",len(constsets[+1]),len(constsets[-1]))
+print("MEASURE: orientations equal =",constsets[+1]==constsets[-1])
+assert constsets[+1]==constsets[-1]
 NEWSET=constsets[+1]
-assert len(NEWSET)==202054
+print("MEASURE: third-tier per-orientation size =",len(NEWSET))
 for ori in (+1,-1):
-    assert tuple(rc[(ori,x)] for x in ("A","B","D","T"))==(39147,39147,39148,84612)
+    census=tuple(rc[(ori,x)] for x in ("A","B","D","T"))
+    print("MEASURE: census",ori,census)
 
-# Exact stabilization test: the third-tier increment is again nu + U.
-assert N1 <= NEWSET
+print("MEASURE: N1 subset of new set =",N1 <= NEWSET)
+print("MEASURE: candidate union equals new set =",N2_CAND==NEWSET)
+print("MEASURE: candidate-only sites =",len(N2_CAND-NEWSET))
+print("MEASURE: orbit-only sites =",len(NEWSET-N2_CAND))
+
 DIFF=NEWSET-N1
-assert len(DIFF)==52889
+print("MEASURE: actual increment beyond N1 =",len(DIFF))
 BACK_NU={sub3(x,NU3) for x in DIFF}
-assert BACK_NU==UBODY
-assert UBODY==O0|TOPNU2
-assert not (O0 & TOPNU2)
+print("MEASURE: back-shifted increment size =",len(BACK_NU))
+print("MEASURE: back increment equals U =",BACK_NU==UBODY)
+print("MEASURE: back increment intersect U =",len(BACK_NU & UBODY))
+print("MEASURE: U missing from back increment =",len(UBODY-BACK_NU))
+print("MEASURE: extra beyond U =",len(BACK_NU-UBODY))
+print("MEASURE: back increment intersect O0 =",len(BACK_NU & O0))
+print("MEASURE: back increment intersect TOPNU2 =",len(BACK_NU & TOPNU2))
+print("MEASURE: back increment intersect N0 =",len(BACK_NU & N0))
+print("MEASURE: back increment intersect T3 =",len(BACK_NU & T3))
 
-# The per-orientation census increment is exactly the U census again.
-assert tuple(
-    y-x for x,y in zip(
-        (28900,28900,28901,62464),
-        (39147,39147,39148,84612),
-    )
-)==(10247,10247,10247,22148)
+# Compare the overlap responsible for failure of disjoint stabilization.
+OV=N1 & SHIFTU
+BACK_OV={sub3(x,NU3) for x in OV}
+print("MEASURE: overlap N1 intersect (nu+U) =",len(OV))
+print("MEASURE: back-shifted overlap intersect O0 =",len(BACK_OV & O0))
+print("MEASURE: back-shifted overlap intersect TOPNU2 =",len(BACK_OV & TOPNU2))
+print("MEASURE: back-shifted overlap outside U =",len(BACK_OV-UBODY))
 
-# Exact atlas count.
-assert len(n2_offsets)==6277
-assert 6277+4634+1643==12554
+# Existing anchor arithmetic is still measured, not promoted.
+print("MEASURE: candidate new-anchor count =",len(n2_offsets))
+print("MEASURE: inherited N1 anchor count =",len(n1_offsets))
+print("MEASURE: inherited O0 anchor count =",len(omega_offsets))
 
-# Inherited N1: reflected orientation +nu relative to COCYCLE-34.
-D0=nuf/3
-E34=base34f+D0
-ON1=orbit(E34,D0/2)
-GN1=graph(ON1,E34,D0/2,BASE34,(0,0,0))
-Ocur=orbit(E,(DELTA+nuf)/2)
-Gcur=graph(Ocur,E,(DELTA+nuf)/2,BASE36,(0,0,0))
-assert Gcur==shift_graph(GN1,(0,0,0),NU3)
-
-# Inherited O0: positive orientation +nu relative to the second nu chamber.
-zOprev=nuf+(D0+(omegaf-nuf))/2
-OO0=orbit(E34,zOprev)
-GO0=graph(OO0,E34,zOprev,BASE34,NU3)
-zcur=2*nuf+(DELTA+(omegaf-2*nuf))/2
-OcurO=orbit(E,zcur)
-GcurO=graph(OcurO,E,zcur,BASE36,mul3(2,NU3))
-assert GcurO==shift_graph(GO0,NU3,(0,0,0))
-
-# Next seam: N1 centers collapse; O0 loses one further nu-width.
+# Euclidean remainder arithmetic is unaffected.
 assert abs((omegaf-3*nuf)-(15*nuf+lambdaf))<1e-15
 assert 0<lambdaf<nuf
-
-print("PASS: third nu seam has 4634 N1/298330 and 1643 O0/105768 generic bands")
-print("PASS: second-chamber N0 centers have collapsed")
-print("PASS: third nu chamber counts = N2/404108 x6277, N1/298330 x4634, O0/105768 x1643")
-print("PASS: total generic bands = 12554")
-print("PASS: checked new-anchor families normalize to one N2 source graph")
-print("PASS: N2 per orientation = N1 union (nu+U), |U|=52889")
-print("PASS: U is unchanged from the second tier: O0 union TOPNU2")
-print("PASS: fixed U-body stabilization is source-orbit verified at the third nu tier")
-print("PASS: |N2| per orientation = 202054; full size = 404108")
-print("PASS: N2 census per orientation = A39147/B39147/D39148/T84612")
-print("PASS: U contribution repeats = A10247/B10247/D10247/T22148")
-print("PASS: inherited N1 is reflected-orientation +nu relabeling")
-print("PASS: inherited O0 is positive-orientation +nu relabeling")
+print("PASS: exact topology inequalities hold on the canonical third-tier band")
 print("PASS: omega = 18*nu + lambda with 0<lambda<nu")
-print("PASS: next seam delta=nu collapses N1; O0 width becomes 15nu+lambda")
-print("NOTE: N2/404108 invertibility is not claimed in this seam pass")
+print("NOTE: this is a recovery probe; no N2 invertibility or fixed-module stabilization is claimed")
