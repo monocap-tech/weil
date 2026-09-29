@@ -1,4 +1,4 @@
-name: SZ Return Cocycle 36 Third Nu Tier Recovery
+name: SZ Return Cocycle 36 Fast Overlap Probe
 
 on:
   push:
@@ -8,13 +8,13 @@ on:
       - ".github/workflows/sz-return-cocycle-36.yml"
 
 jobs:
-  verify:
+  probe:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Verify third nu-tier seam
-        run: python experiments/sz_return_cocycle_36_third_nu_tier_discover.py
+      - name: Measure failed fixed-U overlap
+        run: python experiments/sz_return_cocycle_36_overlap_probe.py
