@@ -1,4 +1,4 @@
-name: SZ Return Cocycle 38 Fast Orbit Probe
+name: SZ Return Cocycle 38 Fourth Nu Tier Certificate
 
 on:
   push:
@@ -8,13 +8,13 @@ on:
       - ".github/workflows/sz-return-cocycle-38.yml"
 
 jobs:
-  probe:
+  verify:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 90
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Probe fourth nu-tier orbit
-        run: python experiments/sz_return_cocycle_38_orbit_probe.py
+      - name: Verify fourth nu-tier seam
+        run: python experiments/sz_return_cocycle_38_fourth_nu_tier_discover.py
