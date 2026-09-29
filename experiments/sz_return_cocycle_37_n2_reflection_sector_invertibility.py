@@ -48,8 +48,8 @@ OMEGA3=sub3(SIG3,mul3(4,TAU3))
 NU3=sub3(TAU3,OMEGA3)
 BASE30=add3(add3(add3(add3(mul3(5,KAP3),mul3(2,CHI3)),RHO3),SIG3),mul3(4,TAU3))
 BASE32=add3(BASE30,OMEGA3)
-BASE36=add3(BASE32,NU3)
-BASE36=add3(BASE36,NU3)
+BASE34=add3(BASE32,NU3)
+BASE36=add3(BASE34,NU3)
 
 R3=add3(Q3,J3); S3=sub3(Q3,K3); QS3=add3(Q3,S3)
 
@@ -98,7 +98,7 @@ def orbit(e,z):
                 seen.add(s); todo.append(s)
     return seen
 
-# Exact N1 constant set.
+# Exact N2 constant set.
 skeleton=[]
 for n in range(6): skeleton.append(mul3(n,H3))
 for n in range(6): skeleton.append(add3(P3,mul3(n,H3)))
