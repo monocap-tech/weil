@@ -1,0 +1,20 @@
+name: SZ Return Cocycle 44 Fast Orbit Probe
+
+on:
+  push:
+    branches:
+      - research/sz-return-cocycle-0
+    paths:
+      - .github/workflows/sz-return-cocycle-44.yml
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Probe seventh nu-tier orbit
+        run: python experiments/sz_return_cocycle_44_orbit_probe.py
