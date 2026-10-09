@@ -38,7 +38,7 @@
     "url": "https://github.com/monocap-tech/weil/actions/runs/37995164234"
   },
   "extension": {
-    "status": "LOCAL_VERIFIED_REMOTE_CI_PENDING",
+    "status": "REMOTE_CI_VERIFIED",
     "module": "WeilDefect.RPB108.CompletedColumns",
     "declarations": [
       "WeilDefect.RPB108.four_column_tail_gap",
@@ -61,6 +61,46 @@
       "actual completed-column norm bounds",
       "completed-square energy lower bound",
       "kernel-checked authenticated numerical denominator"
+    ],
+    "remote_CI": {
+      "head": "bb1effa808e6a99415f5213e723ccc981633f124",
+      "conclusion": "success",
+      "url": "https://github.com/monocap-tech/weil/actions/runs/38002900652"
+    }
+  },
+  "source_norm_extension": {
+    "status": "LOCAL_VERIFIED_REMOTE_CI_PENDING",
+    "module": "WeilDefect.RPB108.SourceNormBounds",
+    "declarations": [
+      "WeilDefect.RPB108.sqrt_add_le_of_squared_certificate",
+      "WeilDefect.RPB108.completed_mass_bound_of_squared_certificate",
+      "WeilDefect.RPB108.completed_column_norm_le",
+      "WeilDefect.RPB108.source_completed_columns_physical_gap"
+    ],
+    "source_sha256": "65422bd359b468153398bb574a6678bc54e47300e5ba0d96a398599c0ea69a84",
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "checks": {
+      "component_build": "PASS",
+      "h1_ci_target": "PASS",
+      "axiom_audit": "PASS",
+      "admission_check": "PASS"
+    },
+    "evidence_sha256": {
+      "build.log": "d7f42201c43af4d605039bf09670834b6f920ae1569b6e26a4f60cfc60bfd430",
+      "h1-build.log": "ee09e836dcdb216af76cd420d7872d25401510718bf5bf489d0e15119a10afb5",
+      "axioms.log": "99a2ffc3f07435a0c50027fec6129b2d207ca9c15f396878122fe70e96c52eab"
+    },
+    "original_form_attachment_proved": false,
+    "original_arithmetic_certificate_imported": false,
+    "remaining_actual_inputs": [
+      "actual native norms and full source-square enclosures",
+      "high-inverse operator norm bound",
+      "completed-square energy lower bound",
+      "kernel-checked numerical squared and denominator bounds"
     ]
   }
 }

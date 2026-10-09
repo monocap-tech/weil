@@ -60,4 +60,4 @@ See [SOURCE_MANIFEST](SOURCE_MANIFEST.md) for pinned upstream links and [OPEN_FR
 
 ## Generic supporting Lean component
 
-The [physical-gap component ledger](PHYSICAL_GAP_PORT.md) maps six new declarations to exact generic inequalities. Status: initial three declarations passed remote CI; three completed-column extension declarations are locally type-checked and axiom-audited, with remote CI pending. These supporting lemmas are separate from provisional RPB-P01–RPB-P05. None of those original arithmetic/form results changes formal status.
+The [physical-gap component ledger](PHYSICAL_GAP_PORT.md) maps ten new declarations to exact generic inequalities. Status: first six declarations passed remote CI; four source-norm certificate declarations are locally type-checked and axiom-audited, with remote CI pending. These supporting lemmas are separate from provisional RPB-P01–RPB-P05. None of those original arithmetic/form results changes formal status.

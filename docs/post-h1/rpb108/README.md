@@ -21,7 +21,7 @@ The current mathematical subject is the original supported Weil quadratic form Q
 
 ## First Lean component
 
-The companion port adds [the universal physical-gap bound](PHYSICAL_GAP_PORT.md) in the separate `WeilDefect.RPB108` namespace. The initial three generic inequalities passed pinned remote CI. Three completed-column extension lemmas also passed the local pinned build and axiom audit; their remote CI is pending. They do not certify the original DNE27 numerical values, original form-domain estimates, or carrier adapter.
+The companion port adds [the universal physical-gap bound](PHYSICAL_GAP_PORT.md) in the separate `WeilDefect.RPB108` namespace. The first six physical-gap and completed-column lemmas passed pinned remote CI. Four source-norm certificate lemmas also passed the local pinned build and axiom audit; their remote CI is pending. They do not certify the original DNE27 numerical values, original form-domain estimates, or carrier adapter.
 
 ## Main bounded conclusions and nonconclusions
 
