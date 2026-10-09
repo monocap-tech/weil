@@ -6,7 +6,7 @@
 
 The Horizon-1 WeilDefect Lean project is pinned at Lean 4.34.0 / mathlib v4.34.0 in [its formalization track](../../LEAN_FORMALIZATION_TRACK.md). Its certificate rule requires compilation in pinned CI, no project sorry/admit/axiom, durable theorem-to-declaration mapping, and explicit separate classification for imports. The external Prove2Me/Formalpedia constructions use a different recorded toolchain (Lean 4.33.1 / Mathlib 0df444a). **No automatic cross-version or cross-definition equivalence is established.**
 
-The proposed package is **documentation/provenance only**. It contains no Lean proof, no cached compiled proof artifact, no promoted H1 theorem status, and no claim that the source validators have been rerun here.
+The initial transfer in PR #1 is **documentation/provenance only**. A separate companion port now adds three generic physical-gap lemmas; see [the component ledger](PHYSICAL_GAP_PORT.md). These have local pinned-build and axiom-audit evidence, with CI certification pending. No original arithmetic certificate or RPB-P result is thereby promoted, and H1 theorem statuses remain unchanged.
 
 ## Staged port plan
 

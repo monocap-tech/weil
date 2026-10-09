@@ -19,6 +19,10 @@ The current mathematical subject is the original supported Weil quadratic form Q
 3. [Mathematical obstruction and next acceptance gate](OPEN_FRONTIER.md) — the exact remaining 104-dimensional response and adequate sufficient source test.
 4. [Formalization and promotion protocol](FORMALIZATION_PLAN.md) — which proofs to port first; how numerical certificates may be promoted without overstating evidence.
 
+## First Lean component
+
+The companion port adds [the universal physical-gap bound](PHYSICAL_GAP_PORT.md) in the separate `WeilDefect.RPB108` namespace. Its three generic inequalities have passed the local pinned Lean build and axiom audit; CI review is required for repository certification. They do not certify the original DNE27 numerical values, original form-domain estimates, or carrier adapter.
+
 ## Main bounded conclusions and nonconclusions
 
 - The **finite first-116-mode original form** at 1.06 is certified positive *in the upstream arithmetic/interval workflow*. The unmeasured infinite high complement prevents inferring whole-domain positivity from this alone.

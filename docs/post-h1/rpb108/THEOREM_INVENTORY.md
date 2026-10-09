@@ -57,3 +57,7 @@ The inequalities c_parity * B_Y - Gamma_Y > 0 **in both parities** suffice for f
 - The formal RH-equivalent quartet/finite-selected-certificate results are separate, accepted interfaces. No direct identity with the RPB108 fixed-aperture certificate is yet formalized.
 
 See [SOURCE_MANIFEST](SOURCE_MANIFEST.md) for pinned upstream links and [OPEN_FRONTIER](OPEN_FRONTIER.md) for the next mathematical target.
+
+## Generic supporting Lean component
+
+The [physical-gap component ledger](PHYSICAL_GAP_PORT.md) maps three new declarations to exact generic inequalities. Status: locally type-checked and axiom-audited; CI certification pending. These supporting lemmas are separate from provisional RPB-P01–RPB-P05. None of those original arithmetic/form results changes formal status.

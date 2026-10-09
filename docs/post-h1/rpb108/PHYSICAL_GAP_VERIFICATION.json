@@ -1,0 +1,35 @@
+{
+  "status": "LOCAL_VERIFIED_REMOTE_CI_PENDING",
+  "base_commit": "ffc59e6b99768aef16ccf6a695e711c89a2f0ea5",
+  "documentation_pr": "https://github.com/monocap-tech/weil/pull/1",
+  "toolchain": "leanprover/lean4:v4.34.0",
+  "mathlib": "v4.34.0",
+  "module": "WeilDefect.RPB108",
+  "declarations": [
+    "WeilDefect.RPB108.weighted_mass_sq_le_energy",
+    "WeilDefect.RPB108.physical_gap_of_denominator_bound",
+    "WeilDefect.RPB108.physical_gap_of_mass_upper_bound"
+  ],
+  "source_sha256": "95f803d0c4f97ab5bca884b54a1f222deb20306770f1fb4ba110a75828a1a958",
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "checks": {
+    "component_build": "PASS",
+    "h1_ci_target": "PASS",
+    "axiom_audit": "PASS",
+    "ci_admission_check": "PASS"
+  },
+  "evidence_sha256": {
+    "component-build.log": "86ebdcf3b769b6711858f55178c75e205ae6dee521e710c3ea153686d8e83248",
+    "h1-regression.log": "ee09e836dcdb216af76cd420d7872d25401510718bf5bf489d0e15119a10afb5",
+    "axiom-audit.log": "af89fea4a45a3c631e83b7cb5513a89239285a51a76b7e326afc1c69a4061ba9"
+  },
+  "original_arithmetic_certificate_imported": false,
+  "original_analytic_attachment_proved": false,
+  "carrier_adapter_proved": false,
+  "RPB_P_theorems_promoted": false,
+  "RH_established": false
+}

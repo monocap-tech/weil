@@ -47,6 +47,10 @@ jobs:
         shell: bash
         run: lake build WeilDefect.Examples.WeakCriticalFallthrough
 
+      - name: Check post-H1 physical-gap component
+        shell: bash
+        run: lake build WeilDefect.RPB108
+
       - name: Reject unfinished trusted declarations
         shell: bash
         run: |
