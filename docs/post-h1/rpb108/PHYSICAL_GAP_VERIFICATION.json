@@ -31,5 +31,36 @@
   "original_analytic_attachment_proved": false,
   "carrier_adapter_proved": false,
   "RPB_P_theorems_promoted": false,
-  "RH_established": false
+  "RH_established": false,
+  "initial_component_remote_CI": {
+    "head": "fcd6f161e260692b9f80391f5185d34fd513e4ad",
+    "conclusion": "success",
+    "url": "https://github.com/monocap-tech/weil/actions/runs/37995164234"
+  },
+  "extension": {
+    "status": "LOCAL_VERIFIED_REMOTE_CI_PENDING",
+    "module": "WeilDefect.RPB108.CompletedColumns",
+    "declarations": [
+      "WeilDefect.RPB108.four_column_tail_gap",
+      "WeilDefect.RPB108.completed_columns_norm_bound",
+      "WeilDefect.RPB108.completed_columns_physical_gap"
+    ],
+    "source_sha256": "79e8e4bde2ec62b81ab4dc5b861c03619ff6006496bc610ff2ad24be9d84405e",
+    "checks": {
+      "component_build": "PASS",
+      "h1_ci_target": "PASS",
+      "axiom_audit": "PASS",
+      "admission_check": "PASS"
+    },
+    "evidence_sha256": {
+      "build.log": "4386f6c2ec3507da7730c5b5340303804bbbd2b62b40870622a7bfda550eb6f4",
+      "h1-build.log": "ee09e836dcdb216af76cd420d7872d25401510718bf5bf489d0e15119a10afb5",
+      "axioms.log": "675c731d3301a136c9863e613bff399388a390cd927754c23fd5d0ecb2ce4ac0"
+    },
+    "remaining_original_form_obligations": [
+      "actual completed-column norm bounds",
+      "completed-square energy lower bound",
+      "kernel-checked authenticated numerical denominator"
+    ]
+  }
 }
