@@ -1,0 +1,32 @@
+[
+  {
+    "commit": "3b5c5cb3a6db62c0fc7745820dc42a0d3d195c16",
+    "path": "notes/data/RPB108_DNE27_COHERENT_BUDGET_CERTIFICATE_20261009.json",
+    "bytes": 52382,
+    "sha256": "4004a41e1ff792ea667719ba889d5908b3098581fd0dfbf437e96fe0c6cf9f93"
+  },
+  {
+    "commit": "3b5c5cb3a6db62c0fc7745820dc42a0d3d195c16",
+    "path": "notes/data/RPB108_DNE22_PROBE_PLANE_CERTIFICATE_20261009.json",
+    "bytes": 66927,
+    "sha256": "6f1adeb39792345e857806ce4128c72b9b08dabd4d21f6f3bde8a8463bd94671"
+  },
+  {
+    "commit": "3b5c5cb3a6db62c0fc7745820dc42a0d3d195c16",
+    "path": "notes/data/RPB108_DNE18_CC62_INPUT_20261009.json",
+    "bytes": 4202,
+    "sha256": "ebca74e6237cf401b7480afe08b91caba2c3412dc08e55ac2ac55f1970d8f788"
+  },
+  {
+    "commit": "3b5c5cb3a6db62c0fc7745820dc42a0d3d195c16",
+    "path": "notes/data/RPB108_DNE22_NF32_EVEN_INPUT_20261009.json",
+    "bytes": 90658,
+    "sha256": "316ea81720e0992699ee8a37c5cc48b1170d811ef6d88bbdf19d46d03860c7a9"
+  },
+  {
+    "commit": "3b5c5cb3a6db62c0fc7745820dc42a0d3d195c16",
+    "path": "notes/data/RPB108_DNE22_NF32_ODD_INPUT_20261009.json",
+    "bytes": 90870,
+    "sha256": "96a4f1448b0aa0d347ce79345e222d260c70af22cc86e7cd998626883e6fdb90"
+  }
+]

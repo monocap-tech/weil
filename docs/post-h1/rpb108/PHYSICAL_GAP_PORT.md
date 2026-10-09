@@ -1,6 +1,6 @@
 # First post-H1 Lean component: universal physical-gap inequalities
 
-Status: **FIRST SIX LEMMAS PASSED REMOTE CI; SOURCE-NORM EXTENSION LOCALLY VERIFIED, REMOTE CI PENDING**.
+Status: **TEN SUPPORTING LEMMAS PASSED REMOTE CI; NUMERICAL SLICE LOCALLY VERIFIED, REMOTE CI PENDING**.
 This companion port is based on the documentation transfer in PR #1. It adds a separate `WeilDefect.RPB108` module family. The existing Horizon-1 sources, theorem declarations, theorem IDs and ledger are unchanged.
 
 ## Exact declaration inventory
@@ -44,13 +44,17 @@ The mixed bound used by DNE27 is covered by the first lemma with `a=dual`, `b=rh
 
 The source-completed theorem no longer asks for a completed-column norm bound as an unexplained premise. It derives that bound from the original native norms, original full source squares, a high-inverse operator bound, and squared rational inequalities. The theorem is generic and conditional: those inputs must still be realized on the original operator/domain and paid by authenticated data. It does not silently identify a generic normed space with the RPB108 physical carrier.
 
+## Numerical slice
+
+The [DNE27 numerical port](DNE27_NUMERIC_PORT.md) now kernel-checks the four physical-gap scalar families in each parity and composes two quantitative conditional gap theorems. Its manifest and vendored exact inputs make this slice portable. This discharges the squared completed-mass and denominator inequalities used by the source-completed theorem, while preserving the actual source/operator/energy attachment obligations.
+
 ## Intended DNE27 application and exact boundary
 
 Use four completed-column weights `s_i b_i`, lower diagonal weights `(alpha, theta*g, theta*g, theta*g)`, and append one coordinate equal to the remaining high norm, with weight `1` and lower weight `k=11/25`. The denominator is
 
 `sum_i (s_i*b_i)^2/L_i + 1/k`.
 
-The source-completed theorem derives the column and triangle bounds. Instantiation on the original form still requires the native/source norm enclosures, the actual high-inverse bound, the completed-square energy lower bound, and kernel verification of the squared and denominator inequalities. The DNE27 rational values and their six authenticated input certificates have not been imported into the Lean kernel by this component. The preceding local review's genuine arithmetic replays and mutation checks remain computational evidence, not a formal arithmetic port.
+The source-completed theorem derives the column and triangle bounds. Instantiation on the original form still requires the native/source norm enclosures, the actual high-inverse bound, the completed-square energy lower bound, and kernel verification of the squared and denominator inequalities. The selected DNE27 physical-gap scalar values now have kernel-checked inequalities in the numerical slice. The remaining matrix/source-credit and mixed-energy numerical assertions, and the local Python replays beyond this slice, retain their separate computational status.
 
 Thus F2 gains its universal inequality lemma, while F0/F1, the numerical part of F2, and the original-form theorem F3 remain open. F4/F5/F6 are unchanged. No positivity of the full original 1.06 form, complete 104-dimensional response sign, global continuation, or RH is asserted.
 
@@ -64,7 +68,7 @@ lake build WeilDefect.Examples.WeakCriticalFallthrough
 lake env lean WeilDefect/RPB108/PhysicalGap.lean
 ```
 
-The last command prints the initial three axiom audits; also run `lake env lean WeilDefect/RPB108/CompletedColumns.lean` for the three completed-column audits and `lake env lean WeilDefect/RPB108/SourceNormBounds.lean` for the four source-norm audits. The companion CI change adds `lake build WeilDefect.RPB108` beside the existing H1 target and retains the admission check. Local evidence is recorded in [PHYSICAL_GAP_VERIFICATION.json](PHYSICAL_GAP_VERIFICATION.json); the initial head `fcd6f161e260692b9f80391f5185d34fd513e4ad` passed [remote CI](https://github.com/monocap-tech/weil/actions/runs/37995164234), and the six-lemma head `bb1effa808e6a99415f5213e723ccc981633f124` passed [remote CI](https://github.com/monocap-tech/weil/actions/runs/38002900652). The source-norm extension requires its own successful remote CI run.
+The last command prints the initial three axiom audits; also run `lake env lean WeilDefect/RPB108/CompletedColumns.lean` for the three completed-column audits and `lake env lean WeilDefect/RPB108/SourceNormBounds.lean` for the four source-norm audits. The companion CI change adds `lake build WeilDefect.RPB108` beside the existing H1 target and retains the admission check. Local evidence is recorded in [PHYSICAL_GAP_VERIFICATION.json](PHYSICAL_GAP_VERIFICATION.json); the initial head `fcd6f161e260692b9f80391f5185d34fd513e4ad` passed [remote CI](https://github.com/monocap-tech/weil/actions/runs/37995164234), and the six-lemma head `bb1effa808e6a99415f5213e723ccc981633f124` passed [remote CI](https://github.com/monocap-tech/weil/actions/runs/38002900652). The source-norm extension passed remote CI at `906df24396b75c1a8a628ea09f91faabb75e7a3a`; the numerical slice requires its own successful remote CI run.
 
 ## Relationship to the next release
 

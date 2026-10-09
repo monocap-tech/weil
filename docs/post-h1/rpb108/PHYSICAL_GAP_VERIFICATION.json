@@ -69,7 +69,7 @@
     }
   },
   "source_norm_extension": {
-    "status": "LOCAL_VERIFIED_REMOTE_CI_PENDING",
+    "status": "REMOTE_CI_VERIFIED",
     "module": "WeilDefect.RPB108.SourceNormBounds",
     "declarations": [
       "WeilDefect.RPB108.sqrt_add_le_of_squared_certificate",
@@ -101,6 +101,11 @@
       "high-inverse operator norm bound",
       "completed-square energy lower bound",
       "kernel-checked numerical squared and denominator bounds"
-    ]
+    ],
+    "remote_CI": {
+      "head": "906df24396b75c1a8a628ea09f91faabb75e7a3a",
+      "conclusion": "success",
+      "url": "https://github.com/monocap-tech/weil/actions/runs/38004008559/job/114068511822"
+    }
   }
 }

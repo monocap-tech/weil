@@ -1,0 +1,101 @@
+{
+  "status": "PASS",
+  "milestone": "CC62",
+  "original_E112_raw_SHA256": "f69019a895cd675e304989cbb8209c90f033264e0aef589d4b1aa3be09cf4c81",
+  "NF23_manifest_SHA256": "134deb5db09b2bd720284c7f4e2a2fca5918982a307eb67267ecf3586e6810de",
+  "native_component_interval_checks": 448,
+  "complete_retained_projection_records": 112,
+  "native_parity_gates": [
+    {
+      "parity": "even",
+      "retained_source_projection_coefficients": 56,
+      "native_Q_diagonal": [
+        "20076042137710372343537220725250745270857217/500000000000000000000000000000000000000000000",
+        "8030416855084148937414888290100298108342887/200000000000000000000000000000000000000000000"
+      ],
+      "full_source_square": [
+        "4183091719087265625959414385912784471159557/50000000000000000000000000000000000000000000",
+        "8366183438274531256278010358684881008899997/100000000000000000000000000000000000000000000"
+      ],
+      "complete_retained_source_square": [
+        "9894057213199729458068202139832434399398211/125000000000000000000000000000000000000000000",
+        "79152457705597835664545617118659475195185689/1000000000000000000000000000000000000000000000"
+      ],
+      "full_F112_source_square": [
+        "4509376676147476854642670599596214228005451/1000000000000000000000000000000000000000000000",
+        "2254688338573738449117243234094667446907141/500000000000000000000000000000000000000000000"
+      ],
+      "P_over_kappa_A_strict_upper": "543/1000",
+      "complete_high_corrected_margin_relative_A": "457/1000",
+      "coarse_uncompensated_full_high_gate_passes": true
+    },
+    {
+      "parity": "odd",
+      "retained_source_projection_coefficients": 56,
+      "native_Q_diagonal": [
+        "72005836428166872383094818635236435677873659/500000000000000000000000000000000000000000000",
+        "144011672856333744766189637270472871355747319/1000000000000000000000000000000000000000000000"
+      ],
+      "full_source_square": [
+        "33814118153265662986501360745012106149041509/100000000000000000000000000000000000000000000",
+        "66043199518292310550309563084022848573621/195312500000000000000000000000000000000000"
+      ],
+      "complete_retained_source_square": [
+        "325739907115240488157590488335480983034559079/1000000000000000000000000000000000000000000000",
+        "8143497677881012203939762208387024575863977/25000000000000000000000000000000000000000000"
+      ],
+      "full_F112_source_square": [
+        "1240127441741614170742311911464007845585601/100000000000000000000000000000000000000000000",
+        "12401274418416141859994474654716001662380441/1000000000000000000000000000000000000000000000"
+      ],
+      "P_over_kappa_A_strict_upper": "417/1000",
+      "complete_high_corrected_margin_relative_A": "583/1000",
+      "coarse_uncompensated_full_high_gate_passes": true
+    }
+  ],
+  "restricted_physical_gap": "1/100",
+  "certified_original_subspace": "span(e0,e1)+F112 canonical form domain at53/50",
+  "excluded_retained_dimension": 110,
+  "genuine_crossing_controls": [
+    {
+      "full_Schur": "1/100",
+      "complete_high_floor_above_kappa": true,
+      "native_leakage_hypothesis_satisfied": false
+    },
+    {
+      "full_Schur": "0",
+      "complete_high_floor_above_kappa": true,
+      "native_leakage_hypothesis_satisfied": false
+    },
+    {
+      "full_Schur": "-1/100",
+      "complete_high_floor_above_kappa": true,
+      "native_leakage_hypothesis_satisfied": false
+    }
+  ],
+  "positive_level_controls": [
+    {
+      "positive_ground_level": "1/10000000000000000000000000000000000000000",
+      "whole_shift_null": true,
+      "retained_only_shift_misses_null": true,
+      "native_leakage_hypothesis_satisfied": false
+    },
+    {
+      "positive_ground_level": "1/100",
+      "whole_shift_null": true,
+      "retained_only_shift_misses_null": true,
+      "native_leakage_hypothesis_satisfied": false
+    },
+    {
+      "positive_ground_level": "1/20",
+      "whole_shift_null": true,
+      "retained_only_shift_misses_null": true,
+      "native_leakage_hypothesis_satisfied": false
+    }
+  ],
+  "whole_aperture_positive": false,
+  "compensated_P2_evaluated": false,
+  "all_cap_frame": false,
+  "RH": false,
+  "Lean": false
+}

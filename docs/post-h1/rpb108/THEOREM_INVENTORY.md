@@ -60,4 +60,6 @@ See [SOURCE_MANIFEST](SOURCE_MANIFEST.md) for pinned upstream links and [OPEN_FR
 
 ## Generic supporting Lean component
 
-The [physical-gap component ledger](PHYSICAL_GAP_PORT.md) maps ten new declarations to exact generic inequalities. Status: first six declarations passed remote CI; four source-norm certificate declarations are locally type-checked and axiom-audited, with remote CI pending. These supporting lemmas are separate from provisional RPB-P01–RPB-P05. None of those original arithmetic/form results changes formal status.
+The [physical-gap component ledger](PHYSICAL_GAP_PORT.md) maps ten new declarations to exact generic inequalities. Status: all ten supporting declarations passed remote CI; the separate numerical slice below is locally kernel-checked, with remote CI pending. These supporting lemmas are separate from provisional RPB-P01–RPB-P05. None of those original arithmetic/form results changes formal status.
+
+The [DNE27 physical-gap numerical slice](DNE27_NUMERIC_PORT.md) adds eight closed scalar declarations and two conditional quantitative gap declarations using authenticated exact values. These are locally kernel-checked, with remote CI pending. They discharge the selected squared/denominator arithmetic, not the original source and energy attachment; RPB-P03 remains NOT PORTED as a full original-form theorem.

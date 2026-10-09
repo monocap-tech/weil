@@ -1,0 +1,52 @@
+{
+  "status": "LOCAL_KERNEL_VERIFIED_REMOTE_CI_PENDING",
+  "upstream_commit": "3b5c5cb3a6db62c0fc7745820dc42a0d3d195c16",
+  "module": "WeilDefect.RPB108.DNE27Numerics",
+  "declarations": [
+    "WeilDefect.RPB108.DNE27Even.lower_pos",
+    "WeilDefect.RPB108.DNE27Even.native_le_completed",
+    "WeilDefect.RPB108.DNE27Even.source_square_certificate",
+    "WeilDefect.RPB108.DNE27Even.denominator_guard",
+    "WeilDefect.RPB108.DNE27Even.physical_gap_of_native_source_bounds",
+    "WeilDefect.RPB108.DNE27Odd.lower_pos",
+    "WeilDefect.RPB108.DNE27Odd.native_le_completed",
+    "WeilDefect.RPB108.DNE27Odd.source_square_certificate",
+    "WeilDefect.RPB108.DNE27Odd.denominator_guard",
+    "WeilDefect.RPB108.DNE27Odd.physical_gap_of_native_source_bounds"
+  ],
+  "closed_numerical_declarations": 8,
+  "conditional_actual_vector_declarations": 2,
+  "input_manifest_sha256": "31d57701528d968795726ce140755f98cd58e46a36478bcb366251a40ee961a5",
+  "generated_source_sha256": "c34fd52113eac1864098b6f45aa0f69b8c323effeec75b12b71e5f49a7f7d6da",
+  "checks": {
+    "component_build": "PASS",
+    "h1_ci_target": "PASS",
+    "ten_standard_axiom_audits": "PASS",
+    "admission_check": "PASS",
+    "authenticated_byte_identical_regeneration": "PASS",
+    "inflated_gap_negative_control": "REJECTED",
+    "zero_lower_negative_control": "REJECTED"
+  },
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "evidence_sha256": {
+    "build.log": "e66dd1ce44a4986f9a6e8e4af69def031cfe1906a22cb924ea18633727a571eb",
+    "h1-build.log": "ee09e836dcdb216af76cd420d7872d25401510718bf5bf489d0e15119a10afb5",
+    "lean.log": "9b927cc02926a9226935fecca23794543137edcc35ed6bde2681afab70310730",
+    "mutated-gap.log": "f7170a9b5a2d218513790f103c5d6af442a95001fc029e90b39ee4752b2f504c",
+    "mutated-lower.log": "050d002c0a887f412ff0fd5775a4bdf5565fafdf8199270d6acfc60f020131d5"
+  },
+  "preceding_supporting_component_CI": {
+    "head": "906df24396b75c1a8a628ea09f91faabb75e7a3a",
+    "conclusion": "success",
+    "url": "https://github.com/monocap-tech/weil/actions/runs/38004008559/job/114068511822"
+  },
+  "original_source_enclosure_generation_proved": false,
+  "original_high_inverse_realized": false,
+  "original_energy_attachment_proved": false,
+  "full_DNE27_certificate_imported": false,
+  "RH_established": false
+}
