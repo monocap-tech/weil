@@ -1,6 +1,6 @@
 # Native-pairing square from unsquared entry enclosures
 
-Status: **LOCALLY KERNEL-CHECKED; REMOTE CI PENDING**. The preceding retained-energy extension passed pinned CI at `57db5c1a2b254bf848f71868d63aac063f56536a`.
+Status: **KERNEL-CHECKED; PINNED REMOTE CI PASSED** at `fcf548917a799b1a8c725776a3f9a0f38d69e37e`. The preceding retained-energy extension passed pinned CI at `57db5c1a2b254bf848f71868d63aac063f56536a`.
 
 ## Source and exact normalization
 
@@ -46,3 +46,5 @@ This closes the native row arithmetic/reduction boundary, not full RPB-P03, the 
 ## Verification
 
 Pinned Lean/mathlib 4.34.0 component and H1 target builds passed. Independent audits of all sixteen new declarations use only the standard axioms `propext`, `Classical.choice`, and `Quot.sound`. Authenticated regeneration is byte-identical. Lean rejected an isolated control setting the native dual budget to zero. See [DNE27_NATIVE_PAIRING_VERIFICATION.json](DNE27_NATIVE_PAIRING_VERIFICATION.json) for source and evidence hashes.
+
+The subsequent [source-pairing attachment](DNE27_SOURCE_PAIRING_PORT.md) constructs q from the same inverse and source vectors and derives its square bound from their full Gram realization.
