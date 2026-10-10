@@ -1,6 +1,6 @@
 # Actual-energy mixed-pairing attachment
 
-Status: **LOCALLY KERNEL-CHECKED; REMOTE CI PENDING**. The preceding Gram extension passed pinned CI at `cc731445e24872fdb429405de407a0de059fa0bc`.
+Status: **KERNEL-CHECKED; PINNED REMOTE CI PASSED** at `6b912392d2969ff592409029f698edbb44b588cf`. The preceding Gram extension passed pinned CI at `cc731445e24872fdb429405de407a0de059fa0bc`.
 
 ## Exact distinction
 
@@ -54,3 +54,5 @@ These are explicit arguments, not axioms or opaque certificate assumptions. The 
 ## Verification
 
 Pinned Lean/mathlib 4.34.0 builds of `WeilDefect.RPB108` and the H1 target passed. Independent Lean invocation audits all seven declarations to only `propext`, `Classical.choice`, and `Quot.sound`. No new numerical certificate or data file is introduced; the existing authenticated Gram and mixed-root certificates supply the arithmetic. See [DNE27_ACTUAL_ENERGY_VERIFICATION.json](DNE27_ACTUAL_ENERGY_VERIFICATION.json).
+
+The subsequent [retained-energy certificate](DNE27_RETAINED_ENERGY_PORT.md) discharges the separate retained-energy floor from the same V entry enclosures. The older theorem remains available unchanged.

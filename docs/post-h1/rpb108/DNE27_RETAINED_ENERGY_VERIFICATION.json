@@ -1,0 +1,60 @@
+{
+  "status": "LOCAL_KERNEL_VERIFIED_REMOTE_CI_PENDING",
+  "new_declaration_count": 13,
+  "declarations": [
+    "WeilDefect.RPB108.scaled_retained_gram",
+    "WeilDefect.RPB108.DNE27Even.retained_off_nonneg",
+    "WeilDefect.RPB108.DNE27Even.retained_off_certificate",
+    "WeilDefect.RPB108.DNE27Even.retained_margin_certificate",
+    "WeilDefect.RPB108.DNE27Even.retained_gram_lower",
+    "WeilDefect.RPB108.DNE27Even.retained_energy_of_enclosures",
+    "WeilDefect.RPB108.DNE27Even.physical_gap_of_enclosures_and_pairings",
+    "WeilDefect.RPB108.DNE27Odd.retained_off_nonneg",
+    "WeilDefect.RPB108.DNE27Odd.retained_off_certificate",
+    "WeilDefect.RPB108.DNE27Odd.retained_margin_certificate",
+    "WeilDefect.RPB108.DNE27Odd.retained_gram_lower",
+    "WeilDefect.RPB108.DNE27Odd.retained_energy_of_enclosures",
+    "WeilDefect.RPB108.DNE27Odd.physical_gap_of_enclosures_and_pairings"
+  ],
+  "upstream_commit": "3b5c5cb3a6db62c0fc7745820dc42a0d3d195c16",
+  "input_manifest_sha256": "523dee81048a18e1b543b6e654daa894375a31540bbca2630d0f093009979982",
+  "source_sha256": {
+    "WeilDefect/RPB108/DNE27RetainedEnergy.lean": "4a41ee4590c3cb7fb2d0ee15498dbafc45b1c6256b633b0d0bdb527587dd145b",
+    "docs/post-h1/rpb108/numeric-inputs/generate_retained.py": "bb0c5ab6c445ebc17863368c2a0e79a6f33a4f5ac42ade26dc737730363270b7"
+  },
+  "checks": {
+    "component_build": "PASS",
+    "h1_ci_target": "PASS",
+    "independent_axiom_audits": "PASS",
+    "admission_check": "PASS",
+    "authenticated_regeneration": "BYTE_IDENTICAL",
+    "inflated_floor_control": "REJECTED"
+  },
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "evidence_sha256": {
+    "build.log": "569b9840dd8d339b415142fa500409a307eae9c6acc82038f7dbe6075727415e",
+    "h1-build.log": "ee09e836dcdb216af76cd420d7872d25401510718bf5bf489d0e15119a10afb5",
+    "axioms.log": "0cdc5b73036dbfcdbc7dc47f3a04392bcca7d2f6059012f435efdd9b43151aca",
+    "regeneration.log": "d5abdbb8c42b6370a9ddbcf05d20561b18b188c8e9a689e0718a83b9973bed81",
+    "inflated-floor.log": "39caee9b7321a952802407d1df825bfdb792fccec46ba78b991df9d196341957"
+  },
+  "preceding_actual_energy_CI": {
+    "head": "6b912392d2969ff592409029f698edbb44b588cf",
+    "conclusion": "success",
+    "url": "https://github.com/monocap-tech/weil/actions/runs/38009055940/job/114084551539"
+  },
+  "retained_energy_floor_derived_from_V_intervals": true,
+  "all_six_cross_entries_checked": true,
+  "all_three_published_margins_checked": true,
+  "universal_complex_vector_bound": true,
+  "original_source_enclosures_realized": false,
+  "original_pairings_realized": false,
+  "original_inverse_domain_realized": false,
+  "original_completion_realized": false,
+  "full_RPB_P03_proved": false,
+  "RH_established": false
+}

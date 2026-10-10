@@ -1,5 +1,5 @@
 {
-  "status": "LOCAL_KERNEL_VERIFIED_REMOTE_CI_PENDING",
+  "status": "LOCAL_KERNEL_VERIFIED_REMOTE_CI_PASSED",
   "new_declaration_count": 7,
   "declarations": [
     "WeilDefect.RPB108.source_cross_square_of_gram_domination",
@@ -44,5 +44,10 @@
   "original_inverse_domain_realized": false,
   "original_completion_realized": false,
   "full_RPB_P03_proved": false,
-  "RH_established": false
+  "RH_established": false,
+  "remote_CI": {
+    "head": "6b912392d2969ff592409029f698edbb44b588cf",
+    "conclusion": "success",
+    "url": "https://github.com/monocap-tech/weil/actions/runs/38009055940/job/114084551539"
+  }
 }
