@@ -1,6 +1,6 @@
 # Actual low and retained Schur-block bounds
 
-Status: **LOCALLY KERNEL-CHECKED; REMOTE CI PENDING**. The preceding form-completion head `2729c76f4b69ea17783e80b9727ef3f6a9c19147` passed pinned remote CI.
+Status: **KERNEL-CHECKED; PINNED REMOTE CI PASSED** at `9dc74c27347275dc02c115596404ff82f78671cf`. The preceding form-completion head `2729c76f4b69ea17783e80b9727ef3f6a9c19147` passed pinned remote CI.
 
 ## Actual inverse versus raw source
 
@@ -54,3 +54,5 @@ Full RPB-P03, the remaining 104-dimensional response sign, complete 1.06 positiv
 ## Verification
 
 Pinned Lean/mathlib 4.34.0 component and H1 target builds passed. Independent audits of all eleven new declarations use only `propext`, `Classical.choice`, and `Quot.sound`. Authenticated regeneration reproduces the checked module byte for byte. [DNE27_SCHUR_BOUNDS_VERIFICATION.json](DNE27_SCHUR_BOUNDS_VERIFICATION.json) records source and evidence hashes and all remaining original-form obligations.
+
+The subsequent [finite Schur component](DNE27_FINITE_SCHUR_PORT.md) derives the finite Schur identity from the uncorrected native block identity and Hermitian high-form weak inverse equations. Original native/raw block realization remains open.

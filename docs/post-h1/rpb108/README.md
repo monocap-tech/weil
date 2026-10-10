@@ -42,4 +42,6 @@ This directory is a review candidate, not an instruction to begin a new official
 
 The [high-form completion component](DNE27_FORM_COMPLETION_PORT.md) locally checks the weak-inverse square-completion identity and derives the gap from explicit raw/finite Schur block identities and separate block lower bounds. Original-form attachment remains open; pinned remote CI passed.
 
-The [actual Schur-bound component](DNE27_SCHUR_BOUNDS_PORT.md) derives the low and retained inverse-corrected block bounds, keeping actual inverse covariance distinct from the raw source Gram. Its local checks passed; remote CI is pending. Original block/domain realization remains open.
+The [actual Schur-bound component](DNE27_SCHUR_BOUNDS_PORT.md) derives the low and retained inverse-corrected block bounds, keeping actual inverse covariance distinct from the raw source Gram. Pinned remote CI passed. Original block/domain realization remains open.
+
+The [finite Schur component](DNE27_FINITE_SCHUR_PORT.md) derives the actual finite Schur decomposition from native blocks and weak Hermitian inverse identities, keeping conjugations explicit. Local checks passed; remote CI is pending. Original native/raw block and domain/coercivity realization remain open.

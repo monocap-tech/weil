@@ -38,4 +38,6 @@ This proposed transfer is not a completed Horizon-2 theorem package. Review the 
 
 The [form-completion component](DNE27_FORM_COMPLETION_PORT.md) now supplies checked generic high-form algebra and a block interface for F3. Original weak inverse/domain, raw form identity, finite Schur identities and separate lower bounds still require proof on the original carrier. Pinned remote CI passed at `2729c76f4b69ea17783e80b9727ef3f6a9c19147`.
 
-The [actual Schur-bound component](DNE27_SCHUR_BOUNDS_PORT.md) derives the low and retained Schur lower bounds under native/source enclosures and inverse norm control. Original raw and finite block identities, native energy realization and domain/high coercivity remain the F3 boundary. Local checks passed; remote CI is pending.
+The [actual Schur-bound component](DNE27_SCHUR_BOUNDS_PORT.md) derives the low and retained Schur lower bounds under native/source enclosures and inverse norm control. Original raw and finite block identities, native energy realization and domain/high coercivity remain the F3 boundary. Pinned remote CI passed at `9dc74c27347275dc02c115596404ff82f78671cf`.
+
+The [finite Schur component](DNE27_FINITE_SCHUR_PORT.md) derives finite Schur transport from uncorrected native blocks and weak Hermitian high-inverse equations. Native/raw block identities and original domain/enclosure/coercivity realization remain the F3 boundary. Local checks passed; remote CI is pending.

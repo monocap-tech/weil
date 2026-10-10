@@ -1,0 +1,52 @@
+{
+  "status": "LOCAL_KERNEL_VERIFIED_REMOTE_CI_PENDING",
+  "new_declaration_count": 7,
+  "declarations": [
+    "WeilDefect.RPB108.inverse_covariance_hermitian",
+    "WeilDefect.RPB108.inverse_covariance_split",
+    "WeilDefect.RPB108.finite_schur_split",
+    "WeilDefect.RPB108.DNE27Even.finite_schur_identity_of_native_block",
+    "WeilDefect.RPB108.DNE27Even.physical_gap_of_native_form_blocks",
+    "WeilDefect.RPB108.DNE27Odd.finite_schur_identity_of_native_block",
+    "WeilDefect.RPB108.DNE27Odd.physical_gap_of_native_form_blocks"
+  ],
+  "upstream_commit": "3b5c5cb3a6db62c0fc7745820dc42a0d3d195c16",
+  "input_manifest_sha256": "523dee81048a18e1b543b6e654daa894375a31540bbca2630d0f093009979982",
+  "source_sha256": {
+    "WeilDefect/RPB108/FiniteSchur.lean": "110ee29c91511f622c2ea9fee4242f7f9dda9dc25857bf8c0e76a8c9536165b7",
+    "WeilDefect/RPB108/DNE27FiniteSchur.lean": "73a70c7287b557c7806f8983fd975d7cf559fc37350d4e31ca3211061cdb59b4"
+  },
+  "checks": {
+    "component_build": "PASS",
+    "h1_ci_target": "PASS",
+    "independent_axiom_audits": "PASS",
+    "admission_check": "PASS"
+  },
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "evidence_sha256": {
+    "build.log": "50761e792efda92a4ce950591a794012253f2c39cd512dce2ac1f77cc3744198",
+    "h1-build.log": "ee09e836dcdb216af76cd420d7872d25401510718bf5bf489d0e15119a10afb5",
+    "axioms-generic.log": "3c634de01f9919072b8277263fa16a2d90cfd3b8f4a51d3a99d560a80f3b8c35",
+    "axioms-parity.log": "91bbec9200834991ce71742ee4ed199f18cfe433b6afb8eb2c5046e08f4c1d0d"
+  },
+  "preceding_Schur_bounds_CI": {
+    "head": "9dc74c27347275dc02c115596404ff82f78671cf",
+    "conclusion": "success",
+    "url": "https://github.com/monocap-tech/weil/actions/runs/38012573386/job/114095634502"
+  },
+  "Hermitian_covariance_derived_from_cross_weak_equations": true,
+  "finite_Schur_identity_derived_from_native_block": true,
+  "raw_Gram_equals_inverse_covariance_claimed": false,
+  "original_native_block_identity_realized": false,
+  "original_raw_block_identity_realized": false,
+  "original_source_Gram_realized": false,
+  "original_high_form_domain_realized": false,
+  "original_weak_inverse_realized": false,
+  "original_high_coercivity_realized": false,
+  "full_RPB_P03_proved": false,
+  "RH_established": false
+}

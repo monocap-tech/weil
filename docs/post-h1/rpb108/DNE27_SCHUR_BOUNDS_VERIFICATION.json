@@ -1,5 +1,5 @@
 {
-  "status": "LOCAL_KERNEL_VERIFIED_REMOTE_CI_PENDING",
+  "status": "LOCAL_KERNEL_VERIFIED_REMOTE_CI_PASSED",
   "new_declaration_count": 11,
   "declarations": [
     "WeilDefect.RPB108.inverse_quadratic_upper",
@@ -55,5 +55,10 @@
   "original_finite_Schur_identity_realized": false,
   "original_high_coercivity_realized": false,
   "full_RPB_P03_proved": false,
-  "RH_established": false
+  "RH_established": false,
+  "remote_CI": {
+    "head": "9dc74c27347275dc02c115596404ff82f78671cf",
+    "conclusion": "success",
+    "url": "https://github.com/monocap-tech/weil/actions/runs/38012573386/job/114095634502"
+  }
 }
