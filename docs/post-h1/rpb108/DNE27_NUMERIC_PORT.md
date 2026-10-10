@@ -1,10 +1,10 @@
 # DNE27 physical-gap arithmetic: first kernel-checked numerical slice
 
-Status: **LOCALLY KERNEL-CHECKED; REMOTE CI PENDING**. The preceding ten supporting lemmas passed remote CI at `906df24396b75c1a8a628ea09f91faabb75e7a3a`.
+Status: **REMOTE CI VERIFIED AT THE NUMERICAL-SLICE HEAD**. The preceding ten supporting lemmas passed remote CI at `906df24396b75c1a8a628ea09f91faabb75e7a3a`.
 
 ## Exact input custody and generated definitions
 
-[The input manifest](numeric-inputs/MANIFEST.json) records immutable commit, Git path, SHA256 and byte count for five unmodified JSON files at DNE27 `3b5c5cb3a6db62c0fc7745820dc42a0d3d195c16`: the primary DNE27 certificate, the DNE22 probe-plane certificate, the DNE18 low input, and the even/odd NF32 inputs. These bytes are vendored for portable replay. The generator verifies their hashes before rendering values; it supplies no Lean proof premise.
+[The input manifest](numeric-inputs/MANIFEST.json) records immutable commit, Git path, SHA256 and byte count for six unmodified JSON files, five used by this initial numerical slice at DNE27 `3b5c5cb3a6db62c0fc7745820dc42a0d3d195c16`: the primary DNE27 certificate, the DNE22 probe-plane certificate, the DNE18 low input, and the even/odd NF32 inputs. The sixth DNE23 input supplies the subsequent [mixed-energy slice](DNE27_MIXED_ENERGY_PORT.md). These bytes are vendored for portable replay. The generator verifies their hashes before rendering values; it supplies no Lean proof premise.
 
 [generate.py](numeric-inputs/generate.py) extracts exact rational literals into [DNE27Numerics.lean](../../../../WeilDefect/RPB108/DNE27Numerics.lean). Both `DNE27Even` and `DNE27Odd` define the four scales, native mass upper values, source-square upper values, completed mass upper values, low/three-coordinate lower weights, `highFloor=11/25`, and `gap=4/(10^36)`.
 

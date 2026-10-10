@@ -28,5 +28,11 @@
     "path": "notes/data/RPB108_DNE22_NF32_ODD_INPUT_20261009.json",
     "bytes": 90870,
     "sha256": "96a4f1448b0aa0d347ce79345e222d260c70af22cc86e7cd998626883e6fdb90"
+  },
+  {
+    "commit": "3b5c5cb3a6db62c0fc7745820dc42a0d3d195c16",
+    "path": "notes/data/RPB108_DNE23_EIGHT_DIRECTION_CERTIFICATE_20261009.json",
+    "bytes": 53153,
+    "sha256": "0cb636cdf03ad09f57cfce6d4bc67d0b7094dc1c154597cb0d1fe467590a2fd6"
   }
 ]

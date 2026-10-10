@@ -1,5 +1,5 @@
 {
-  "status": "LOCAL_KERNEL_VERIFIED_REMOTE_CI_PENDING",
+  "status": "REMOTE_CI_VERIFIED_AT_NUMERICAL_SLICE_HEAD",
   "upstream_commit": "3b5c5cb3a6db62c0fc7745820dc42a0d3d195c16",
   "module": "WeilDefect.RPB108.DNE27Numerics",
   "declarations": [
@@ -16,7 +16,7 @@
   ],
   "closed_numerical_declarations": 8,
   "conditional_actual_vector_declarations": 2,
-  "input_manifest_sha256": "31d57701528d968795726ce140755f98cd58e46a36478bcb366251a40ee961a5",
+  "input_manifest_sha256": "523dee81048a18e1b543b6e654daa894375a31540bbca2630d0f093009979982",
   "generated_source_sha256": "c34fd52113eac1864098b6f45aa0f69b8c323effeec75b12b71e5f49a7f7d6da",
   "checks": {
     "component_build": "PASS",
@@ -48,5 +48,11 @@
   "original_high_inverse_realized": false,
   "original_energy_attachment_proved": false,
   "full_DNE27_certificate_imported": false,
-  "RH_established": false
+  "RH_established": false,
+  "remote_CI": {
+    "head": "3bba71d37e44e5fcbe40d5a771cf746f243a443c",
+    "conclusion": "success",
+    "url": "https://github.com/monocap-tech/weil/actions/runs/38005749917/job/114074026448"
+  },
+  "original_five_input_manifest_sha256": "31d57701528d968795726ce140755f98cd58e46a36478bcb366251a40ee961a5"
 }

@@ -1,6 +1,6 @@
 # First post-H1 Lean component: universal physical-gap inequalities
 
-Status: **TEN SUPPORTING LEMMAS PASSED REMOTE CI; NUMERICAL SLICE LOCALLY VERIFIED, REMOTE CI PENDING**.
+Status: **TEN SUPPORTING LEMMAS PASSED REMOTE CI; NUMERICAL SLICE PASSED REMOTE CI; MIXED-ENERGY EXTENSION LOCALLY VERIFIED**.
 This companion port is based on the documentation transfer in PR #1. It adds a separate `WeilDefect.RPB108` module family. The existing Horizon-1 sources, theorem declarations, theorem IDs and ledger are unchanged.
 
 ## Exact declaration inventory
@@ -54,7 +54,7 @@ Use four completed-column weights `s_i b_i`, lower diagonal weights `(alpha, the
 
 `sum_i (s_i*b_i)^2/L_i + 1/k`.
 
-The source-completed theorem derives the column and triangle bounds. Instantiation on the original form still requires the native/source norm enclosures, the actual high-inverse bound, the completed-square energy lower bound, and kernel verification of the squared and denominator inequalities. The selected DNE27 physical-gap scalar values now have kernel-checked inequalities in the numerical slice. The remaining matrix/source-credit and mixed-energy numerical assertions, and the local Python replays beyond this slice, retain their separate computational status.
+The source-completed theorem derives the column and triangle bounds. Instantiation on the original form still requires the native/source norm enclosures, the actual high-inverse bound, the completed-square energy lower bound, and kernel verification of the squared and denominator inequalities. The selected DNE27 physical-gap scalar values now have kernel-checked inequalities in the numerical slice. The remaining matrix/source-credit numerical assertions beyond the [mixed-energy slice](DNE27_MIXED_ENERGY_PORT.md), and the local Python replays beyond this slice, retain their separate computational status.
 
 Thus F2 gains its universal inequality lemma, while F0/F1, the numerical part of F2, and the original-form theorem F3 remain open. F4/F5/F6 are unchanged. No positivity of the full original 1.06 form, complete 104-dimensional response sign, global continuation, or RH is asserted.
 
@@ -68,7 +68,7 @@ lake build WeilDefect.Examples.WeakCriticalFallthrough
 lake env lean WeilDefect/RPB108/PhysicalGap.lean
 ```
 
-The last command prints the initial three axiom audits; also run `lake env lean WeilDefect/RPB108/CompletedColumns.lean` for the three completed-column audits and `lake env lean WeilDefect/RPB108/SourceNormBounds.lean` for the four source-norm audits. The companion CI change adds `lake build WeilDefect.RPB108` beside the existing H1 target and retains the admission check. Local evidence is recorded in [PHYSICAL_GAP_VERIFICATION.json](PHYSICAL_GAP_VERIFICATION.json); the initial head `fcd6f161e260692b9f80391f5185d34fd513e4ad` passed [remote CI](https://github.com/monocap-tech/weil/actions/runs/37995164234), and the six-lemma head `bb1effa808e6a99415f5213e723ccc981633f124` passed [remote CI](https://github.com/monocap-tech/weil/actions/runs/38002900652). The source-norm extension passed remote CI at `906df24396b75c1a8a628ea09f91faabb75e7a3a`; the numerical slice requires its own successful remote CI run.
+The last command prints the initial three axiom audits; also run `lake env lean WeilDefect/RPB108/CompletedColumns.lean` for the three completed-column audits and `lake env lean WeilDefect/RPB108/SourceNormBounds.lean` for the four source-norm audits. The companion CI change adds `lake build WeilDefect.RPB108` beside the existing H1 target and retains the admission check. Local evidence is recorded in [PHYSICAL_GAP_VERIFICATION.json](PHYSICAL_GAP_VERIFICATION.json); the initial head `fcd6f161e260692b9f80391f5185d34fd513e4ad` passed [remote CI](https://github.com/monocap-tech/weil/actions/runs/37995164234), and the six-lemma head `bb1effa808e6a99415f5213e723ccc981633f124` passed [remote CI](https://github.com/monocap-tech/weil/actions/runs/38002900652). The source-norm extension passed remote CI at `906df24396b75c1a8a628ea09f91faabb75e7a3a`; the numerical slice passed remote CI at `3bba71d37e44e5fcbe40d5a771cf746f243a443c`. The mixed-energy extension requires its own successful remote CI run.
 
 ## Relationship to the next release
 
