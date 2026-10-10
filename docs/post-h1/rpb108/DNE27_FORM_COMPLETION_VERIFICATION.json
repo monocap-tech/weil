@@ -1,5 +1,5 @@
 {
-  "status": "LOCAL_KERNEL_VERIFIED_REMOTE_NOT_VERIFIED",
+  "status": "LOCAL_KERNEL_VERIFIED_REMOTE_CI_PENDING",
   "new_declaration_count": 6,
   "declarations": [
     "WeilDefect.RPB108.high_form_square_completion",
@@ -34,7 +34,8 @@
   },
   "preceding_source_pairing_CI": {
     "head": "4aee865272a835a8063ea2ab55f169c669d9859b",
-    "status": "UNVERIFIED_API_HTTP_401"
+    "conclusion": "success",
+    "url": "https://github.com/monocap-tech/weil/actions/runs/38010483562/job/114089077316"
   },
   "weak_inverse_square_completion_derived": true,
   "same_completed_physical_vector_identified": true,
@@ -46,5 +47,6 @@
   "original_finite_Schur_lower_bounds_realized": false,
   "original_high_coercivity_realized": false,
   "full_RPB_P03_proved": false,
-  "RH_established": false
+  "RH_established": false,
+  "proof_extension_pushed_head": "82a02c7"
 }

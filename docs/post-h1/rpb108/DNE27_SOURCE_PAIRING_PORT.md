@@ -1,6 +1,6 @@
 # Source-pairing square from actual vectors and restricted inverse
 
-Status: **LOCALLY KERNEL-CHECKED; REMOTE CI PENDING**. The preceding native-row extension passed pinned CI at `fcf548917a799b1a8c725776a3f9a0f38d69e37e`.
+Status: **KERNEL-CHECKED; PINNED REMOTE CI PASSED** at `4aee865272a835a8063ea2ab55f169c669d9859b`. The preceding native-row extension passed pinned CI at `fcf548917a799b1a8c725776a3f9a0f38d69e37e`.
 
 ## Exact distinction and realization
 
