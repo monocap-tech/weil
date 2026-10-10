@@ -1,6 +1,6 @@
 # Complete three-column source-Gram domination slice
 
-Status: **LOCALLY KERNEL-CHECKED; REMOTE CI PENDING**. The preceding mixed-energy slice passed remote CI at `f818c791070226abc6862100a84a074af17e6319`.
+Status: **KERNEL-CHECKED; PINNED REMOTE CI PASSED** at `cc731445e24872fdb429405de407a0de059fa0bc`. The preceding mixed-energy slice passed remote CI at `f818c791070226abc6862100a84a074af17e6319`.
 
 ## Exact data and scope
 
