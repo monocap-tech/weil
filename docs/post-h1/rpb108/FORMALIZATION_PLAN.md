@@ -35,3 +35,5 @@ If formal arithmetic verification is infeasible for a source certificate, mark i
 ## Publication disposition
 
 This proposed transfer is not a completed Horizon-2 theorem package. Review the four surfaces, verify upstream bytes and accepted wording, then separately decide which statements warrant stable IDs and a manuscript-level theorem. Keep experimental work in weil-lab and attach only the reusable proofs and checked dependency closure to weil.
+
+The [form-completion component](DNE27_FORM_COMPLETION_PORT.md) now supplies checked generic high-form algebra and a block interface for F3. Original weak inverse/domain, raw form identity, finite Schur identities and separate lower bounds still require proof on the original carrier. Local checks passed; publication and remote CI require restored GitHub authentication.

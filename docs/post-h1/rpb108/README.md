@@ -39,3 +39,5 @@ A result marked **UPSTREAM-CERTIFIED** has a published, outward computational ar
 Original theorem statements should be promoted into the stable public theorem registry only after the input bytes, exact normalizations, source ancestry, statement scope, and replay evidence have passed review. Proposed RPB labels are **not** existing stable Horizon-1 theorem IDs.
 
 This directory is a review candidate, not an instruction to begin a new official Horizon or silently attach the current P2M equivalence to a different carrier.
+
+The [high-form completion component](DNE27_FORM_COMPLETION_PORT.md) locally checks the weak-inverse square-completion identity and derives the gap from explicit raw/finite Schur block identities and separate block lower bounds. Original-form attachment remains open; remote publication and CI are not verified because GitHub authentication was unavailable during this pass.

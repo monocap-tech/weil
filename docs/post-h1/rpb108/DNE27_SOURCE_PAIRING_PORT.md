@@ -47,3 +47,5 @@ Full RPB-P03, the remaining 104-dimensional response sign, complete 1.06 positiv
 ## Verification
 
 Pinned Lean/mathlib 4.34.0 component and H1 target builds passed. Independent audits of all ten added declarations use only `propext`, `Classical.choice`, and `Quot.sound`. The generic norm identities and Cauchy estimates are Lean proofs; there is no external numerical premise or new numerical certificate. [DNE27_SOURCE_PAIRING_VERIFICATION.json](DNE27_SOURCE_PAIRING_VERIFICATION.json) records source hashes, audit evidence and exact scope.
+
+The subsequent [form-completion component](DNE27_FORM_COMPLETION_PORT.md) derives the mixed completion inequality from explicit raw and finite Schur block identities, separate block lower bounds and high-form coercivity. Those original-form attachments remain unproved.
