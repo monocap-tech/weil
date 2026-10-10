@@ -1,5 +1,5 @@
 {
-  "status": "LOCAL_KERNEL_VERIFIED_REMOTE_CI_PENDING",
+  "status": "REMOTE_CI_VERIFIED_AT_MIXED_ENERGY_HEAD",
   "upstream_commit": "3b5c5cb3a6db62c0fc7745820dc42a0d3d195c16",
   "declarations": [
     "WeilDefect.RPB108.paid_young_completed_square",
@@ -60,5 +60,10 @@
   "source_Gram_domination_imported": false,
   "original_operator_domain_realized": false,
   "full_RPB_P03_proved": false,
-  "RH_established": false
+  "RH_established": false,
+  "remote_CI": {
+    "head": "f818c791070226abc6862100a84a074af17e6319",
+    "conclusion": "success",
+    "url": "https://github.com/monocap-tech/weil/actions/runs/38007754448"
+  }
 }

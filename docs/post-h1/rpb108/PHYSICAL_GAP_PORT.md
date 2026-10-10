@@ -1,6 +1,6 @@
 # First post-H1 Lean component: universal physical-gap inequalities
 
-Status: **TEN SUPPORTING LEMMAS PASSED REMOTE CI; NUMERICAL SLICE PASSED REMOTE CI; MIXED-ENERGY EXTENSION LOCALLY VERIFIED**.
+Status: **TEN SUPPORTING LEMMAS PASSED REMOTE CI; NUMERICAL SLICE PASSED REMOTE CI; MIXED-ENERGY EXTENSION PASSED REMOTE CI; GRAM EXTENSION LOCALLY VERIFIED**.
 This companion port is based on the documentation transfer in PR #1. It adds a separate `WeilDefect.RPB108` module family. The existing Horizon-1 sources, theorem declarations, theorem IDs and ledger are unchanged.
 
 ## Exact declaration inventory
@@ -68,7 +68,7 @@ lake build WeilDefect.Examples.WeakCriticalFallthrough
 lake env lean WeilDefect/RPB108/PhysicalGap.lean
 ```
 
-The last command prints the initial three axiom audits; also run `lake env lean WeilDefect/RPB108/CompletedColumns.lean` for the three completed-column audits and `lake env lean WeilDefect/RPB108/SourceNormBounds.lean` for the four source-norm audits. The companion CI change adds `lake build WeilDefect.RPB108` beside the existing H1 target and retains the admission check. Local evidence is recorded in [PHYSICAL_GAP_VERIFICATION.json](PHYSICAL_GAP_VERIFICATION.json); the initial head `fcd6f161e260692b9f80391f5185d34fd513e4ad` passed [remote CI](https://github.com/monocap-tech/weil/actions/runs/37995164234), and the six-lemma head `bb1effa808e6a99415f5213e723ccc981633f124` passed [remote CI](https://github.com/monocap-tech/weil/actions/runs/38002900652). The source-norm extension passed remote CI at `906df24396b75c1a8a628ea09f91faabb75e7a3a`; the numerical slice passed remote CI at `3bba71d37e44e5fcbe40d5a771cf746f243a443c`. The mixed-energy extension requires its own successful remote CI run.
+The last command prints the initial three axiom audits; also run `lake env lean WeilDefect/RPB108/CompletedColumns.lean` for the three completed-column audits and `lake env lean WeilDefect/RPB108/SourceNormBounds.lean` for the four source-norm audits. The companion CI change adds `lake build WeilDefect.RPB108` beside the existing H1 target and retains the admission check. Local evidence is recorded in [PHYSICAL_GAP_VERIFICATION.json](PHYSICAL_GAP_VERIFICATION.json); the initial head `fcd6f161e260692b9f80391f5185d34fd513e4ad` passed [remote CI](https://github.com/monocap-tech/weil/actions/runs/37995164234), and the six-lemma head `bb1effa808e6a99415f5213e723ccc981633f124` passed [remote CI](https://github.com/monocap-tech/weil/actions/runs/38002900652). The source-norm extension passed remote CI at `906df24396b75c1a8a628ea09f91faabb75e7a3a`; the numerical slice passed remote CI at `3bba71d37e44e5fcbe40d5a771cf746f243a443c`. The mixed-energy extension passed remote CI at `f818c791070226abc6862100a84a074af17e6319`; the [Gram extension](DNE27_GRAM_PORT.md) requires its own successful remote CI run.
 
 ## Relationship to the next release
 

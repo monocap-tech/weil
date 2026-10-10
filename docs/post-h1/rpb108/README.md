@@ -21,7 +21,7 @@ The current mathematical subject is the original supported Weil quadratic form Q
 
 ## First Lean component
 
-The companion port adds [the universal physical-gap bound](PHYSICAL_GAP_PORT.md) in the separate `WeilDefect.RPB108` namespace. The ten supporting lemmas passed pinned remote CI. The [DNE27 numerical slice](DNE27_NUMERIC_PORT.md) now proves eight closed scalar lemmas and two conditional physical-gap theorems; these passed pinned remote CI. The [mixed-energy slice](DNE27_MIXED_ENERGY_PORT.md) also passed its local pinned build and axiom audits, with remote CI pending. This numerical slice certifies selected arithmetic inequalities; the original source/form-domain attachment and carrier adapter remain open.
+The companion port adds [the universal physical-gap bound](PHYSICAL_GAP_PORT.md) in the separate `WeilDefect.RPB108` namespace. The ten supporting lemmas passed pinned remote CI. The [DNE27 numerical slice](DNE27_NUMERIC_PORT.md) now proves eight closed scalar lemmas and two conditional physical-gap theorems; these passed pinned remote CI. The [mixed-energy slice](DNE27_MIXED_ENERGY_PORT.md) passed pinned remote CI. The [complete three-column Gram slice](DNE27_GRAM_PORT.md) passed its local pinned build and axiom audits, with remote CI pending. This numerical slice certifies selected arithmetic inequalities; the original source/form-domain attachment and carrier adapter remain open.
 
 ## Main bounded conclusions and nonconclusions
 

@@ -1,6 +1,6 @@
 # DNE27 mixed-energy certificate and paid Young reduction
 
-Status: **LOCALLY KERNEL-CHECKED; REMOTE CI PENDING**. The preceding physical-gap numerical slice passed remote CI at `3bba71d37e44e5fcbe40d5a771cf746f243a443c`.
+Status: **REMOTE CI VERIFIED AT THE MIXED-ENERGY HEAD**. The preceding physical-gap numerical slice passed remote CI at `3bba71d37e44e5fcbe40d5a771cf746f243a443c`.
 
 ## Exact inventory and dependency path
 
@@ -64,3 +64,5 @@ lake build WeilDefect.Examples.WeakCriticalFallthrough
 ```
 
 Both generators authenticate inputs and reproduce source bytes exactly. An isolated control replaced the even mixed upper bound with zero; Lean rejected its scalar certificate/identities. The control is excluded from trusted sources. [DNE27_MIXED_VERIFICATION.json](DNE27_MIXED_VERIFICATION.json) records source/input hashes, local validation and scope. Existing CI builds the RPB108 entry point, including both new modules.
+
+The subsequent [complete three-column Gram slice](DNE27_GRAM_PORT.md) closes the selected matrix domination arithmetic for all compatible enclosures and arbitrary complex vectors. Original source/form realization remains open.

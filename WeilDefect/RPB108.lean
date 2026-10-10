@@ -3,3 +3,4 @@ import WeilDefect.RPB108.CompletedColumns
 import WeilDefect.RPB108.SourceNormBounds
 import WeilDefect.RPB108.DNE27Numerics
 import WeilDefect.RPB108.DNE27MixedEnergy
+import WeilDefect.RPB108.DNE27Gram
