@@ -1,5 +1,5 @@
 {
-  "status": "LOCAL_KERNEL_VERIFIED_REMOTE_CI_PENDING",
+  "status": "LOCAL_KERNEL_VERIFIED_REMOTE_CI_PASSED",
   "new_declaration_count": 7,
   "declarations": [
     "WeilDefect.RPB108.inverse_covariance_hermitian",
@@ -48,5 +48,10 @@
   "original_weak_inverse_realized": false,
   "original_high_coercivity_realized": false,
   "full_RPB_P03_proved": false,
-  "RH_established": false
+  "RH_established": false,
+  "remote_CI": {
+    "head": "7baf4a3a5572f983c61a39b14d2c1c249b5ce112",
+    "conclusion": "success",
+    "url": "https://github.com/monocap-tech/weil/actions/runs/38013891325/job/114099818925"
+  }
 }

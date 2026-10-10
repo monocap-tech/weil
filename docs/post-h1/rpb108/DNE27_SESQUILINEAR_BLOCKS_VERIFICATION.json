@@ -1,0 +1,57 @@
+{
+  "status": "LOCAL_KERNEL_VERIFIED_REMOTE_CI_PENDING",
+  "new_declaration_count": 10,
+  "total_audited_declarations": 143,
+  "declarations": [
+    "WeilDefect.RPB108.hermitian_form_add",
+    "WeilDefect.RPB108.sesquilinear_smul_diagonal",
+    "WeilDefect.RPB108.sesquilinear_gram",
+    "WeilDefect.RPB108.sesquilinear_source_coupling",
+    "WeilDefect.RPB108.DNE27Even.native_block_of_sesquilinear_entries",
+    "WeilDefect.RPB108.DNE27Even.raw_block_of_sesquilinear_coupling",
+    "WeilDefect.RPB108.DNE27Even.physical_gap_of_sesquilinear_realization",
+    "WeilDefect.RPB108.DNE27Odd.native_block_of_sesquilinear_entries",
+    "WeilDefect.RPB108.DNE27Odd.raw_block_of_sesquilinear_coupling",
+    "WeilDefect.RPB108.DNE27Odd.physical_gap_of_sesquilinear_realization"
+  ],
+  "upstream_commit": "3b5c5cb3a6db62c0fc7745820dc42a0d3d195c16",
+  "input_manifest_sha256": "523dee81048a18e1b543b6e654daa894375a31540bbca2630d0f093009979982",
+  "source_sha256": {
+    "WeilDefect/RPB108/SesquilinearBlocks.lean": "4dcb50ec0ebc06cc9c8d402695cb4b59283e9bc0957ac6db754398b8a7683994",
+    "WeilDefect/RPB108/DNE27SesquilinearBlocks.lean": "88f270e58bdb9289a00489833f6e2f41d981c7f840049bbfefba3fcc91337dd9"
+  },
+  "checks": {
+    "component_build": "PASS",
+    "h1_ci_target": "PASS",
+    "independent_axiom_audits": "PASS",
+    "admission_check": "PASS"
+  },
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "evidence_directory": "/workspace/outputs/rpb108-sesquilinear-blocks",
+  "evidence_sha256": {
+    "build.log": "9e3e9c2a65a764a3af67b0ea8c5f33c313032ecd575126569c205ca063eee249",
+    "h1-build.log": "ee09e836dcdb216af76cd420d7872d25401510718bf5bf489d0e15119a10afb5",
+    "axioms-generic.log": "5cdc39914fb841ee12625f7266afefca548090a406b05ec55feb8f924adebd8a",
+    "axioms-parity.log": "e63d3a6e0ca7d6793c8862e5600ec687dea08656a1e96cf5b31a08559d7bf786"
+  },
+  "preceding_finite_Schur_CI": {
+    "head": "7baf4a3a5572f983c61a39b14d2c1c249b5ce112",
+    "conclusion": "success",
+    "url": "https://github.com/monocap-tech/weil/actions/runs/38013891325/job/114099818925"
+  },
+  "full_form_type": "E \u2192\u209b\u2097[starRingEnd \u2102] E \u2192\u2097[\u2102] \u2102",
+  "full_form_continuity_required": false,
+  "full_and_high_forms_distinct": true,
+  "native_block_derived_from_finite_entries": true,
+  "raw_block_derived_from_local_realization": true,
+  "original_form_domain_realized": false,
+  "original_finite_form_entries_realized": false,
+  "original_Q_high_restriction_source_coupling_realized": false,
+  "original_weak_inverse_and_high_coercivity_realized": false,
+  "full_RPB_P03_proved": false,
+  "RH_proved": false
+}

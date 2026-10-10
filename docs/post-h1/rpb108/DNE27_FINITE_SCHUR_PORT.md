@@ -1,6 +1,6 @@
 # Finite Schur identity from native blocks and weak inverse equations
 
-Status: **LOCALLY KERNEL-CHECKED; REMOTE CI PENDING**. The preceding Schur-bound head `9dc74c27347275dc02c115596404ff82f78671cf` passed pinned remote CI.
+Status: **LOCALLY KERNEL-CHECKED; PINNED REMOTE CI PASSED**. The preceding Schur-bound head `9dc74c27347275dc02c115596404ff82f78671cf` passed pinned remote CI.
 
 ## Exact conjugation and source realization
 
@@ -55,3 +55,5 @@ Full RPB-P03, the remaining 104-dimensional response sign, complete 1.06 positiv
 ## Validation
 
 Pinned Lean/mathlib 4.34.0 component and H1 target builds passed. Independent axiom audits of all seven new declarations use only `propext`, `Classical.choice`, and `Quot.sound`. The complex expansion uses exact algebra, with no phase sampling or numerical certificate premise. [DNE27_FINITE_SCHUR_VERIFICATION.json](DNE27_FINITE_SCHUR_VERIFICATION.json) records source hashes, evidence and all original-form realization obligations.
+
+Pinned finite-Schur CI passed at `7baf4a3a5572f983c61a39b14d2c1c249b5ce112`: https://github.com/monocap-tech/weil/actions/runs/38013891325/job/114099818925

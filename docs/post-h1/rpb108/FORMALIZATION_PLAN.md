@@ -40,4 +40,6 @@ The [form-completion component](DNE27_FORM_COMPLETION_PORT.md) now supplies chec
 
 The [actual Schur-bound component](DNE27_SCHUR_BOUNDS_PORT.md) derives the low and retained Schur lower bounds under native/source enclosures and inverse norm control. Original raw and finite block identities, native energy realization and domain/high coercivity remain the F3 boundary. Pinned remote CI passed at `9dc74c27347275dc02c115596404ff82f78671cf`.
 
-The [finite Schur component](DNE27_FINITE_SCHUR_PORT.md) derives finite Schur transport from uncorrected native blocks and weak Hermitian high-inverse equations. Native/raw block identities and original domain/enclosure/coercivity realization remain the F3 boundary. Local checks passed; remote CI is pending.
+The [finite Schur component](DNE27_FINITE_SCHUR_PORT.md) derives finite Schur transport from uncorrected native blocks and weak Hermitian high-inverse equations. Native/raw block identities and original domain/enclosure/coercivity realization remain the F3 boundary. Pinned remote CI passed at `7baf4a3a5572f983c61a39b14d2c1c249b5ce112`.
+
+The [sesquilinear block component](DNE27_SESQUILINEAR_BLOCKS_PORT.md) adds ten checked declarations deriving native and raw block identities from an algebraic Hermitian form, exact finite entries, local source coupling and high restriction. It composes these into both conditional physical-gap theorems. Local validation passed; remote CI for this extension is pending. Original form/domain, enclosures, weak inverse and high-coercivity realization remain open.

@@ -44,4 +44,6 @@ The [high-form completion component](DNE27_FORM_COMPLETION_PORT.md) locally chec
 
 The [actual Schur-bound component](DNE27_SCHUR_BOUNDS_PORT.md) derives the low and retained inverse-corrected block bounds, keeping actual inverse covariance distinct from the raw source Gram. Pinned remote CI passed. Original block/domain realization remains open.
 
-The [finite Schur component](DNE27_FINITE_SCHUR_PORT.md) derives the actual finite Schur decomposition from native blocks and weak Hermitian inverse identities, keeping conjugations explicit. Local checks passed; remote CI is pending. Original native/raw block and domain/coercivity realization remain open.
+The [finite Schur component](DNE27_FINITE_SCHUR_PORT.md) derives the actual finite Schur decomposition from native blocks and weak Hermitian inverse identities, keeping conjugations explicit. Pinned remote CI passed at `7baf4a3a5572f983c61a39b14d2c1c249b5ce112`. Original native/raw block and domain/coercivity realization remain open.
+
+The [sesquilinear block component](DNE27_SESQUILINEAR_BLOCKS_PORT.md) adds ten checked declarations deriving native and raw block identities from an algebraic Hermitian form, exact finite entries, local source coupling and high restriction. It composes these into both conditional physical-gap theorems. Local validation passed; remote CI for this extension is pending. Original form/domain, enclosures, weak inverse and high-coercivity realization remain open.
