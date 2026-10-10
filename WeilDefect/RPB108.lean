@@ -6,3 +6,4 @@ import WeilDefect.RPB108.DNE27MixedEnergy
 import WeilDefect.RPB108.DNE27Gram
 import WeilDefect.RPB108.DNE27ActualEnergy
 import WeilDefect.RPB108.DNE27RetainedEnergy
+import WeilDefect.RPB108.DNE27NativePairing

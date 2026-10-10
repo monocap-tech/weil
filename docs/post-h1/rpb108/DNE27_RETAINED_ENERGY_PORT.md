@@ -1,6 +1,6 @@
 # Retained-energy floor from complete V intervals
 
-Status: **LOCALLY KERNEL-CHECKED; REMOTE CI PENDING**. The preceding actual-energy pairing attachment passed pinned CI at `6b912392d2969ff592409029f698edbb44b588cf`.
+Status: **KERNEL-CHECKED; PINNED REMOTE CI PASSED** at `57db5c1a2b254bf848f71868d63aac063f56536a`. The preceding actual-energy pairing attachment passed pinned CI at `6b912392d2969ff592409029f698edbb44b588cf`.
 
 ## Exact arithmetic and scope
 
@@ -36,3 +36,5 @@ Full RPB-P03, the 104-dimensional response, complete 1.06 positivity, continuati
 ## Verification
 
 Pinned Lean/mathlib 4.34.0 component and H1 target builds passed. Independent axiom audits of all thirteen new declarations use only `propext`, `Classical.choice`, and `Quot.sound`. Authenticated regeneration is byte-identical. An isolated control falsely raised the odd retained floor to 1; Lean rejected it. The control is excluded from the trusted source. [DNE27_RETAINED_ENERGY_VERIFICATION.json](DNE27_RETAINED_ENERGY_VERIFICATION.json) records exact custody and evidence.
+
+The subsequent [native row attachment](DNE27_NATIVE_PAIRING_PORT.md) derives the separate native pairing-square estimate from exact unsquared row enclosures and this V-energy floor.

@@ -1,5 +1,5 @@
 {
-  "status": "LOCAL_KERNEL_VERIFIED_REMOTE_CI_PENDING",
+  "status": "LOCAL_KERNEL_VERIFIED_REMOTE_CI_PASSED",
   "new_declaration_count": 13,
   "declarations": [
     "WeilDefect.RPB108.scaled_retained_gram",
@@ -56,5 +56,10 @@
   "original_inverse_domain_realized": false,
   "original_completion_realized": false,
   "full_RPB_P03_proved": false,
-  "RH_established": false
+  "RH_established": false,
+  "remote_CI": {
+    "head": "57db5c1a2b254bf848f71868d63aac063f56536a",
+    "conclusion": "success",
+    "url": "https://github.com/monocap-tech/weil/actions/runs/38009541252/job/114086089793"
+  }
 }
