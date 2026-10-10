@@ -40,4 +40,6 @@ Original theorem statements should be promoted into the stable public theorem re
 
 This directory is a review candidate, not an instruction to begin a new official Horizon or silently attach the current P2M equivalence to a different carrier.
 
-The [high-form completion component](DNE27_FORM_COMPLETION_PORT.md) locally checks the weak-inverse square-completion identity and derives the gap from explicit raw/finite Schur block identities and separate block lower bounds. Original-form attachment remains open; the proof extension is pushed, with remote CI pending.
+The [high-form completion component](DNE27_FORM_COMPLETION_PORT.md) locally checks the weak-inverse square-completion identity and derives the gap from explicit raw/finite Schur block identities and separate block lower bounds. Original-form attachment remains open; pinned remote CI passed.
+
+The [actual Schur-bound component](DNE27_SCHUR_BOUNDS_PORT.md) derives the low and retained inverse-corrected block bounds, keeping actual inverse covariance distinct from the raw source Gram. Its local checks passed; remote CI is pending. Original block/domain realization remains open.

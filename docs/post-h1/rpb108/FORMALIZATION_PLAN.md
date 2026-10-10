@@ -36,4 +36,6 @@ If formal arithmetic verification is infeasible for a source certificate, mark i
 
 This proposed transfer is not a completed Horizon-2 theorem package. Review the four surfaces, verify upstream bytes and accepted wording, then separately decide which statements warrant stable IDs and a manuscript-level theorem. Keep experimental work in weil-lab and attach only the reusable proofs and checked dependency closure to weil.
 
-The [form-completion component](DNE27_FORM_COMPLETION_PORT.md) now supplies checked generic high-form algebra and a block interface for F3. Original weak inverse/domain, raw form identity, finite Schur identities and separate lower bounds still require proof on the original carrier. Local checks passed and the proof extension was pushed; remote CI is pending.
+The [form-completion component](DNE27_FORM_COMPLETION_PORT.md) now supplies checked generic high-form algebra and a block interface for F3. Original weak inverse/domain, raw form identity, finite Schur identities and separate lower bounds still require proof on the original carrier. Pinned remote CI passed at `2729c76f4b69ea17783e80b9727ef3f6a9c19147`.
+
+The [actual Schur-bound component](DNE27_SCHUR_BOUNDS_PORT.md) derives the low and retained Schur lower bounds under native/source enclosures and inverse norm control. Original raw and finite block identities, native energy realization and domain/high coercivity remain the F3 boundary. Local checks passed; remote CI is pending.

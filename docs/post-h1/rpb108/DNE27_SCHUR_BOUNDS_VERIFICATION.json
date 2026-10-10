@@ -1,0 +1,59 @@
+{
+  "status": "LOCAL_KERNEL_VERIFIED_REMOTE_CI_PENDING",
+  "new_declaration_count": 11,
+  "declarations": [
+    "WeilDefect.RPB108.inverse_quadratic_upper",
+    "WeilDefect.RPB108.low_schur_lower_of_norm_bound",
+    "WeilDefect.RPB108.complex_gram_add_div",
+    "WeilDefect.RPB108.DNE27Even.low_native_floor_identity",
+    "WeilDefect.RPB108.DNE27Even.actual_low_schur_lower",
+    "WeilDefect.RPB108.DNE27Even.actual_retained_schur_lower",
+    "WeilDefect.RPB108.DNE27Even.physical_gap_of_actual_schur_blocks",
+    "WeilDefect.RPB108.DNE27Odd.low_native_floor_identity",
+    "WeilDefect.RPB108.DNE27Odd.actual_low_schur_lower",
+    "WeilDefect.RPB108.DNE27Odd.actual_retained_schur_lower",
+    "WeilDefect.RPB108.DNE27Odd.physical_gap_of_actual_schur_blocks"
+  ],
+  "upstream_commit": "3b5c5cb3a6db62c0fc7745820dc42a0d3d195c16",
+  "input_manifest_sha256": "523dee81048a18e1b543b6e654daa894375a31540bbca2630d0f093009979982",
+  "source_sha256": {
+    "WeilDefect/RPB108/SchurBounds.lean": "559f8c972633086de1625a34c0ae03fa96d241415c6b33e4c028839fb43e7de7",
+    "WeilDefect/RPB108/DNE27SchurBounds.lean": "3565e26e8ff2272bd4092d03e9f5786009a91127fe867a754238fbd334606891",
+    "docs/post-h1/rpb108/numeric-inputs/generate_schur.py": "745e4e7b61700a6dbbc1b3f0b7c669e86547caec8d06467b574861f4adfd2528"
+  },
+  "checks": {
+    "component_build": "PASS",
+    "h1_ci_target": "PASS",
+    "independent_axiom_audits": "PASS",
+    "admission_check": "PASS",
+    "authenticated_regeneration": "BYTE_IDENTICAL"
+  },
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "evidence_sha256": {
+    "build.log": "525fdf417ac8d56042a5b8abb993a0533310078360eba434694898355e58cd4f",
+    "h1-build.log": "ee09e836dcdb216af76cd420d7872d25401510718bf5bf489d0e15119a10afb5",
+    "axioms-generic.log": "fe687280480c3a2cd7f382b6d26e1bfded2a7d88dcf4428407e84398f0211929",
+    "axioms-parity.log": "a892ebc706605fc32fbff853c79d1ef1857c42cef026095d2a7cceef1217227b",
+    "regeneration.log": "23c154845e02a3e07e2d9c9b02eb8469e04952e8f78cf0c258f39eeb84006619"
+  },
+  "preceding_form_completion_CI": {
+    "head": "2729c76f4b69ea17783e80b9727ef3f6a9c19147",
+    "conclusion": "success",
+    "url": "https://github.com/monocap-tech/weil/actions/runs/38012214932/job/114094570276"
+  },
+  "actual_low_and_retained_Schur_lower_bounds_derived": true,
+  "raw_Gram_equals_inverse_covariance_claimed": false,
+  "original_native_energy_realized": false,
+  "original_source_Gram_realized": false,
+  "original_high_form_domain_realized": false,
+  "original_weak_inverse_realized": false,
+  "original_raw_block_identity_realized": false,
+  "original_finite_Schur_identity_realized": false,
+  "original_high_coercivity_realized": false,
+  "full_RPB_P03_proved": false,
+  "RH_established": false
+}

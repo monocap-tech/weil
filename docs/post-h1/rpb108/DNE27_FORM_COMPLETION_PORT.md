@@ -1,6 +1,6 @@
 # High-form square completion and physical-gap block interface
 
-Status: **LOCALLY KERNEL-CHECKED; REMOTE CI PENDING**. The preceding source-pairing head `4aee865272a835a8063ea2ab55f169c669d9859b` passed pinned remote CI. GitHub authentication briefly failed during this pass, then recovered; the proof extension was pushed at `82a02c7`.
+Status: **KERNEL-CHECKED; PINNED REMOTE CI PASSED** at `2729c76f4b69ea17783e80b9727ef3f6a9c19147`. The preceding source-pairing head `4aee865272a835a8063ea2ab55f169c669d9859b` passed pinned remote CI. GitHub authentication briefly failed during this pass, then recovered; the proof extension was pushed at `82a02c7`.
 
 ## Scope
 
@@ -45,4 +45,6 @@ Full RPB-P03, the remaining 104-dimensional response sign, complete 1.06 positiv
 
 ## Validation and publication
 
-Pinned Lean/mathlib 4.34.0 component and H1 target builds passed. Independent audits of all six added declarations use only `propext`, `Classical.choice`, and `Quot.sound`. No external numerical proof premise is introduced. [DNE27_FORM_COMPLETION_VERIFICATION.json](DNE27_FORM_COMPLETION_VERIFICATION.json) records source hashes, checks and the exact unproved original-form attachments. The proof extension is published on the draft PR branch; remote CI for this extension remains pending.
+Pinned Lean/mathlib 4.34.0 component and H1 target builds passed. Independent audits of all six added declarations use only `propext`, `Classical.choice`, and `Quot.sound`. No external numerical proof premise is introduced. [DNE27_FORM_COMPLETION_VERIFICATION.json](DNE27_FORM_COMPLETION_VERIFICATION.json) records source hashes, checks and the exact unproved original-form attachments. The proof extension is published on the draft PR branch and passed pinned remote CI.
+
+The subsequent [actual Schur-bound component](DNE27_SCHUR_BOUNDS_PORT.md) derives the separate low and retained Schur lower bounds from native/source enclosures and the inverse norm. Original raw and finite block identities remain unproved.
