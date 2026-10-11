@@ -1,0 +1,71 @@
+{
+  "status": "LOCAL_KERNEL_VERIFIED_REMOTE_CI_PASSED",
+  "new_declaration_count": 16,
+  "declarations": [
+    "WeilDefect.RPB108.complex_row_square_le",
+    "WeilDefect.RPB108.native_row_square_of_energy_floor",
+    "WeilDefect.RPB108.DNE27Even.native_pairing_normalization",
+    "WeilDefect.RPB108.DNE27Even.native_envelope_nonneg",
+    "WeilDefect.RPB108.DNE27Even.native_pairing_endpoints",
+    "WeilDefect.RPB108.DNE27Even.native_dual_budget_identity",
+    "WeilDefect.RPB108.DNE27Even.native_scaled_row_bound",
+    "WeilDefect.RPB108.DNE27Even.native_pairing_square_of_enclosures",
+    "WeilDefect.RPB108.DNE27Even.physical_gap_of_native_row_enclosures",
+    "WeilDefect.RPB108.DNE27Odd.native_pairing_normalization",
+    "WeilDefect.RPB108.DNE27Odd.native_envelope_nonneg",
+    "WeilDefect.RPB108.DNE27Odd.native_pairing_endpoints",
+    "WeilDefect.RPB108.DNE27Odd.native_dual_budget_identity",
+    "WeilDefect.RPB108.DNE27Odd.native_scaled_row_bound",
+    "WeilDefect.RPB108.DNE27Odd.native_pairing_square_of_enclosures",
+    "WeilDefect.RPB108.DNE27Odd.physical_gap_of_native_row_enclosures"
+  ],
+  "upstream_commit": "3b5c5cb3a6db62c0fc7745820dc42a0d3d195c16",
+  "input_manifest_sha256": "523dee81048a18e1b543b6e654daa894375a31540bbca2630d0f093009979982",
+  "source_sha256": {
+    "WeilDefect/RPB108/NativePairing.lean": "a7d507bfe099ea300b03c469d6f2fadf9c979d23799375364721dd2eb3c304c1",
+    "WeilDefect/RPB108/DNE27NativePairing.lean": "281061491fd514610fe97f616372cb64afdb040ed1962333925ee71f3a06cc0f",
+    "docs/post-h1/rpb108/numeric-inputs/generate_native.py": "6575265c66fbdcef516aadeaaba499ff13175efc93136eb0379c6beb2004d677"
+  },
+  "checks": {
+    "component_build": "PASS",
+    "h1_ci_target": "PASS",
+    "independent_axiom_audits": "PASS",
+    "admission_check": "PASS",
+    "authenticated_regeneration": "BYTE_IDENTICAL",
+    "zero_native_dual_control": "REJECTED"
+  },
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "evidence_sha256": {
+    "build.log": "f8b8bbf7a841bc47803cea8c12cc1658a6eba24de86d4dffc6005df0fead10c1",
+    "h1-build.log": "ee09e836dcdb216af76cd420d7872d25401510718bf5bf489d0e15119a10afb5",
+    "axioms-generic.log": "8d2d2d52405a04ea843b00a452f6e601be841da4055bac7d8f9ee5bad40d21fb",
+    "axioms-parity.log": "71f226175816aa14e706a946921b3bde8ed988eb000c6a8bfa4a0c413f093ef4",
+    "regeneration.log": "366b5712fae53736bc2b6d764681bec7a23c4c28a63495f20cfd0c038cf72dfe",
+    "zero-dual.log": "2cdaacb93b12e873df272eaae479c3ec4e4529c3951cbafd3c6a8024227c47e8"
+  },
+  "preceding_retained_energy_CI": {
+    "head": "57db5c1a2b254bf848f71868d63aac063f56536a",
+    "conclusion": "success",
+    "url": "https://github.com/monocap-tech/weil/actions/runs/38009541252/job/114086089793"
+  },
+  "native_dual_budget_exact_identity": true,
+  "native_pairing_square_derived_from_entry_enclosures": true,
+  "native_row_scaling_exact": true,
+  "universal_complex_vector_bound": true,
+  "original_native_row_realized": false,
+  "original_source_enclosures_realized": false,
+  "original_source_pairing_realized": false,
+  "original_inverse_domain_realized": false,
+  "original_completion_realized": false,
+  "full_RPB_P03_proved": false,
+  "RH_established": false,
+  "remote_CI": {
+    "head": "fcf548917a799b1a8c725776a3f9a0f38d69e37e",
+    "conclusion": "success",
+    "url": "https://github.com/monocap-tech/weil/actions/runs/38010215337/job/114088230101"
+  }
+}

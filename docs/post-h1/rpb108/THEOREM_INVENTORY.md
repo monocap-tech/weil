@@ -57,3 +57,29 @@ The inequalities c_parity * B_Y - Gamma_Y > 0 **in both parities** suffice for f
 - The formal RH-equivalent quartet/finite-selected-certificate results are separate, accepted interfaces. No direct identity with the RPB108 fixed-aperture certificate is yet formalized.
 
 See [SOURCE_MANIFEST](SOURCE_MANIFEST.md) for pinned upstream links and [OPEN_FRONTIER](OPEN_FRONTIER.md) for the next mathematical target.
+
+## Generic supporting Lean component
+
+The [physical-gap component ledger](PHYSICAL_GAP_PORT.md) maps ten new declarations to exact generic inequalities. Status: all ten supporting declarations passed remote CI; the separate numerical slice below is locally kernel-checked, with remote CI pending. These supporting lemmas are separate from provisional RPB-P01–RPB-P05. None of those original arithmetic/form results changes formal status.
+
+The [DNE27 physical-gap numerical slice](DNE27_NUMERIC_PORT.md) adds eight closed scalar declarations and two conditional quantitative gap declarations using authenticated exact values. These passed remote CI at the numerical-slice head. They discharge the selected squared/denominator arithmetic, not the original source and energy attachment; RPB-P03 remains NOT PORTED as a full original-form theorem.
+
+The [DNE27 mixed-energy slice](DNE27_MIXED_ENERGY_PORT.md) adds the exact paid Young identity, its lower bound, and ten parity-specific declarations in each sector. The combined-root and paid-weight arithmetic are kernel-checked; the raw mixed-energy estimate on the original form and the source-Gram domination remain attachment obligations. Remote CI passed at the mixed-energy head.
+
+The [three-column Gram slice](DNE27_GRAM_PORT.md) checks all signed interval cross bounds and positive row margins, deriving strict source-Gram domination for every nonzero complex coefficient vector under the complete V/G enclosures. Original source realization remains unproved; full RPB-P results retain their status. Remote CI for the matrix extension passed at `cc731445e24872fdb429405de407a0de059fa0bc`.
+
+The [actual-energy pairing attachment](DNE27_ACTUAL_ENERGY_PORT.md) adds seven checked reductions composing complete Gram domination, primitive pairing squares and paid Young bounds into the physical gap. It keeps actual V-energy distinct from its coordinate lower bound. Original pairing/domain/completion realization remains open; all full RPB-P statuses remain unchanged. Pinned remote CI passed at `6b912392d2969ff592409029f698edbb44b588cf`.
+
+The [retained-energy slice](DNE27_RETAINED_ENERGY_PORT.md) adds thirteen declarations verifying the complete retained V row margins and deriving its universal energy floor. The physical-gap attachment now derives that floor from its existing V enclosures. All original-form realization obligations and full RPB-P statuses remain explicit and unchanged. Pinned remote CI passed at `57db5c1a2b254bf848f71868d63aac063f56536a`.
+
+The [native-pairing slice](DNE27_NATIVE_PAIRING_PORT.md) adds sixteen declarations exposing exact row scaling and verifying the unsquared native row endpoints and dual-budget identity. It derives the native pairing-square bound from the existing V floor, removing that separate premise from the gap attachment. Original row/source/domain/completion realization and full RPB-P statuses remain open. Pinned remote CI passed at `fcf548917a799b1a8c725776a3f9a0f38d69e37e`.
+
+The [source-pairing attachment](DNE27_SOURCE_PAIRING_PORT.md) adds ten declarations identifying actual source norms and deriving the constructed inverse source-pairing square by Cauchy and the inverse norm bound. Both mixed pairing-square premises are now derived; actual source/Gram/inverse/domain and form-completion realization remain explicit obligations. Full RPB-P statuses remain unchanged. Pinned remote CI passed at `4aee865272a835a8063ea2ab55f169c669d9859b`.
+
+The [form-completion component](DNE27_FORM_COMPLETION_PORT.md) adds six declarations deriving high square completion and a physical-gap interface for explicit raw and finite Schur blocks. It refines the completion obligation into original block identities, low/retained Schur lower bounds and high coercivity; none of those original-form attachments is thereby proved. All full RPB-P statuses remain unchanged. Pinned remote CI passed at `2729c76f4b69ea17783e80b9727ef3f6a9c19147`.
+
+The [actual Schur-bound component](DNE27_SCHUR_BOUNDS_PORT.md) adds eleven declarations deriving inverse-corrected low and retained lower bounds and their physical-gap composition. It removes those separate bounds from the final premise list, while retaining original raw/finite block identity and domain/coercivity obligations. All full RPB-P statuses remain unchanged. Pinned remote CI passed at `9dc74c27347275dc02c115596404ff82f78671cf`.
+
+The [finite Schur component](DNE27_FINITE_SCHUR_PORT.md) adds seven declarations deriving Hermitian covariance and exact native-to-Schur transport. The gap theorem no longer requires a separate finite Schur identity. Original native/raw block, source/domain/inverse and high-coercivity realization remain unproved; full RPB-P statuses remain unchanged. Local builds, independent audits and pinned remote CI passed.
+
+The [sesquilinear block component](DNE27_SESQUILINEAR_BLOCKS_PORT.md) adds ten checked declarations deriving native and raw block identities from an algebraic Hermitian form, exact finite entries, local source coupling and high restriction. It composes these into both conditional physical-gap theorems. Local validation passed; remote CI for this extension is pending. Original form/domain, enclosures, weak inverse and high-coercivity realization remain open.

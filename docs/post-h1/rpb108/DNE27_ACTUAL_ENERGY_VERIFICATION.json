@@ -1,0 +1,53 @@
+{
+  "status": "LOCAL_KERNEL_VERIFIED_REMOTE_CI_PASSED",
+  "new_declaration_count": 7,
+  "declarations": [
+    "WeilDefect.RPB108.source_cross_square_of_gram_domination",
+    "WeilDefect.RPB108.mixed_pairing_norm_le",
+    "WeilDefect.RPB108.paid_actual_energy_lower",
+    "WeilDefect.RPB108.DNE27Even.actual_energy_diagonal_lower",
+    "WeilDefect.RPB108.DNE27Even.physical_gap_of_gram_and_pairings",
+    "WeilDefect.RPB108.DNE27Odd.actual_energy_diagonal_lower",
+    "WeilDefect.RPB108.DNE27Odd.physical_gap_of_gram_and_pairings"
+  ],
+  "upstream_commit": "3b5c5cb3a6db62c0fc7745820dc42a0d3d195c16",
+  "input_manifest_sha256": "523dee81048a18e1b543b6e654daa894375a31540bbca2630d0f093009979982",
+  "source_sha256": {
+    "WeilDefect/RPB108/MixedPairing.lean": "a93c990b29d50c5536f57ca66d5750c92cbb38320e8b1188887c2cfdfbf85428",
+    "WeilDefect/RPB108/DNE27ActualEnergy.lean": "f34d9946fe9000422ac90511b5df464891310b9591a7c05eed61c408d096ea5e"
+  },
+  "evidence_sha256": {
+    "build.log": "254f2af182c99ce16d7be51d55d8d495d9616988672a524ab9c1b73717dec3f3",
+    "h1-build.log": "ee09e836dcdb216af76cd420d7872d25401510718bf5bf489d0e15119a10afb5",
+    "axioms-generic.log": "ba5f9fda342c7276fcfc0cf18d8f01a4a4faa8a57d1101d496576e896048a0f3",
+    "axioms-parity.log": "c1f321a6a6a22cfc9a599b3b4ede0f775e642c40153f0d07dc6e3aaf4336d60b"
+  },
+  "checks": {
+    "component_build": "PASS",
+    "h1_ci_target": "PASS",
+    "independent_axiom_audits": "PASS",
+    "admission_check": "PASS"
+  },
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "preceding_gram_CI": {
+    "head": "cc731445e24872fdb429405de407a0de059fa0bc",
+    "conclusion": "success",
+    "url": "https://github.com/monocap-tech/weil/actions/runs/38008333980/job/114082236342"
+  },
+  "actual_energy_kept_until_paid_young": true,
+  "original_pairings_realized": false,
+  "original_source_enclosures_realized": false,
+  "original_inverse_domain_realized": false,
+  "original_completion_realized": false,
+  "full_RPB_P03_proved": false,
+  "RH_established": false,
+  "remote_CI": {
+    "head": "6b912392d2969ff592409029f698edbb44b588cf",
+    "conclusion": "success",
+    "url": "https://github.com/monocap-tech/weil/actions/runs/38009055940/job/114084551539"
+  }
+}

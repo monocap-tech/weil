@@ -1,0 +1,65 @@
+{
+  "status": "LOCAL_KERNEL_VERIFIED_REMOTE_CI_PASSED",
+  "new_declaration_count": 10,
+  "declarations": [
+    "WeilDefect.RPB108.source_gram_norm_sq",
+    "WeilDefect.RPB108.inverse_source_pairing_square",
+    "WeilDefect.RPB108.DNE27Even.low_source_square_identity",
+    "WeilDefect.RPB108.DNE27Even.retained_source_norm_sq",
+    "WeilDefect.RPB108.DNE27Even.inverse_source_pairing_square_of_gram",
+    "WeilDefect.RPB108.DNE27Even.physical_gap_of_realized_source_gram",
+    "WeilDefect.RPB108.DNE27Odd.low_source_square_identity",
+    "WeilDefect.RPB108.DNE27Odd.retained_source_norm_sq",
+    "WeilDefect.RPB108.DNE27Odd.inverse_source_pairing_square_of_gram",
+    "WeilDefect.RPB108.DNE27Odd.physical_gap_of_realized_source_gram"
+  ],
+  "upstream_commit": "3b5c5cb3a6db62c0fc7745820dc42a0d3d195c16",
+  "input_manifest_sha256": "523dee81048a18e1b543b6e654daa894375a31540bbca2630d0f093009979982",
+  "source_sha256": {
+    "WeilDefect/RPB108/SourcePairing.lean": "ba90c8b11465f83dc965c1ed4c7657c17689a1ac3a9e74b76eb6f40f7f80bfaa",
+    "WeilDefect/RPB108/DNE27SourcePairing.lean": "498d343d111ed242d24172da2d719cf493eb78251dc2d20676f79374bbe10800"
+  },
+  "checks": {
+    "component_build": "PASS",
+    "h1_ci_target": "PASS",
+    "independent_axiom_audits": "PASS",
+    "admission_check": "PASS"
+  },
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "evidence_sha256": {
+    "build.log": "b52e7456b8ab301df9d4a89e57b536c168de4fb00eeae31f55835fac260587d1",
+    "h1-build.log": "ee09e836dcdb216af76cd420d7872d25401510718bf5bf489d0e15119a10afb5",
+    "axioms-generic.log": "66057e76d107b02e059d99c1913c50c561e30f7657c68489b8aed71b0096c225",
+    "axioms-parity.log": "4bf3c3c552a67269d787d6540534d82e1520617af24c9b6143974afe100e5741"
+  },
+  "preceding_native_pairing_CI": {
+    "head": "fcf548917a799b1a8c725776a3f9a0f38d69e37e",
+    "checks": [
+      {
+        "status": "completed",
+        "conclusion": "success",
+        "html_url": "https://github.com/monocap-tech/weil/actions/runs/38010215337/job/114088230101"
+      }
+    ]
+  },
+  "same_inverse_and_source_frame_used": true,
+  "source_pairing_square_derived_from_actual_vectors": true,
+  "full_real_Gram_identity_required": true,
+  "raw_Gram_equals_inverse_covariance_claimed": false,
+  "universal_complex_vector_bound": true,
+  "original_source_Gram_realized": false,
+  "original_native_row_realized": false,
+  "original_inverse_domain_realized": false,
+  "original_completion_realized": false,
+  "full_RPB_P03_proved": false,
+  "RH_established": false,
+  "remote_CI": {
+    "head": "4aee865272a835a8063ea2ab55f169c669d9859b",
+    "conclusion": "success",
+    "url": "https://github.com/monocap-tech/weil/actions/runs/38010483562/job/114089077316"
+  }
+}

@@ -19,6 +19,10 @@ The current mathematical subject is the original supported Weil quadratic form Q
 3. [Mathematical obstruction and next acceptance gate](OPEN_FRONTIER.md) — the exact remaining 104-dimensional response and adequate sufficient source test.
 4. [Formalization and promotion protocol](FORMALIZATION_PLAN.md) — which proofs to port first; how numerical certificates may be promoted without overstating evidence.
 
+## First Lean component
+
+The companion port adds [the universal physical-gap bound](PHYSICAL_GAP_PORT.md) in the separate `WeilDefect.RPB108` namespace. The ten supporting lemmas passed pinned remote CI. The [DNE27 numerical slice](DNE27_NUMERIC_PORT.md) now proves eight closed scalar lemmas and two conditional physical-gap theorems; these passed pinned remote CI. The [mixed-energy slice](DNE27_MIXED_ENERGY_PORT.md) passed pinned remote CI. The [complete three-column Gram slice](DNE27_GRAM_PORT.md) passed pinned remote CI. The [actual-energy pairing attachment](DNE27_ACTUAL_ENERGY_PORT.md) derives the mixed diagonal bound from separate native/source pairing squares using actual retained energy; it passed pinned remote CI. The [retained-energy extension](DNE27_RETAINED_ENERGY_PORT.md) derives the retained-energy floor from the complete V intervals, removing that separate premise from the physical-gap attachment; it passed pinned remote CI. The [native-pairing extension](DNE27_NATIVE_PAIRING_PORT.md) derives the native row-square bound from exact unsquared row enclosures and the V-energy floor; pinned remote CI passed. The [source-pairing attachment](DNE27_SOURCE_PAIRING_PORT.md) constructs the inverse source pairing and proves its bound from actual source Gram realization and the inverse norm; pinned remote CI passed. This numerical slice certifies selected arithmetic inequalities; the original source/form-domain attachment and carrier adapter remain open.
+
 ## Main bounded conclusions and nonconclusions
 
 - The **finite first-116-mode original form** at 1.06 is certified positive *in the upstream arithmetic/interval workflow*. The unmeasured infinite high complement prevents inferring whole-domain positivity from this alone.
@@ -35,3 +39,11 @@ A result marked **UPSTREAM-CERTIFIED** has a published, outward computational ar
 Original theorem statements should be promoted into the stable public theorem registry only after the input bytes, exact normalizations, source ancestry, statement scope, and replay evidence have passed review. Proposed RPB labels are **not** existing stable Horizon-1 theorem IDs.
 
 This directory is a review candidate, not an instruction to begin a new official Horizon or silently attach the current P2M equivalence to a different carrier.
+
+The [high-form completion component](DNE27_FORM_COMPLETION_PORT.md) locally checks the weak-inverse square-completion identity and derives the gap from explicit raw/finite Schur block identities and separate block lower bounds. Original-form attachment remains open; pinned remote CI passed.
+
+The [actual Schur-bound component](DNE27_SCHUR_BOUNDS_PORT.md) derives the low and retained inverse-corrected block bounds, keeping actual inverse covariance distinct from the raw source Gram. Pinned remote CI passed. Original block/domain realization remains open.
+
+The [finite Schur component](DNE27_FINITE_SCHUR_PORT.md) derives the actual finite Schur decomposition from native blocks and weak Hermitian inverse identities, keeping conjugations explicit. Pinned remote CI passed at `7baf4a3a5572f983c61a39b14d2c1c249b5ce112`. Original native/raw block and domain/coercivity realization remain open.
+
+The [sesquilinear block component](DNE27_SESQUILINEAR_BLOCKS_PORT.md) adds ten checked declarations deriving native and raw block identities from an algebraic Hermitian form, exact finite entries, local source coupling and high restriction. It composes these into both conditional physical-gap theorems. Local validation passed; remote CI for this extension is pending. Original form/domain, enclosures, weak inverse and high-coercivity realization remain open.

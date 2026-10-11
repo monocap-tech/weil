@@ -6,7 +6,7 @@
 
 The Horizon-1 WeilDefect Lean project is pinned at Lean 4.34.0 / mathlib v4.34.0 in [its formalization track](../../LEAN_FORMALIZATION_TRACK.md). Its certificate rule requires compilation in pinned CI, no project sorry/admit/axiom, durable theorem-to-declaration mapping, and explicit separate classification for imports. The external Prove2Me/Formalpedia constructions use a different recorded toolchain (Lean 4.33.1 / Mathlib 0df444a). **No automatic cross-version or cross-definition equivalence is established.**
 
-The proposed package is **documentation/provenance only**. It contains no Lean proof, no cached compiled proof artifact, no promoted H1 theorem status, and no claim that the source validators have been rerun here.
+The initial transfer in PR #1 is **documentation/provenance only**. A separate companion port now adds ten generic physical-gap, completed-column and source-norm certificate lemmas; see [the component ledger](PHYSICAL_GAP_PORT.md). All ten supporting declarations passed remote CI. The [DNE27 numerical slice](DNE27_NUMERIC_PORT.md) adds eight closed scalar lemmas and two conditional physical-gap theorems, with pinned remote CI verified. The [mixed-energy extension](DNE27_MIXED_ENERGY_PORT.md) passed pinned remote CI. The [three-column Gram extension](DNE27_GRAM_PORT.md) passed pinned remote CI. The [actual-energy attachment](DNE27_ACTUAL_ENERGY_PORT.md) passed pinned remote CI. The [retained-energy extension](DNE27_RETAINED_ENERGY_PORT.md) passed pinned remote CI. The [native-pairing extension](DNE27_NATIVE_PAIRING_PORT.md) passed pinned remote CI. The [source-pairing attachment](DNE27_SOURCE_PAIRING_PORT.md) passed pinned remote CI. The selected arithmetic and conditional reductions are kernel-checked; no full original arithmetic certificate or RPB-P result is thereby promoted, and H1 theorem statuses remain unchanged.
 
 ## Staged port plan
 
@@ -35,3 +35,11 @@ If formal arithmetic verification is infeasible for a source certificate, mark i
 ## Publication disposition
 
 This proposed transfer is not a completed Horizon-2 theorem package. Review the four surfaces, verify upstream bytes and accepted wording, then separately decide which statements warrant stable IDs and a manuscript-level theorem. Keep experimental work in weil-lab and attach only the reusable proofs and checked dependency closure to weil.
+
+The [form-completion component](DNE27_FORM_COMPLETION_PORT.md) now supplies checked generic high-form algebra and a block interface for F3. Original weak inverse/domain, raw form identity, finite Schur identities and separate lower bounds still require proof on the original carrier. Pinned remote CI passed at `2729c76f4b69ea17783e80b9727ef3f6a9c19147`.
+
+The [actual Schur-bound component](DNE27_SCHUR_BOUNDS_PORT.md) derives the low and retained Schur lower bounds under native/source enclosures and inverse norm control. Original raw and finite block identities, native energy realization and domain/high coercivity remain the F3 boundary. Pinned remote CI passed at `9dc74c27347275dc02c115596404ff82f78671cf`.
+
+The [finite Schur component](DNE27_FINITE_SCHUR_PORT.md) derives finite Schur transport from uncorrected native blocks and weak Hermitian high-inverse equations. Native/raw block identities and original domain/enclosure/coercivity realization remain the F3 boundary. Pinned remote CI passed at `7baf4a3a5572f983c61a39b14d2c1c249b5ce112`.
+
+The [sesquilinear block component](DNE27_SESQUILINEAR_BLOCKS_PORT.md) adds ten checked declarations deriving native and raw block identities from an algebraic Hermitian form, exact finite entries, local source coupling and high restriction. It composes these into both conditional physical-gap theorems. Local validation passed; remote CI for this extension is pending. Original form/domain, enclosures, weak inverse and high-coercivity realization remain open.

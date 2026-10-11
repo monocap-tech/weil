@@ -1,0 +1,111 @@
+{
+  "status": "LOCAL_VERIFIED_REMOTE_CI_PENDING",
+  "base_commit": "ffc59e6b99768aef16ccf6a695e711c89a2f0ea5",
+  "documentation_pr": "https://github.com/monocap-tech/weil/pull/1",
+  "toolchain": "leanprover/lean4:v4.34.0",
+  "mathlib": "v4.34.0",
+  "module": "WeilDefect.RPB108",
+  "declarations": [
+    "WeilDefect.RPB108.weighted_mass_sq_le_energy",
+    "WeilDefect.RPB108.physical_gap_of_denominator_bound",
+    "WeilDefect.RPB108.physical_gap_of_mass_upper_bound"
+  ],
+  "source_sha256": "95f803d0c4f97ab5bca884b54a1f222deb20306770f1fb4ba110a75828a1a958",
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "checks": {
+    "component_build": "PASS",
+    "h1_ci_target": "PASS",
+    "axiom_audit": "PASS",
+    "ci_admission_check": "PASS"
+  },
+  "evidence_sha256": {
+    "component-build.log": "86ebdcf3b769b6711858f55178c75e205ae6dee521e710c3ea153686d8e83248",
+    "h1-regression.log": "ee09e836dcdb216af76cd420d7872d25401510718bf5bf489d0e15119a10afb5",
+    "axiom-audit.log": "af89fea4a45a3c631e83b7cb5513a89239285a51a76b7e326afc1c69a4061ba9"
+  },
+  "original_arithmetic_certificate_imported": false,
+  "original_analytic_attachment_proved": false,
+  "carrier_adapter_proved": false,
+  "RPB_P_theorems_promoted": false,
+  "RH_established": false,
+  "initial_component_remote_CI": {
+    "head": "fcd6f161e260692b9f80391f5185d34fd513e4ad",
+    "conclusion": "success",
+    "url": "https://github.com/monocap-tech/weil/actions/runs/37995164234"
+  },
+  "extension": {
+    "status": "REMOTE_CI_VERIFIED",
+    "module": "WeilDefect.RPB108.CompletedColumns",
+    "declarations": [
+      "WeilDefect.RPB108.four_column_tail_gap",
+      "WeilDefect.RPB108.completed_columns_norm_bound",
+      "WeilDefect.RPB108.completed_columns_physical_gap"
+    ],
+    "source_sha256": "79e8e4bde2ec62b81ab4dc5b861c03619ff6006496bc610ff2ad24be9d84405e",
+    "checks": {
+      "component_build": "PASS",
+      "h1_ci_target": "PASS",
+      "axiom_audit": "PASS",
+      "admission_check": "PASS"
+    },
+    "evidence_sha256": {
+      "build.log": "4386f6c2ec3507da7730c5b5340303804bbbd2b62b40870622a7bfda550eb6f4",
+      "h1-build.log": "ee09e836dcdb216af76cd420d7872d25401510718bf5bf489d0e15119a10afb5",
+      "axioms.log": "675c731d3301a136c9863e613bff399388a390cd927754c23fd5d0ecb2ce4ac0"
+    },
+    "remaining_original_form_obligations": [
+      "actual completed-column norm bounds",
+      "completed-square energy lower bound",
+      "kernel-checked authenticated numerical denominator"
+    ],
+    "remote_CI": {
+      "head": "bb1effa808e6a99415f5213e723ccc981633f124",
+      "conclusion": "success",
+      "url": "https://github.com/monocap-tech/weil/actions/runs/38002900652"
+    }
+  },
+  "source_norm_extension": {
+    "status": "REMOTE_CI_VERIFIED",
+    "module": "WeilDefect.RPB108.SourceNormBounds",
+    "declarations": [
+      "WeilDefect.RPB108.sqrt_add_le_of_squared_certificate",
+      "WeilDefect.RPB108.completed_mass_bound_of_squared_certificate",
+      "WeilDefect.RPB108.completed_column_norm_le",
+      "WeilDefect.RPB108.source_completed_columns_physical_gap"
+    ],
+    "source_sha256": "65422bd359b468153398bb574a6678bc54e47300e5ba0d96a398599c0ea69a84",
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "checks": {
+      "component_build": "PASS",
+      "h1_ci_target": "PASS",
+      "axiom_audit": "PASS",
+      "admission_check": "PASS"
+    },
+    "evidence_sha256": {
+      "build.log": "d7f42201c43af4d605039bf09670834b6f920ae1569b6e26a4f60cfc60bfd430",
+      "h1-build.log": "ee09e836dcdb216af76cd420d7872d25401510718bf5bf489d0e15119a10afb5",
+      "axioms.log": "99a2ffc3f07435a0c50027fec6129b2d207ca9c15f396878122fe70e96c52eab"
+    },
+    "original_form_attachment_proved": false,
+    "original_arithmetic_certificate_imported": false,
+    "remaining_actual_inputs": [
+      "actual native norms and full source-square enclosures",
+      "high-inverse operator norm bound",
+      "completed-square energy lower bound",
+      "kernel-checked numerical squared and denominator bounds"
+    ],
+    "remote_CI": {
+      "head": "906df24396b75c1a8a628ea09f91faabb75e7a3a",
+      "conclusion": "success",
+      "url": "https://github.com/monocap-tech/weil/actions/runs/38004008559/job/114068511822"
+    }
+  }
+}

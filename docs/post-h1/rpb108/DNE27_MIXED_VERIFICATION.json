@@ -1,0 +1,69 @@
+{
+  "status": "REMOTE_CI_VERIFIED_AT_MIXED_ENERGY_HEAD",
+  "upstream_commit": "3b5c5cb3a6db62c0fc7745820dc42a0d3d195c16",
+  "declarations": [
+    "WeilDefect.RPB108.paid_young_completed_square",
+    "WeilDefect.RPB108.paid_young_lower",
+    "WeilDefect.RPB108.DNE27Even.theta_bounds",
+    "WeilDefect.RPB108.DNE27Even.retainedLower_pos",
+    "WeilDefect.RPB108.DNE27Even.lowLower_identity",
+    "WeilDefect.RPB108.DNE27Even.threeLower_identity",
+    "WeilDefect.RPB108.DNE27Even.mixed_root_certificate",
+    "WeilDefect.RPB108.DNE27Even.combined_mixed_norm_bound",
+    "WeilDefect.RPB108.DNE27Even.paid_mixed_lower",
+    "WeilDefect.RPB108.DNE27Even.retained_energy_nonneg",
+    "WeilDefect.RPB108.DNE27Even.mixed_diagonal_lower",
+    "WeilDefect.RPB108.DNE27Even.physical_gap_of_mixed_energy",
+    "WeilDefect.RPB108.DNE27Odd.theta_bounds",
+    "WeilDefect.RPB108.DNE27Odd.retainedLower_pos",
+    "WeilDefect.RPB108.DNE27Odd.lowLower_identity",
+    "WeilDefect.RPB108.DNE27Odd.threeLower_identity",
+    "WeilDefect.RPB108.DNE27Odd.mixed_root_certificate",
+    "WeilDefect.RPB108.DNE27Odd.combined_mixed_norm_bound",
+    "WeilDefect.RPB108.DNE27Odd.paid_mixed_lower",
+    "WeilDefect.RPB108.DNE27Odd.retained_energy_nonneg",
+    "WeilDefect.RPB108.DNE27Odd.mixed_diagonal_lower",
+    "WeilDefect.RPB108.DNE27Odd.physical_gap_of_mixed_energy"
+  ],
+  "new_declaration_count": 22,
+  "new_closed_arithmetic_declaration_count": 10,
+  "input_manifest_sha256": "523dee81048a18e1b543b6e654daa894375a31540bbca2630d0f093009979982",
+  "source_sha256": {
+    "WeilDefect/RPB108/PaidYoung.lean": "d415bac932305316f5d1919a5bcd6f97cb5d4a5dee52a7f825c4f2a929025a43",
+    "WeilDefect/RPB108/DNE27MixedEnergy.lean": "45cb5b8d112c5975566df7932641b62a5eef54da1f9915fb26c1b5f5f4902360"
+  },
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "checks": {
+    "component_build": "PASS",
+    "h1_ci_target": "PASS",
+    "new_axiom_audits": "PASS",
+    "admission_check": "PASS",
+    "authenticated_generators_byte_identical": "PASS",
+    "zero_mixed_bound_control": "REJECTED"
+  },
+  "evidence_sha256": {
+    "build.log": "e30f0f6a7fcfb4f58ba52b42428313b7487ce6bcf26723d3ca1b35618b55af2e",
+    "h1-build.log": "ee09e836dcdb216af76cd420d7872d25401510718bf5bf489d0e15119a10afb5",
+    "lean.log": "318e654a5283030b3d54f8a27012e8707782410cf56f3d206af75018af74a50e",
+    "zero-mixed-bound.log": "266d295eb28470e1e1b596ba77bbb4ffdb7d6bb6ffd12d89b89deba22bdfecdc"
+  },
+  "preceding_numerical_CI": {
+    "head": "3bba71d37e44e5fcbe40d5a771cf746f243a443c",
+    "conclusion": "success",
+    "url": "https://github.com/monocap-tech/weil/actions/runs/38005749917/job/114074026448"
+  },
+  "original_raw_mixed_energy_established": false,
+  "source_Gram_domination_imported": false,
+  "original_operator_domain_realized": false,
+  "full_RPB_P03_proved": false,
+  "RH_established": false,
+  "remote_CI": {
+    "head": "f818c791070226abc6862100a84a074af17e6319",
+    "conclusion": "success",
+    "url": "https://github.com/monocap-tech/weil/actions/runs/38007754448"
+  }
+}

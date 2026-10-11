@@ -1,0 +1,57 @@
+{
+  "status": "LOCAL_KERNEL_VERIFIED_REMOTE_CI_PASSED",
+  "new_declaration_count": 6,
+  "declarations": [
+    "WeilDefect.RPB108.high_form_square_completion",
+    "WeilDefect.RPB108.completed_column_identity",
+    "WeilDefect.RPB108.complex_mixed_cross_lower",
+    "WeilDefect.RPB108.energy_lower_of_form_blocks",
+    "WeilDefect.RPB108.DNE27Even.physical_gap_of_form_blocks",
+    "WeilDefect.RPB108.DNE27Odd.physical_gap_of_form_blocks"
+  ],
+  "upstream_commit": "3b5c5cb3a6db62c0fc7745820dc42a0d3d195c16",
+  "input_manifest_sha256": "523dee81048a18e1b543b6e654daa894375a31540bbca2630d0f093009979982",
+  "source_sha256": {
+    "WeilDefect/RPB108/FormCompletion.lean": "9d83ac9a57bec7771c1b9d156306326c08b8e3b9f013f38b02f37c875a13301c",
+    "WeilDefect/RPB108/DNE27FormCompletion.lean": "35aa8eb199869cf6ed3fbfb6b051b5e1345c5dda5a330db2525d4e0a9f273ddc"
+  },
+  "checks": {
+    "component_build": "PASS",
+    "h1_ci_target": "PASS",
+    "independent_axiom_audits": "PASS",
+    "admission_check": "PASS"
+  },
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "evidence_sha256": {
+    "build.log": "7b7132e12ddc3d621b064847f87f1ee4bf3a0fcf6e304bf7fae1e70020134a8b",
+    "h1-build.log": "ee09e836dcdb216af76cd420d7872d25401510718bf5bf489d0e15119a10afb5",
+    "axioms-generic.log": "f08c5ff8d7b4100b42439efff07e0d47a06e188770883796e386b8e48e8d1008",
+    "axioms-parity.log": "67df86896e94ae569828115510a13e0e846697184540f4ed3ed443eef81b4f3d"
+  },
+  "preceding_source_pairing_CI": {
+    "head": "4aee865272a835a8063ea2ab55f169c669d9859b",
+    "conclusion": "success",
+    "url": "https://github.com/monocap-tech/weil/actions/runs/38010483562/job/114089077316"
+  },
+  "weak_inverse_square_completion_derived": true,
+  "same_completed_physical_vector_identified": true,
+  "mixed_energy_derived_from_explicit_blocks": true,
+  "original_high_form_domain_realized": false,
+  "original_weak_inverse_realized": false,
+  "original_raw_block_identity_realized": false,
+  "original_finite_Schur_identity_realized": false,
+  "original_finite_Schur_lower_bounds_realized": false,
+  "original_high_coercivity_realized": false,
+  "full_RPB_P03_proved": false,
+  "RH_established": false,
+  "proof_extension_pushed_head": "82a02c7",
+  "remote_CI": {
+    "head": "2729c76f4b69ea17783e80b9727ef3f6a9c19147",
+    "conclusion": "success",
+    "url": "https://github.com/monocap-tech/weil/actions/runs/38012214932/job/114094570276"
+  }
+}
