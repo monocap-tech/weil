@@ -9,6 +9,10 @@ negative directions, and compact-window neutral modes.
 > **Scope:** This repository packages an independent Weil-defect theory to its
 > stated stop boundary. It does not claim a proof of the Riemann Hypothesis.
 
+## Proposed post-Horizon-1 research transfer (draft)
+
+A [separate RPB108 fixed-aperture transfer dossier](docs/post-h1/rpb108/README.md) is staged for review. It organizes selected original Weil-form certificates, source custody, the open 104-dimensional collective response, and a Lean promotion plan. This is **not** part of the completed Horizon-1 theorem inventory, does **not** establish full positivity at aperture 1.06, and is **not** Lean-certified or an RH proof. Horizon-1's verified standing and historical registry remain unchanged.
+
 ## Scope and separation
 
 The project separates two mathematical layers that must not be conflated:
